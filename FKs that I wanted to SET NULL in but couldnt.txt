@@ -1,0 +1,6 @@
+fk_Attends_Class_Type
+fk_Uses_Service_Service
+fk_Staff_Rcv_Announce_Message
+fk_Mem_Rcv_Announce_Message
+fk_PT_Session_Instructor
+fk_Classes_Mgr
