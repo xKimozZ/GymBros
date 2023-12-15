@@ -34,7 +34,6 @@ CREATE TABLE Suppliers (
 -- Create Financial_Records Table
 CREATE TABLE Financial_Records (
     Transaction_Type VARCHAR(50) PRIMARY KEY,
-    Transaction_Date DATE NOT NULL,
     Transaction_Amount INT NOT NULL
 );
 
@@ -183,7 +182,8 @@ CREATE TABLE Mem_Rcv_Announce (
 CREATE TABLE Mem_Trans (
     Member_ID INT,
     Transaction_Type VARCHAR(50),
-    PRIMARY KEY (Member_ID, Transaction_Type),
+	Transaction_Date DATETIME NOT NULL,
+    PRIMARY KEY (Member_ID, Transaction_Date),
 	constraint fk_Mem_Trans_Member
 		FOREIGN KEY (Member_ID) REFERENCES Members(Member_ID)
 			ON DELETE NO ACTION
@@ -214,7 +214,8 @@ CREATE TABLE Staff_Rcv_Announce (
 CREATE TABLE Staff_Trans (
     Staff_ID INT,
     Transaction_Type VARCHAR(50),
-    PRIMARY KEY (Staff_ID, Transaction_Type),
+	Transaction_Date DATETIME NOT NULL,
+    PRIMARY KEY (Staff_ID, Transaction_Date),
 	constraint fk_Staff_Trans_Staff
 		FOREIGN KEY (Staff_ID) REFERENCES Staff(Staff_ID)
 			ON DELETE NO ACTION
@@ -229,7 +230,8 @@ CREATE TABLE Staff_Trans (
 CREATE TABLE Supplier_Trans (
     Supplier_ID INT,
     Transaction_Type VARCHAR(50),
-    PRIMARY KEY (Supplier_ID, Transaction_Type),
+	Transaction_Date DATETIME NOT NULL,
+    PRIMARY KEY (Supplier_ID, Transaction_Date),
 	constraint fk_Supplier_Trans_Supplier
 		FOREIGN KEY (Supplier_ID) REFERENCES Suppliers(Supplier_ID)
 			ON DELETE NO ACTION

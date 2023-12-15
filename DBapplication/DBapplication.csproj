@@ -49,106 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddProject.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddProject.Designer.cs">
-      <DependentUpon>AddProject.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminLogin.Designer.cs">
-      <DependentUpon>AdminLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
-    <Compile Include="demo1_AddMember.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="demo1_AddMember.Designer.cs">
-      <DependentUpon>demo1_AddMember.cs</DependentUpon>
-    </Compile>
-    <Compile Include="labReqs_1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="labReqs_1.Designer.cs">
-      <DependentUpon>labReqs_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="labReqs_3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="labReqs_3.Designer.cs">
-      <DependentUpon>labReqs_3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="labReqs_4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="labReqs_4.Designer.cs">
-      <DependentUpon>labReqs_4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="labReqs_5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="labReqs_5.Designer.cs">
-      <DependentUpon>labReqs_5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="labReqs_Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="labReqs_Home.Designer.cs">
-      <DependentUpon>labReqs_Home.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Provided Functionalities.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Provided Functionalities.Designer.cs">
-      <DependentUpon>Provided Functionalities.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RetrieveProjects.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RetrieveProjects.Designer.cs">
-      <DependentUpon>RetrieveProjects.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewEmployees.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewEmployees.Designer.cs">
-      <DependentUpon>ViewEmployees.cs</DependentUpon>
-    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddProject.resx">
-      <DependentUpon>AddProject.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminLogin.resx">
-      <DependentUpon>AdminLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="demo1_AddMember.resx">
-      <DependentUpon>demo1_AddMember.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="labReqs_1.resx">
-      <DependentUpon>labReqs_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="labReqs_3.resx">
-      <DependentUpon>labReqs_3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="labReqs_4.resx">
-      <DependentUpon>labReqs_4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="labReqs_5.resx">
-      <DependentUpon>labReqs_5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="labReqs_Home.resx">
-      <DependentUpon>labReqs_Home.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -159,15 +69,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Provided Functionalities.resx">
-      <DependentUpon>Provided Functionalities.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RetrieveProjects.resx">
-      <DependentUpon>RetrieveProjects.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewEmployees.resx">
-      <DependentUpon>ViewEmployees.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>

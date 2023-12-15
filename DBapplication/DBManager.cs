@@ -10,6 +10,14 @@ namespace DBapplication
 {
     public class DBManager
     {
+        // KAREEM:
+        //static string DB_Connection_String = @"Data Source=.\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True";
+        // GALAL:
+        //static string DB_Connection_String = @"Data Source=LAPTOP-3337RCUE\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True";
+        // HUSSEIN:
+        //
+        // EZZ:
+        //
         static string DB_Connection_String = @"Data Source=.\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True";
         SqlConnection myConnection;
         static bool check=false;

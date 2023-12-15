@@ -18,3 +18,10 @@ C:\Users\KimozZ\Downloads\Lab5 Accessing DB from C# - Part2\Code\DBapplication\D
 C:\Users\KimozZ\Downloads\Lab5 Accessing DB from C# - Part2\Code\DBapplication\DBapplication\obj\x86\Debug\DBapplication.labReqs_4.resources
 C:\Users\KimozZ\Downloads\Lab5 Accessing DB from C# - Part2\Code\DBapplication\DBapplication\obj\x86\Debug\DBapplication.labReqs_5.resources
 C:\Users\KimozZ\Downloads\Lab5 Accessing DB from C# - Part2\Code\DBapplication\DBapplication\obj\x86\Debug\DBapplication.demo1_AddMember.resources
+C:\Users\galal\Desktop\CHS study folder\CCE-C Year 2 Term 1\DB\Project\GymBros\DBapplication\obj\x86\Debug\DBapplication.csproj.AssemblyReference.cache
+C:\Users\galal\Desktop\CHS study folder\CCE-C Year 2 Term 1\DB\Project\GymBros\DBapplication\obj\x86\Debug\DBapplication.Properties.Resources.resources
+C:\Users\galal\Desktop\CHS study folder\CCE-C Year 2 Term 1\DB\Project\GymBros\DBapplication\obj\x86\Debug\DBapplication.Welcome.resources
+C:\Users\galal\Desktop\CHS study folder\CCE-C Year 2 Term 1\DB\Project\GymBros\DBapplication\obj\x86\Debug\DBapplication.csproj.GenerateResource.cache
+C:\Users\galal\Desktop\CHS study folder\CCE-C Year 2 Term 1\DB\Project\GymBros\DBapplication\obj\x86\Debug\DBapplication.csproj.CoreCompileInputs.cache
+C:\Users\galal\Desktop\CHS study folder\CCE-C Year 2 Term 1\DB\Project\GymBros\DBapplication\obj\x86\Debug\DBapplication.exe
+C:\Users\galal\Desktop\CHS study folder\CCE-C Year 2 Term 1\DB\Project\GymBros\DBapplication\obj\x86\Debug\DBapplication.pdb
