@@ -18,16 +18,17 @@ namespace DBapplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminLogin a = new AdminLogin();
+            //AdminLogin a = new AdminLogin();
+            Admin a = new Admin();
             a.Show();
              
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Provided_Functionalities f = new Provided_Functionalities(0);//for admin
-            f.Show();
-        }
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    Provided_Functionalities f = new Provided_Functionalities(0);//for admin
+        //    f.Show();
+        //}
 
         private void label1_Click(object sender, EventArgs e)
         {

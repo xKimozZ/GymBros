@@ -23,7 +23,7 @@ namespace DBapplication
         static bool check=false;
         public DBManager()
         {
-            myConnection = new SqlConnection(DB_Connection_String);
+            myConnection = new SqlConnection(DB_Connection_String); 
             try
             {
                 myConnection.Open();
