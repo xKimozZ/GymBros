@@ -16,43 +16,30 @@ namespace DBapplication
         {
             InitializeComponent();
             MainMenu.Show();
-            panelStaff.Hide();
+            placeholderPanel.Hide();
         }
-
-        private void buttonback_Click(object sender, EventArgs e)
-        {
-            panelStaff.Hide();
-            MainMenu.Show();
-        }
-
         private void buttonStaff_Click(object sender, EventArgs e)
         {
-            panelStaff.Show();
-            panelStaffdel.Hide();
-            panelManager.Hide();
-            panelAdAdmin.Hide();
+            ShowContent(new AdminStaffMenu());
+            placeholderPanel.Show();
             MainMenu.Hide();
         }
 
-        private void buttonRemove_Click(object sender, EventArgs e)
+        private void ShowContent(Control content)
         {
-            panelManager.Hide();
-            panelAdAdmin.Hide();
-            panelStaffdel.Show();
+            placeholderPanel.Controls.Clear(); // clear current content
+            placeholderPanel.Controls.Add(content); // add new
+            content.Dock = DockStyle.Fill; // fill placeholder area
+            buttonBack.Enabled = true;
+            buttonBack.Visible = true; 
         }
 
-        private void buttonProfile_Click(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)
         {
-            panelStaffdel.Hide();
-            panelAdAdmin.Hide();
-            panelManager.Show();
-        }
-
-        private void buttonAdmin_Click(object sender, EventArgs e)
-        {
-            panelStaffdel.Hide();
-            panelManager.Hide();
-            panelAdAdmin.Show();
+            placeholderPanel.Hide();
+            MainMenu.Show();
+            buttonBack.Enabled = false;
+            buttonBack.Visible = false;
         }
     }
 }
