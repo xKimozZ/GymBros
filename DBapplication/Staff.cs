@@ -64,5 +64,26 @@ namespace DBapplication
             placeholderPanel.Show();
             MainMenu.Hide();
         }
+
+        private void EditStaffprofile_Click(object sender, EventArgs e)
+        {
+            ShowContent(new EditStaffOwnProfile());
+            placeholderPanel.Show();
+            MainMenu.Hide();
+        }
+
+        private void Announcment_Click(object sender, EventArgs e)
+        {
+            ShowContent(new StaffAnnouncmentMenu());
+            placeholderPanel.Show();
+            MainMenu.Hide();
+        }
+
+        private void PTButton_Click(object sender, EventArgs e)
+        {
+            ShowContent(new PersonaltrainingStaffMenu());
+            placeholderPanel.Show();
+            MainMenu.Hide();
+        }
     }
 }
