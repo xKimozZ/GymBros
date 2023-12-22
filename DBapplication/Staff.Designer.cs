@@ -32,12 +32,12 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.placeholderPanel = new System.Windows.Forms.Panel();
             this.MainMenu = new System.Windows.Forms.Panel();
+            this.PTButton = new System.Windows.Forms.Button();
+            this.Announcment = new System.Windows.Forms.Button();
+            this.EditStaffprofile = new System.Windows.Forms.Button();
             this.EditMember = new System.Windows.Forms.Button();
             this.AddMember = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.EditStaffprofile = new System.Windows.Forms.Button();
-            this.Announcment = new System.Windows.Forms.Button();
-            this.PTButton = new System.Windows.Forms.Button();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +74,36 @@
             this.MainMenu.Size = new System.Drawing.Size(796, 286);
             this.MainMenu.TabIndex = 5;
             // 
+            // PTButton
+            // 
+            this.PTButton.Location = new System.Drawing.Point(634, 101);
+            this.PTButton.Name = "PTButton";
+            this.PTButton.Size = new System.Drawing.Size(141, 40);
+            this.PTButton.TabIndex = 8;
+            this.PTButton.Text = "Personal Training";
+            this.PTButton.UseVisualStyleBackColor = true;
+            this.PTButton.Click += new System.EventHandler(this.PTButton_Click);
+            // 
+            // Announcment
+            // 
+            this.Announcment.Location = new System.Drawing.Point(479, 102);
+            this.Announcment.Name = "Announcment";
+            this.Announcment.Size = new System.Drawing.Size(126, 41);
+            this.Announcment.TabIndex = 7;
+            this.Announcment.Text = "Announcment";
+            this.Announcment.UseVisualStyleBackColor = true;
+            this.Announcment.Click += new System.EventHandler(this.Announcment_Click);
+            // 
+            // EditStaffprofile
+            // 
+            this.EditStaffprofile.Location = new System.Drawing.Point(316, 101);
+            this.EditStaffprofile.Name = "EditStaffprofile";
+            this.EditStaffprofile.Size = new System.Drawing.Size(126, 41);
+            this.EditStaffprofile.TabIndex = 6;
+            this.EditStaffprofile.Text = "Edit My Profile";
+            this.EditStaffprofile.UseVisualStyleBackColor = true;
+            this.EditStaffprofile.Click += new System.EventHandler(this.EditStaffprofile_Click);
+            // 
             // EditMember
             // 
             this.EditMember.Location = new System.Drawing.Point(159, 102);
@@ -103,35 +133,6 @@
             this.label1.Size = new System.Drawing.Size(158, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Staff Menu";
-            // 
-            // EditStaffprofile
-            // 
-            this.EditStaffprofile.Location = new System.Drawing.Point(316, 101);
-            this.EditStaffprofile.Name = "EditStaffprofile";
-            this.EditStaffprofile.Size = new System.Drawing.Size(126, 41);
-            this.EditStaffprofile.TabIndex = 6;
-            this.EditStaffprofile.Text = "Edit My Profile";
-            this.EditStaffprofile.UseVisualStyleBackColor = true;
-            this.EditStaffprofile.Click += new System.EventHandler(this.EditStaffprofile_Click);
-            // 
-            // Announcment
-            // 
-            this.Announcment.Location = new System.Drawing.Point(479, 102);
-            this.Announcment.Name = "Announcment";
-            this.Announcment.Size = new System.Drawing.Size(126, 41);
-            this.Announcment.TabIndex = 7;
-            this.Announcment.Text = "Announcment";
-            this.Announcment.UseVisualStyleBackColor = true;
-            this.Announcment.Click += new System.EventHandler(this.Announcment_Click);
-            // 
-            // PTButton
-            // 
-            this.PTButton.Location = new System.Drawing.Point(634, 101);
-            this.PTButton.Name = "PTButton";
-            this.PTButton.Size = new System.Drawing.Size(141, 40);
-            this.PTButton.TabIndex = 8;
-            this.PTButton.Text = "Personal Training";
-            this.PTButton.UseVisualStyleBackColor = true;
             // 
             // Staff
             // 
