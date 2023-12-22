@@ -87,9 +87,10 @@
             // buttonAdmin
             // 
             this.buttonAdmin.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonAdmin.Location = new System.Drawing.Point(48, 271);
+            this.buttonAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdmin.Location = new System.Drawing.Point(48, 258);
             this.buttonAdmin.Name = "buttonAdmin";
-            this.buttonAdmin.Size = new System.Drawing.Size(85, 41);
+            this.buttonAdmin.Size = new System.Drawing.Size(85, 40);
             this.buttonAdmin.TabIndex = 22;
             this.buttonAdmin.Text = "Add Admin";
             this.buttonAdmin.UseVisualStyleBackColor = false;
@@ -98,9 +99,10 @@
             // buttonProfile
             // 
             this.buttonProfile.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonProfile.Location = new System.Drawing.Point(48, 217);
+            this.buttonProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonProfile.Location = new System.Drawing.Point(48, 212);
             this.buttonProfile.Name = "buttonProfile";
-            this.buttonProfile.Size = new System.Drawing.Size(85, 41);
+            this.buttonProfile.Size = new System.Drawing.Size(85, 40);
             this.buttonProfile.TabIndex = 21;
             this.buttonProfile.Text = "Profile Manager";
             this.buttonProfile.UseVisualStyleBackColor = false;
@@ -109,9 +111,10 @@
             // buttonRemove
             // 
             this.buttonRemove.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonRemove.Location = new System.Drawing.Point(48, 170);
+            this.buttonRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRemove.Location = new System.Drawing.Point(48, 166);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(85, 41);
+            this.buttonRemove.Size = new System.Drawing.Size(85, 40);
             this.buttonRemove.TabIndex = 20;
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.UseVisualStyleBackColor = false;
@@ -120,9 +123,10 @@
             // buttonAdd
             // 
             this.buttonAdd.BackColor = System.Drawing.SystemColors.Menu;
+            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Location = new System.Drawing.Point(48, 123);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(85, 41);
+            this.buttonAdd.Size = new System.Drawing.Size(85, 40);
             this.buttonAdd.TabIndex = 19;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -224,6 +228,7 @@
             this.Controls.Add(this.panelManager);
             this.Controls.Add(this.panelAdAdmin);
             this.Controls.Add(this.panelStaffdel);
+            this.DoubleBuffered = true;
             this.Name = "AdminStaffMenu";
             this.Size = new System.Drawing.Size(719, 376);
             this.panelAdAdmin.ResumeLayout(false);
