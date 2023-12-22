@@ -79,8 +79,21 @@
     <Compile Include="AdminStaffMenu.Designer.cs">
       <DependentUpon>AdminStaffMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppSession.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
+    <Compile Include="EditMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditMember.Designer.cs">
+      <DependentUpon>EditMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditStaffOwnProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditStaffOwnProfile.Designer.cs">
+      <DependentUpon>EditStaffOwnProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemberManage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -107,6 +120,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminStaffMenu.resx">
       <DependentUpon>AdminStaffMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMember.resx">
+      <DependentUpon>EditMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditStaffOwnProfile.resx">
+      <DependentUpon>EditStaffOwnProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberManage.resx">
       <DependentUpon>MemberManage.cs</DependentUpon>

@@ -12,9 +12,14 @@ namespace DBapplication
 {
     public partial class Staff : Form
     {
+       
         public Staff()
         {
+
             InitializeComponent();
+            // Hard code login session 
+            AppSession.Login(101,"John");
+            
         }
 
         private void Staff_Load(object sender, EventArgs e)
@@ -51,6 +56,13 @@ namespace DBapplication
             MainMenu.Show();
             buttonBack.Enabled = false;
             buttonBack.Visible = false;
+        }
+
+        private void EditMember_Click(object sender, EventArgs e)
+        {
+            ShowContent(new EditMember());
+            placeholderPanel.Show();
+            MainMenu.Hide();
         }
     }
 }
