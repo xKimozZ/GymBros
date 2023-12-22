@@ -275,3 +275,5 @@ CREATE TABLE Attends_Class (
 			ON DELETE NO ACTION
 			ON UPDATE NO ACTION 
 );
+
+
