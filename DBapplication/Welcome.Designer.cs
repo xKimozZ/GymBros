@@ -45,7 +45,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(244, 96);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Admin Login";
+            this.button1.Text = "Admin Login (ignore)";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -60,8 +60,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(244, 87);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Member Login";
+            this.button2.Text = "Login";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -87,7 +88,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(244, 96);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Staff Login";
+            this.button3.Text = "Staff Login (ignore)";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

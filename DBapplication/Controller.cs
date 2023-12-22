@@ -74,6 +74,12 @@ namespace DBapplication
 
             return dbMan.ExecuteNonQuery(userUpdateQuery);
         }
+
+        public DataTable LoginAttempt(int UID, string pass)
+        {
+            string query = $"SELECT User_ID FROM Users WHERE User_ID = '{UID}' AND Account_Pass = '{pass}';";
+            return dbMan.ExecuteReader(query);
+        }
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
