@@ -124,11 +124,7 @@ namespace DBapplication
             return dbMan.ExecuteReader(query);
 
         }
-        public DataTable getAllStaff()
-        {
-            string query = $"SELECT * FROM Staff;";
-            return dbMan.ExecuteReader(query);
-        }
+
 
 
         public DataTable getNamesMembers()
@@ -189,11 +185,7 @@ namespace DBapplication
             VALUES (GETDATE(), '{messageText}', {senderId});";
             return dbMan.ExecuteNonQuery(query);
         }
-        public DataTable getNamesStaff()
-        {
-            string query = $"SELECT User_ID, Fname FROM Users INNER JOIN Staff ON Users.User_ID = Staff.Staff_ID;";
-            return dbMan.ExecuteReader(query);
-        }
+
         public int AddMember(string Fname , string Lname , string pass,int age, int contactInfo , int emergencyContact, int gender)
         {
             string userInsertQuery = $"INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) " +
@@ -213,11 +205,11 @@ namespace DBapplication
             string StaffInsertQuery = $"INSERT INTO Staff (Staff_ID, Salary, Role) " +
                                        $"VALUES (SCOPE_IDENTITY(), {Salary}, '{Role}');";
 
-        public int UpdateUser(int userId, string newFname, string newLname, string newPass, int newAge, int newContactInfo, int newEmergencyContact, int newGender)
+        
             dbMan.ExecuteNonQuery(userInsertQuery);
             return dbMan.ExecuteNonQuery(StaffInsertQuery);
         }
-        public int UpdateMember(int userId, string newFname, string newLname, string newPass, int newAge, int newContactInfo, int newEmergencyContact, int newGender)
+        public int UpdateUser(int userId, string newFname, string newLname, string newPass, int newAge, int newContactInfo, int newEmergencyContact, int newGender)
         {
            
             string userUpdateQuery = $"UPDATE Users " +
