@@ -190,7 +190,7 @@
             // 
             // EditProfilebutton
             // 
-            this.EditProfilebutton.Location = new System.Drawing.Point(294, 308);
+            this.EditProfilebutton.Location = new System.Drawing.Point(85, 299);
             this.EditProfilebutton.Name = "EditProfilebutton";
             this.EditProfilebutton.Size = new System.Drawing.Size(155, 51);
             this.EditProfilebutton.TabIndex = 71;
@@ -201,11 +201,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(509, 230);
+            this.dataGridView1.Location = new System.Drawing.Point(349, 230);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(237, 157);
+            this.dataGridView1.Size = new System.Drawing.Size(397, 157);
             this.dataGridView1.TabIndex = 72;
             // 
             // EditStaffOwnProfile
