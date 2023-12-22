@@ -196,6 +196,7 @@
             this.EditProfilebutton.TabIndex = 71;
             this.EditProfilebutton.Text = "Edit Profile";
             this.EditProfilebutton.UseVisualStyleBackColor = true;
+            this.EditProfilebutton.Click += new System.EventHandler(this.EditProfilebutton_Click);
             // 
             // dataGridView1
             // 

@@ -109,6 +109,12 @@
     <Compile Include="Staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffAnnouncmentMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaffAnnouncmentMenu.Designer.cs">
+      <DependentUpon>StaffAnnouncmentMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </Compile>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffAnnouncmentMenu.resx">
+      <DependentUpon>StaffAnnouncmentMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>

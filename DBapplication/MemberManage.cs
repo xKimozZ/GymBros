@@ -20,7 +20,7 @@ namespace DBapplication
             // initally male is checked
             radioButtonMale.Checked = true;
             // fill member grid
-            dataGridView1.DataSource = controllerObj.getAllMembers();
+            dataGridView1.DataSource = controllerObj.getNamesMembers();
             dataGridView1.Refresh();
 
           
@@ -73,7 +73,7 @@ namespace DBapplication
             if (result == 1)
             {
                 MessageBox.Show("Member added successfully!");
-                dataGridView1.DataSource = controllerObj.getAllMembers();
+                dataGridView1.DataSource = controllerObj.getNamesMembers();
                 dataGridView1.Refresh();
             }
             else
