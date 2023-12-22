@@ -34,5 +34,11 @@ namespace DBapplication
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Staff s = new Staff();
+            s.Show();
+        }
     }
 }
