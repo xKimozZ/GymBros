@@ -17,8 +17,9 @@ namespace DBapplication
         // HUSSEIN:
         //
         // EZZ:
-        //
-        static string DB_Connection_String = @"Data Source=.\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True";
+        //Data Source=DESKTOP-MAINEZ\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True;Encrypt=False
+
+        static string DB_Connection_String = @"Data Source=DESKTOP-MAINEZ\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True;Encrypt=False";
         SqlConnection myConnection;
         static bool check=false;
         public DBManager()
