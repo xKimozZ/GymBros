@@ -112,6 +112,7 @@
             this.EditStaffprofile.TabIndex = 6;
             this.EditStaffprofile.Text = "Edit My Profile";
             this.EditStaffprofile.UseVisualStyleBackColor = true;
+            this.EditStaffprofile.Click += new System.EventHandler(this.EditStaffprofile_Click);
             // 
             // Announcment
             // 
@@ -121,12 +122,13 @@
             this.Announcment.TabIndex = 7;
             this.Announcment.Text = "Announcment";
             this.Announcment.UseVisualStyleBackColor = true;
+            this.Announcment.Click += new System.EventHandler(this.Announcment_Click);
             // 
             // PTButton
             // 
-            this.PTButton.Location = new System.Drawing.Point(654, 102);
+            this.PTButton.Location = new System.Drawing.Point(634, 101);
             this.PTButton.Name = "PTButton";
-            this.PTButton.Size = new System.Drawing.Size(115, 41);
+            this.PTButton.Size = new System.Drawing.Size(141, 40);
             this.PTButton.TabIndex = 8;
             this.PTButton.Text = "Personal Training";
             this.PTButton.UseVisualStyleBackColor = true;

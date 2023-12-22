@@ -20,7 +20,7 @@ namespace DBapplication
             // initally male is checked
             radioButtonMale.Checked = true;
             // fill member grid
-            dataGridView1.DataSource = controllerObj.getAllMembers();
+            dataGridView1.DataSource = controllerObj.getNamesMembers();
             dataGridView1.Refresh();
             // fill members combobox
             DataTable members = controllerObj.getNamesMembers();
@@ -75,19 +75,19 @@ namespace DBapplication
             int gender = (radioButtonMale.Checked) ? 1 : 0; // Assuming you have radio buttons for gender
 
             // Call the EditMember function with validated input
-            int result = controllerObj.UpdateMember(Convert.ToInt32(memberCombo.SelectedValue), fname, lname, pass, age, contactInfo, emergencyContact, gender);
+            int result = controllerObj.UpdateUser(Convert.ToInt32(memberCombo.SelectedValue), fname, lname, pass, age, contactInfo, emergencyContact, gender);
 
             // Check the result and provide appropriate feedback to the user
             if (result == 1)
             {
                 MessageBox.Show("Member editted successfully!");
-                dataGridView1.DataSource = controllerObj.getAllMembers();
+                dataGridView1.DataSource = controllerObj.getNamesMembers();
                 dataGridView1.Refresh();
                 memberCombo.Refresh();
             }
             else
             {
-                MessageBox.Show("Error adding member. Please check the input and try again.");
+                MessageBox.Show("Error, Please check the input and try again.");
             }
         }
     }

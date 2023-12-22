@@ -18,9 +18,38 @@ namespace DBapplication
             string query = $"SELECT * FROM Members;";
             return dbMan.ExecuteReader(query);
         }
+        public DataTable getAllStaff()
+        {
+            string query = $"SELECT * FROM Staff;";
+            return dbMan.ExecuteReader(query);
+        }
         public DataTable getNamesMembers()
         {
             string query = $"SELECT User_ID, Fname FROM Users INNER JOIN Members ON Users.User_ID = Members.Member_ID;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetStaffAnnouncements()
+        {
+            string query = @"
+        SELECT Announcements.Message_Text, Staff.Staff_ID, Users.Fname + ' ' + Users.Lname AS SenderName, Staff.Role, Announcements.Message_Date
+        FROM Announcements
+        JOIN Staff ON Announcements.Sender_ID = Staff.Staff_ID
+        JOIN Users ON Announcements.Sender_ID = Users.User_ID";
+
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int SendAnnouncement(int senderId, string messageText)
+        {
+            string query = $@"
+            INSERT INTO Announcements (Message_Date, Message_Text, Sender_ID)
+            VALUES (GETDATE(), '{messageText}', {senderId});";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public DataTable getNamesStaff()
+        {
+            string query = $"SELECT User_ID, Fname FROM Users INNER JOIN Staff ON Users.User_ID = Staff.Staff_ID;";
             return dbMan.ExecuteReader(query);
         }
         public int AddMember(string Fname , string Lname , string pass,int age, int contactInfo , int emergencyContact, int gender)
@@ -35,7 +64,7 @@ namespace DBapplication
             return dbMan.ExecuteNonQuery(memberInsertQuery);
         }
 
-        public int UpdateMember(int userId, string newFname, string newLname, string newPass, int newAge, int newContactInfo, int newEmergencyContact, int newGender)
+        public int UpdateUser(int userId, string newFname, string newLname, string newPass, int newAge, int newContactInfo, int newEmergencyContact, int newGender)
         {
            
             string userUpdateQuery = $"UPDATE Users " +
