@@ -15,6 +15,8 @@ namespace DBapplication
         public Reportuc()
         {
             InitializeComponent();
+            reportViewer1.RefreshReport();
         }
+
     }
 }

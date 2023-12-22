@@ -50,7 +50,7 @@ namespace DBapplication
 
         private void buttonReports_Click(object sender, EventArgs e)
         {
-            ShowContent(new Report1m());
+            ShowContent(new Reportuc());
             placeholderPanel.Show();
             MainMenu.Hide();
         }

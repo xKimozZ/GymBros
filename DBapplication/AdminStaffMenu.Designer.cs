@@ -46,7 +46,6 @@
             this.comboBoxID = new System.Windows.Forms.ComboBox();
             this.labelID = new System.Windows.Forms.Label();
             this.panelAdd = new System.Windows.Forms.Panel();
-            this.labelLname = new System.Windows.Forms.Label();
             this.comboBoxRole2 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxAdSalary = new System.Windows.Forms.TextBox();
@@ -67,6 +66,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.labelLname = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelselect = new System.Windows.Forms.Panel();
@@ -282,17 +282,6 @@
             this.panelAdd.Size = new System.Drawing.Size(462, 303);
             this.panelAdd.TabIndex = 26;
             // 
-            // labelLname
-            // 
-            this.labelLname.AutoSize = true;
-            this.labelLname.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLname.Location = new System.Drawing.Point(408, 145);
-            this.labelLname.Name = "labelLname";
-            this.labelLname.Size = new System.Drawing.Size(43, 20);
-            this.labelLname.TabIndex = 29;
-            this.labelLname.Text = "Name";
-            this.labelLname.Visible = false;
-            // 
             // comboBoxRole2
             // 
             this.comboBoxRole2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -482,6 +471,17 @@
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 34;
             this.label2.Text = "First Name";
+            // 
+            // labelLname
+            // 
+            this.labelLname.AutoSize = true;
+            this.labelLname.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLname.Location = new System.Drawing.Point(408, 145);
+            this.labelLname.Name = "labelLname";
+            this.labelLname.Size = new System.Drawing.Size(43, 20);
+            this.labelLname.TabIndex = 29;
+            this.labelLname.Text = "Name";
+            this.labelLname.Visible = false;
             // 
             // panel1
             // 

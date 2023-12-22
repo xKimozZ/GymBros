@@ -30,6 +30,7 @@
         {
             this.buttonBack = new System.Windows.Forms.Button();
             this.MainMenu = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.buttonAnnouncement = new System.Windows.Forms.Button();
             this.buttonEquipment = new System.Windows.Forms.Button();
             this.buttonStaff = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.buttonExtra = new System.Windows.Forms.Button();
             this.buttonReports = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.placeholderPanel = new System.Windows.Forms.Panel();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +67,16 @@
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(719, 376);
             this.MainMenu.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(278, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Admin Main Menu";
             // 
             // buttonAnnouncement
             // 
@@ -137,23 +147,13 @@
             this.buttonExit.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.Color.White;
             this.buttonExit.Location = new System.Drawing.Point(696, 410);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(56, 26);
             this.buttonExit.TabIndex = 28;
             this.buttonExit.Text = "EXIT";
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(278, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Admin Main Menu";
             // 
             // placeholderPanel
             // 

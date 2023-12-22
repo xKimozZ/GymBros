@@ -84,8 +84,8 @@ namespace DBapplication
         }
         public int DeleteStaff(int staffId)
         {
-            string staffUpdateQuery = $"Delete Staff " +
-                                      $"WHERE Staff_ID = {staffId};";
+            string staffUpdateQuery = $"Delete Users " +
+                                      $"WHERE User_ID = {staffId};";
 
             return dbMan.ExecuteNonQuery(staffUpdateQuery);
         }
