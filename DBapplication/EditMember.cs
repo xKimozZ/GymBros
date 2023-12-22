@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace DBapplication
 {
-    public partial class MemberManage : UserControl
+    public partial class EditMember : UserControl
     {
         Controller controllerObj;
-        public MemberManage()
+        public EditMember()
         {
             InitializeComponent();
             controllerObj = new Controller();
@@ -22,16 +22,24 @@ namespace DBapplication
             // fill member grid
             dataGridView1.DataSource = controllerObj.getAllMembers();
             dataGridView1.Refresh();
-
-          
+            // fill members combobox
+            DataTable members = controllerObj.getNamesMembers();
+            memberCombo.DataSource = members;
+            memberCombo.ValueMember = "User_ID";
+            memberCombo.DisplayMember = "Fname";
         }
 
-        private void MemberManage_Load(object sender, EventArgs e)
+        private void EditMember_Load(object sender, EventArgs e)
         {
 
         }
 
         private void AddMember_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Editbutton_Click(object sender, EventArgs e)
         {
             controllerObj = new Controller();
 
@@ -66,21 +74,21 @@ namespace DBapplication
 
             int gender = (radioButtonMale.Checked) ? 1 : 0; // Assuming you have radio buttons for gender
 
-            // Call the AddMember function with validated input
-            int result = controllerObj.AddMember(fname, lname, pass, age, contactInfo, emergencyContact, gender);
+            // Call the EditMember function with validated input
+            int result = controllerObj.UpdateMember(Convert.ToInt32(memberCombo.SelectedValue), fname, lname, pass, age, contactInfo, emergencyContact, gender);
 
             // Check the result and provide appropriate feedback to the user
             if (result == 1)
             {
-                MessageBox.Show("Member added successfully!");
+                MessageBox.Show("Member editted successfully!");
                 dataGridView1.DataSource = controllerObj.getAllMembers();
                 dataGridView1.Refresh();
+                memberCombo.Refresh();
             }
             else
             {
                 MessageBox.Show("Error adding member. Please check the input and try again.");
             }
         }
-
     }
 }
