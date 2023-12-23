@@ -18,7 +18,7 @@ namespace DBapplication
              //Application.Run(new Welcome());
             
             // for debuging staff uncomment
-            Application.Run(new Staff()); 
+            Application.Run(new Welcome()); 
         }
     }
 }

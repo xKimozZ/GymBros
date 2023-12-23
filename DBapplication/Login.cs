@@ -38,7 +38,7 @@ namespace DBapplication
             }
             DataTable dt = new DataTable();
             dt = controllerObj.LoginAttempt(Convert.ToInt32(textBox1.Text), textBox2.Text);
-            if (dt.Rows.Count > 0)
+            if (dt != null)
             {
                 MessageBox.Show("Success");
             }
@@ -51,6 +51,14 @@ namespace DBapplication
             //dt = controllerObj.AllClass();
             //dataGridView1.DataSource = dt;
             //dataGridView1.Refresh();
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
