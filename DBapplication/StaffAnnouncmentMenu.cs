@@ -34,12 +34,6 @@ namespace DBapplication
         private void button2_Click(object sender, EventArgs e)
         {
             controllerObj = new Controller();
-
-            if (string.IsNullOrEmpty(richTextBox1.Text))
-            {
-                MessageBox.Show("Please fill in all the required fields.");
-                return;
-            } ;
             int result = controllerObj.SendAnnouncement(AppSession.UserId,richTextBox1.Text);
             if (result == 1)
             {

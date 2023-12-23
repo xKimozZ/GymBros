@@ -43,16 +43,5 @@ namespace DBapplication.Properties {
                 return ((string)(this["gymConnectionString"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-MAINEZ\\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Securi" +
-            "ty=True;Encrypt=False")]
-        public string GymBrosDBConnectionString {
-            get {
-                return ((string)(this["GymBrosDBConnectionString"]));
-            }
-        }
     }
 }

@@ -19,7 +19,9 @@ namespace DBapplication
             controllerObj = new Controller();
             // initally male is checked
             radioButtonMale.Checked = true;
-            
+            // fill member grid
+            dataGridView1.DataSource = controllerObj.getNamesMembers();
+            dataGridView1.Refresh();
             // fill members combobox
             DataTable members = controllerObj.getNamesMembers();
             memberCombo.DataSource = members;
@@ -44,16 +46,6 @@ namespace DBapplication
             string fname = txtFname.Text.Trim();
             string lname = txtLname.Text.Trim();
             string pass = txtPass.Text.Trim();
-            string ageText = txtAge.Text.Trim();
-            string contactInfoText = txtContactInfo.Text.Trim();
-            string emergencyContactText = txtEmergencyContact.Text.Trim();
-
-            // Validate empty textboxes
-            if (string.IsNullOrEmpty(fname) || string.IsNullOrEmpty(lname) || string.IsNullOrEmpty(pass) || string.IsNullOrEmpty(ageText) || string.IsNullOrEmpty(contactInfoText) || string.IsNullOrEmpty(emergencyContactText))
-            {
-                MessageBox.Show("Please fill in all the required fields.");
-                return;
-            }
             int age;
 
             // Validate age input
@@ -89,14 +81,9 @@ namespace DBapplication
             if (result == 1)
             {
                 MessageBox.Show("Member editted successfully!");
-                dataGridView1.DataSource = controllerObj.GetMemberInformation(Convert.ToInt32(memberCombo.SelectedValue));
+                dataGridView1.DataSource = controllerObj.getNamesMembers();
                 dataGridView1.Refresh();
-                DataTable members = controllerObj.getNamesMembers();
-                memberCombo.DataSource = members;
-                memberCombo.ValueMember = "User_ID";
-                memberCombo.DisplayMember = "Fname";
                 memberCombo.Refresh();
-
             }
             else
             {
