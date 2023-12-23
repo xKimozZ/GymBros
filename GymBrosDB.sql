@@ -276,4 +276,53 @@ CREATE TABLE Attends_Class (
 			ON UPDATE NO ACTION 
 );
 
+-- CHANGES --
+ALTER TABLE Staff DROP COLUMN Salary;
+ALTER TABLE Members DROP COLUMN Membership_Fees;
+ALTER TABLE Classes DROP COLUMN Price;
+ALTER TABLE Extra_Service DROP COLUMN Price;
+ALTER TABLE PT_Session DROP COLUMN Price;
+
+INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) VALUES
+('Galal', 'Mohamed', 1, 20, '123', 012, 012);
+
+INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) VALUES
+('John', 'JJJ', 1, 22, '1234', 015, 015);
+
+INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) VALUES
+('JJJ', 'James', 1, 21, '12345', 011, 011);
+
+INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) VALUES
+('Om', 'Sayed', 0, 101, '123456', 010, 010);
+
+INSERT INTO Staff (Staff_ID, Role) VALUES
+(101, 'Front Desk');
+
+INSERT INTO Staff (Staff_ID, Role) VALUES
+(104, 'Trainer');
+
+INSERT INTO Members(Member_ID, Renewal_Date) VALUES
+(100, '2024-1-1');
+
+INSERT INTO Members(Member_ID, Renewal_Date) VALUES
+(102, '2023-12-30');
+
+INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('Salary_Staff', 2000);
+INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('Salary_Admin', 4000);
+INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('Membership_fees', 500);
+INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('Class_payment', 2000);
+INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('Extra_Service_payment', 500);
+INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('PT_Session_payment', 1000);
+DELETE FROM Financial_Records;
+
+
+INSERT INTO Staff_Trans (Staff_ID, Transaction_Type, Transaction_Date) VALUES (101, 'Salary_Staff', '2023-12-13');
+INSERT INTO Staff_Trans (Staff_ID, Transaction_Type, Transaction_Date) VALUES (101, 'Salary_Staff', '2023-11-13');
+INSERT INTO Staff_Trans (Staff_ID, Transaction_Type, Transaction_Date) VALUES (101, 'Salary_Staff', '2024-11-13');
+INSERT INTO Staff_Trans (Staff_ID, Transaction_Type, Transaction_Date) VALUES (101, 'Salary_Staff', '2025-11-13');
+
+INSERT INTO Mem_Trans (Member_ID, Transaction_Type, Transaction_Date) VALUES (100, 'Membership_fees', '2023-12-13');
+INSERT INTO Mem_Trans (Member_ID, Transaction_Type, Transaction_Date) VALUES (102, 'Membership_fees', '2023-11-13');
+INSERT INTO Mem_Trans (Member_ID, Transaction_Type, Transaction_Date) VALUES (100, 'Membership_fees', '2024-11-13');
+INSERT INTO Mem_Trans (Member_ID, Transaction_Type, Transaction_Date) VALUES (102, 'Membership_fees', '2025-11-13');
 
