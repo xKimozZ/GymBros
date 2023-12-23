@@ -27,9 +27,9 @@ namespace DBapplication
 
         private void ShowContent(Control content)
         {
-            placeholderPanel.Controls.Clear(); // clear current content
+            placeholderPanel.Controls.Clear();      // clear current content
             placeholderPanel.Controls.Add(content); // add new
-            content.Dock = DockStyle.Fill; // fill placeholder area
+            content.Dock = DockStyle.Fill;          // fill placeholder area
             buttonBack.Enabled = true;
             buttonBack.Visible = true; 
         }
@@ -40,6 +40,26 @@ namespace DBapplication
             MainMenu.Show();
             buttonBack.Enabled = false;
             buttonBack.Visible = false;
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            //Application.Exit();
+            this.Close();
+        }
+
+        private void buttonReports_Click(object sender, EventArgs e)
+        {
+            ShowContent(new Reportuc());
+            placeholderPanel.Show();
+            MainMenu.Hide();
+        }
+
+        private void buttonAnnouncement_Click(object sender, EventArgs e)
+        {
+            ShowContent(new StaffAnnouncmentMenu());
+            placeholderPanel.Show();
+            MainMenu.Hide();
         }
     }
 }

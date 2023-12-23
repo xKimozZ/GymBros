@@ -168,7 +168,7 @@
             // 
             // AddMember
             // 
-            this.AddMember.Location = new System.Drawing.Point(324, 342);
+            this.AddMember.Location = new System.Drawing.Point(134, 331);
             this.AddMember.Name = "AddMember";
             this.AddMember.Size = new System.Drawing.Size(155, 51);
             this.AddMember.TabIndex = 34;
@@ -179,11 +179,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(562, 259);
+            this.dataGridView1.Location = new System.Drawing.Point(403, 270);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(237, 157);
+            this.dataGridView1.Size = new System.Drawing.Size(381, 157);
             this.dataGridView1.TabIndex = 35;
             // 
             // radioButtonMale

@@ -20,7 +20,7 @@ namespace DBapplication
             // initally male is checked
             radioButtonMale.Checked = true;
             // fill member grid
-            dataGridView1.DataSource = controllerObj.getNamesMembers();
+            dataGridView1.DataSource = controllerObj.getAllMembers();
             dataGridView1.Refresh();
 
           
@@ -38,10 +38,21 @@ namespace DBapplication
             string fname = txtFname.Text.Trim();
             string lname = txtLname.Text.Trim();
             string pass = txtPass.Text.Trim();
+            string ageText = txtAge.Text.Trim();
+            string contactInfoText = txtContactInfo.Text.Trim();
+            string emergencyContactText = txtEmergencyContact.Text.Trim();
+
+            // Validate empty textboxes
+            if (string.IsNullOrEmpty(fname) || string.IsNullOrEmpty(lname) || string.IsNullOrEmpty(pass) || string.IsNullOrEmpty(ageText) || string.IsNullOrEmpty(contactInfoText) || string.IsNullOrEmpty(emergencyContactText))
+            {
+                MessageBox.Show("Please fill in all the required fields.");
+                return;
+            }
+
             int age;
 
             // Validate age input
-            if (!int.TryParse(txtAge.Text, out age) || age < 16)
+            if (!int.TryParse(ageText, out age) || age < 16)
             {
                 MessageBox.Show("Invalid age. Please enter a valid age greater than or equal to 16.");
                 return;
@@ -51,14 +62,14 @@ namespace DBapplication
             int emergencyContact;
 
             // Validate contactInfo input
-            if (!int.TryParse(txtContactInfo.Text, out contactInfo))
+            if (!int.TryParse(contactInfoText, out contactInfo))
             {
                 MessageBox.Show("Invalid contact information. Please enter a valid number.");
                 return;
             }
 
             // Validate emergencyContact input
-            if (!int.TryParse(txtEmergencyContact.Text, out emergencyContact))
+            if (!int.TryParse(emergencyContactText, out emergencyContact))
             {
                 MessageBox.Show("Invalid emergency contact information. Please enter a valid number.");
                 return;
@@ -80,6 +91,7 @@ namespace DBapplication
             {
                 MessageBox.Show("Error adding member. Please check the input and try again.");
             }
+
         }
 
     }
