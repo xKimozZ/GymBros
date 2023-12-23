@@ -46,7 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRecheck = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -210,27 +210,27 @@
             this.label1.TabIndex = 58;
             this.label1.Text = "Edit Data";
             // 
-            // textBox1
+            // txtRecheck
             // 
-            this.textBox1.Location = new System.Drawing.Point(130, 214);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 22);
-            this.textBox1.TabIndex = 77;
+            this.txtRecheck.Location = new System.Drawing.Point(130, 214);
+            this.txtRecheck.Name = "txtRecheck";
+            this.txtRecheck.Size = new System.Drawing.Size(119, 22);
+            this.txtRecheck.TabIndex = 77;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(25, 217);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 16);
+            this.label9.Size = new System.Drawing.Size(59, 16);
             this.label9.TabIndex = 76;
-            this.label9.Text = "Again";
+            this.label9.Text = "Re-enter";
             // 
             // MemberData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRecheck);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.radioButtonFemale);
             this.Controls.Add(this.radioButtonMale);
@@ -278,7 +278,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRecheck;
         private System.Windows.Forms.Label label9;
     }
 }

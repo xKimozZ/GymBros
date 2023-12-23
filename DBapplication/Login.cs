@@ -51,14 +51,12 @@ namespace DBapplication
                         MessageBox.Show("Admin");
                         Staff staff = new Staff(); //temp until admin form is made
                         staff.Show();
-                        return;
                     }
                     else
                     {
                         MessageBox.Show(role);
                         Staff staff = new Staff();
                         staff.Show();
-                        return;
                     }
                 }
                 else
@@ -66,8 +64,8 @@ namespace DBapplication
                 MessageBox.Show("Member");
                 Member member = new Member(ID);
                 member.Show();
-                return;
                 }
+                this.Close();
             }
             else
             {

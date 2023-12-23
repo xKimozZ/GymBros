@@ -26,6 +26,7 @@ namespace DBapplication
             string fname = txtFname.Text.Trim();
             string lname = txtLname.Text.Trim();
             string pass = txtPass.Text.Trim();
+            string rechk = txtRecheck.Text.Trim();
             int age;
 
             // Validate age input
@@ -52,7 +53,15 @@ namespace DBapplication
                 return;
             }
 
+            // Validate password input
+            if (rechk != pass)
+            {
+                MessageBox.Show("The passwords you entered are not the same.");
+                return;
+            }
+
             int gender = (radioButtonMale.Checked) ? 1 : 0; // Assuming you have radio buttons for gender
+            
             int SessionID = 101; //Temporary.
 
             // Call the EditMember function with validated input
