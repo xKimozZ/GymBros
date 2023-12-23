@@ -218,6 +218,7 @@ namespace DBapplication
             return dbMan.ExecuteNonQuery(userUpdateQuery);
         }
 
+
         public int UpdateStaffRole(int staffId, string newRole)
         {
             string staffUpdateQuery = $"UPDATE Staff " +
@@ -241,6 +242,70 @@ namespace DBapplication
 
             return dbMan.ExecuteNonQuery(staffUpdateQuery);
         }
+
+        public DataTable GetStaffOwnTransactions(string date1, string date2, int id)
+        {
+            string query;
+            if (date1 == "")
+            {
+                query = $"SELECT FR.Transaction_Type AS Type, FR.Transaction_Amount AS Amount, " +
+                        $"ST.Transaction_Date AS Date " +
+                        $"FROM Financial_Records AS FR, Staff_Trans AS ST " +
+                        $"WHERE ST.Transaction_Date <= '{date2}' AND " +
+                        $"ST.Staff_ID = {id} AND FR.Transaction_Type = ST.Transaction_Type;";
+            }
+            else if (date2 == "")
+            {
+                query = $"SELECT FR.Transaction_Type AS Type, FR.Transaction_Amount AS Amount, " +
+                    $"ST.Transaction_Date AS Date " +
+                    $"FROM Financial_Records AS FR, Staff_Trans AS ST " +
+                    $"WHERE ST.Transaction_Date >= '{date1}' AND " +
+                    $"ST.Staff_ID = {id} AND FR.Transaction_Type = ST.Transaction_Type;";
+            }
+            else
+            {
+                query = $"SELECT FR.Transaction_Type AS Type, FR.Transaction_Amount AS Amount, " +
+                    $"ST.Transaction_Date AS Date " +
+                    $"FROM Financial_Records AS FR, Staff_Trans AS ST " +
+                    $"WHERE ST.Transaction_Date >= '{date1}' AND ST.Transaction_Date <= '{date2}' AND " +
+                    $"ST.Staff_ID = {id} AND FR.Transaction_Type = ST.Transaction_Type;";
+            }
+
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetMemberTransactions(string date1, string date2, int id)
+        {
+            string query;
+            if (date1 == "")
+            {
+                query = $"SELECT FR.Transaction_Type AS Type, FR.Transaction_Amount AS Amount, " +
+                        $"MT.Transaction_Date AS Date " +
+                        $"FROM Financial_Records AS FR, Mem_Trans AS MT " +
+                        $"WHERE MT.Transaction_Date <= '{date2}' AND " +
+                        $"MT.Member_ID = {id} AND FR.Transaction_Type = MT.Transaction_Type;";
+            }
+            else if (date2 == "")
+            {
+                query = $"SELECT FR.Transaction_Type AS Type, FR.Transaction_Amount AS Amount, " +
+                        $"MT.Transaction_Date AS Date " +
+                        $"FROM Financial_Records AS FR, Mem_Trans AS MT " +
+                        $"WHERE MT.Transaction_Date >= '{date1}' AND " +
+                        $"MT.Member_ID = {id} AND FR.Transaction_Type = MT.Transaction_Type;";
+            }
+            else
+            {
+                query = $"SELECT FR.Transaction_Type AS Type, FR.Transaction_Amount AS Amount, " +
+                    $"MT.Transaction_Date AS Date " +
+                    $"FROM Financial_Records AS FR, Mem_Trans AS MT " +
+                    $"WHERE MT.Transaction_Date >= '{date1}' AND MT.Transaction_Date <= '{date2}' AND " +
+                    $"MT.Member_ID = {id} AND FR.Transaction_Type = MT.Transaction_Type;";
+            }
+
+            return dbMan.ExecuteReader(query);
+        }
+
+
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
