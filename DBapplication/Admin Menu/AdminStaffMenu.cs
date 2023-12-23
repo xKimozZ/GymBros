@@ -116,7 +116,7 @@ namespace DBapplication
             string lname = txtLname.Text.Trim();
             string pass = txtPass.Text.Trim();
             int age;
-            int Salary;
+            //int Salary;
             string Role = comboBoxRole2.SelectedItem.ToString();
 
             // Validate age input
@@ -125,11 +125,11 @@ namespace DBapplication
                 MessageBox.Show("Invalid age. Please enter a valid age greater than or equal to 18.");
                 return;
             }
-            if (!int.TryParse(textBoxAdSalary.Text, out Salary))
-            {
-                MessageBox.Show("Invalid Salary. Please enter a valid number.");
-                return;
-            }
+            //if (!int.TryParse(textBoxAdSalary.Text, out Salary))
+            //{
+            //    MessageBox.Show("Invalid Salary. Please enter a valid number.");
+            //    return;
+            //}
             int contactInfo;
             int emergencyContact;
 
@@ -150,7 +150,7 @@ namespace DBapplication
             int gender = (radioButtonMale.Checked) ? 1 : 0; // Assuming you have radio buttons for gender
 
             // Call the AddMember function with validated input
-            int result = controllerObj.AddStaff(fname, lname, pass, age, contactInfo, emergencyContact, gender, Salary, Role);
+            int result = controllerObj.AddStaff(fname, lname, pass, age, contactInfo, emergencyContact, gender, Role);
 
             // Check the result and provide appropriate feedback to the user
             if (result == 1)
@@ -214,27 +214,27 @@ namespace DBapplication
 
         private void buttonSalary_Click(object sender, EventArgs e)
         {
-            controllerObj = new Controller();
-            if (comboBoxID.Text == "")   //validation part
-            {
-                MessageBox.Show("No Staff selected");
-                return;
-            }
-            int Salary;
-            if (!int.TryParse(textBoxSalary.Text, out Salary))
-            {
-                MessageBox.Show("Invalid Salary input. Please enter a valid number.");
-                return;
-            }
-            int result = controllerObj.UpdateStaffSalary(Convert.ToInt32(comboBoxID.Text), Salary);
-            if (result == 1)
-            {
-                MessageBox.Show("Salary changed successfully!");
-            }
-            else
-            {
-                MessageBox.Show("Error changing salary. Please check the input and try again.");
-            }
+        //    controllerObj = new Controller();
+        //    if (comboBoxID.Text == "")   //validation part
+        //    {
+        //        MessageBox.Show("No Staff selected");
+        //        return;
+        //    }
+        //    int Salary;
+        //    if (!int.TryParse(textBoxSalary.Text, out Salary))
+        //    {
+        //        MessageBox.Show("Invalid Salary input. Please enter a valid number.");
+        //        return;
+        //    }
+        //    int result = controllerObj.UpdateStaffSalary(Convert.ToInt32(comboBoxID.Text), Salary);
+        //    if (result == 1)
+        //    {
+        //        MessageBox.Show("Salary changed successfully!");
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Error changing salary. Please check the input and try again.");
+        //    }
         }
 
         private void buttonDel_Click(object sender, EventArgs e)

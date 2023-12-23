@@ -48,8 +48,6 @@
             this.panelAdd = new System.Windows.Forms.Panel();
             this.comboBoxRole2 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBoxAdSalary = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -259,8 +257,6 @@
             // 
             this.panelAdd.Controls.Add(this.comboBoxRole2);
             this.panelAdd.Controls.Add(this.label10);
-            this.panelAdd.Controls.Add(this.textBoxAdSalary);
-            this.panelAdd.Controls.Add(this.label9);
             this.panelAdd.Controls.Add(this.radioButtonFemale);
             this.panelAdd.Controls.Add(this.radioButtonMale);
             this.panelAdd.Controls.Add(this.label4);
@@ -286,7 +282,7 @@
             // 
             this.comboBoxRole2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRole2.FormattingEnabled = true;
-            this.comboBoxRole2.Location = new System.Drawing.Point(346, 189);
+            this.comboBoxRole2.Location = new System.Drawing.Point(346, 152);
             this.comboBoxRole2.Name = "comboBoxRole2";
             this.comboBoxRole2.Size = new System.Drawing.Size(90, 21);
             this.comboBoxRole2.TabIndex = 53;
@@ -294,30 +290,12 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(283, 193);
+            this.label10.Location = new System.Drawing.Point(283, 157);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(29, 13);
             this.label10.TabIndex = 52;
             this.label10.Text = "Role";
-            // 
-            // textBoxAdSalary
-            // 
-            this.textBoxAdSalary.Location = new System.Drawing.Point(93, 190);
-            this.textBoxAdSalary.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxAdSalary.Name = "textBoxAdSalary";
-            this.textBoxAdSalary.Size = new System.Drawing.Size(90, 20);
-            this.textBoxAdSalary.TabIndex = 51;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(14, 193);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 13);
-            this.label9.TabIndex = 50;
-            this.label9.Text = "Salary";
             // 
             // radioButtonFemale
             // 
@@ -522,15 +500,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.Controls.Add(this.panelManager);
             this.Controls.Add(this.labelLname);
             this.Controls.Add(this.panelselect);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.comboBoxID);
             this.Controls.Add(this.panelStaffdel);
-            this.Controls.Add(this.panelManager);
-            this.Controls.Add(this.panelAdd);
             this.Controls.Add(this.panelAdAdmin);
+            this.Controls.Add(this.panelAdd);
             this.DoubleBuffered = true;
             this.Name = "AdminStaffMenu";
             this.Size = new System.Drawing.Size(719, 376);
@@ -588,8 +566,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxRole2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBoxAdSalary;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label labelLname;
     }
 }

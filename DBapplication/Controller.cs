@@ -195,13 +195,13 @@ namespace DBapplication
             dbMan.ExecuteNonQuery(userInsertQuery);
             return dbMan.ExecuteNonQuery(memberInsertQuery);
         }
-        public int AddStaff(string Fname, string Lname, string pass, int age, int contactInfo, int emergencyContact, int gender, int Salary, string Role)
+        public int AddStaff(string Fname, string Lname, string pass, int age, int contactInfo, int emergencyContact, int gender, string Role)
         {
             string userInsertQuery = $"INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) " +
                             $"VALUES ('{Fname}', '{Lname}', {gender}, {age}, '{pass}', {emergencyContact}, {contactInfo});";
 
-            string StaffInsertQuery = $"INSERT INTO Staff (Staff_ID, Salary, Role) " +
-                                       $"VALUES (SCOPE_IDENTITY(), {Salary}, '{Role}');";
+            string StaffInsertQuery = $"INSERT INTO Staff (Staff_ID, Role) " +
+                                       $"VALUES (SCOPE_IDENTITY(), '{Role}');";
 
         
             dbMan.ExecuteNonQuery(userInsertQuery);
@@ -226,14 +226,14 @@ namespace DBapplication
 
             return dbMan.ExecuteNonQuery(staffUpdateQuery);
         }
-        public int UpdateStaffSalary(int staffId, int Salary)
-        {
-            string staffUpdateQuery = $"UPDATE Staff " +
-                                      $"SET Salary = '{Salary}' " +
-                                      $"WHERE Staff_ID = {staffId};";
+        //public int UpdateStaffSalary(int staffId, int Salary)
+        //{
+        //    string staffUpdateQuery = $"UPDATE Staff " +
+        //                              $"SET Salary = '{Salary}' " +
+        //                              $"WHERE Staff_ID = {staffId};";
 
-            return dbMan.ExecuteNonQuery(staffUpdateQuery);
-        }
+        //    return dbMan.ExecuteNonQuery(staffUpdateQuery);
+        //}
         public int DeleteUser(int userid)
         {
             string staffUpdateQuery = $"Delete Users " +
