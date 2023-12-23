@@ -32,12 +32,13 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.placeholderPanel = new System.Windows.Forms.Panel();
             this.MainMenu = new System.Windows.Forms.Panel();
+            this.PTButton = new System.Windows.Forms.Button();
+            this.Announcment = new System.Windows.Forms.Button();
+            this.EditStaffprofile = new System.Windows.Forms.Button();
             this.EditMember = new System.Windows.Forms.Button();
             this.AddMember = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.EditStaffprofile = new System.Windows.Forms.Button();
-            this.Announcment = new System.Windows.Forms.Button();
-            this.PTButton = new System.Windows.Forms.Button();
+            this.trans = new System.Windows.Forms.Button();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +63,7 @@
             // 
             // MainMenu
             // 
+            this.MainMenu.Controls.Add(this.trans);
             this.MainMenu.Controls.Add(this.PTButton);
             this.MainMenu.Controls.Add(this.Announcment);
             this.MainMenu.Controls.Add(this.EditStaffprofile);
@@ -73,6 +75,35 @@
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(796, 286);
             this.MainMenu.TabIndex = 5;
+            // 
+            // PTButton
+            // 
+            this.PTButton.Location = new System.Drawing.Point(634, 101);
+            this.PTButton.Name = "PTButton";
+            this.PTButton.Size = new System.Drawing.Size(141, 40);
+            this.PTButton.TabIndex = 8;
+            this.PTButton.Text = "Personal Training";
+            this.PTButton.UseVisualStyleBackColor = true;
+            // 
+            // Announcment
+            // 
+            this.Announcment.Location = new System.Drawing.Point(479, 102);
+            this.Announcment.Name = "Announcment";
+            this.Announcment.Size = new System.Drawing.Size(126, 41);
+            this.Announcment.TabIndex = 7;
+            this.Announcment.Text = "Announcment";
+            this.Announcment.UseVisualStyleBackColor = true;
+            this.Announcment.Click += new System.EventHandler(this.Announcment_Click);
+            // 
+            // EditStaffprofile
+            // 
+            this.EditStaffprofile.Location = new System.Drawing.Point(316, 101);
+            this.EditStaffprofile.Name = "EditStaffprofile";
+            this.EditStaffprofile.Size = new System.Drawing.Size(126, 41);
+            this.EditStaffprofile.TabIndex = 6;
+            this.EditStaffprofile.Text = "Edit My Profile";
+            this.EditStaffprofile.UseVisualStyleBackColor = true;
+            this.EditStaffprofile.Click += new System.EventHandler(this.EditStaffprofile_Click);
             // 
             // EditMember
             // 
@@ -104,34 +135,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Staff Menu";
             // 
-            // EditStaffprofile
+            // trans
             // 
-            this.EditStaffprofile.Location = new System.Drawing.Point(316, 101);
-            this.EditStaffprofile.Name = "EditStaffprofile";
-            this.EditStaffprofile.Size = new System.Drawing.Size(126, 41);
-            this.EditStaffprofile.TabIndex = 6;
-            this.EditStaffprofile.Text = "Edit My Profile";
-            this.EditStaffprofile.UseVisualStyleBackColor = true;
-            this.EditStaffprofile.Click += new System.EventHandler(this.EditStaffprofile_Click);
-            // 
-            // Announcment
-            // 
-            this.Announcment.Location = new System.Drawing.Point(479, 102);
-            this.Announcment.Name = "Announcment";
-            this.Announcment.Size = new System.Drawing.Size(126, 41);
-            this.Announcment.TabIndex = 7;
-            this.Announcment.Text = "Announcment";
-            this.Announcment.UseVisualStyleBackColor = true;
-            this.Announcment.Click += new System.EventHandler(this.Announcment_Click);
-            // 
-            // PTButton
-            // 
-            this.PTButton.Location = new System.Drawing.Point(634, 101);
-            this.PTButton.Name = "PTButton";
-            this.PTButton.Size = new System.Drawing.Size(141, 40);
-            this.PTButton.TabIndex = 8;
-            this.PTButton.Text = "Personal Training";
-            this.PTButton.UseVisualStyleBackColor = true;
+            this.trans.Location = new System.Drawing.Point(12, 207);
+            this.trans.Name = "trans";
+            this.trans.Size = new System.Drawing.Size(115, 40);
+            this.trans.TabIndex = 9;
+            this.trans.Text = "Transactions";
+            this.trans.UseVisualStyleBackColor = true;
+            this.trans.Click += new System.EventHandler(this.trans_Click);
             // 
             // Staff
             // 
@@ -161,6 +173,7 @@
         private System.Windows.Forms.Button EditStaffprofile;
         private System.Windows.Forms.Button PTButton;
         private System.Windows.Forms.Button Announcment;
+        private System.Windows.Forms.Button trans;
     }
 }
 

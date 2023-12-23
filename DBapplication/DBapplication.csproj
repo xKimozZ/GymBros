@@ -115,6 +115,12 @@
     <Compile Include="StaffAnnouncmentMenu.Designer.cs">
       <DependentUpon>StaffAnnouncmentMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Staff_Transactions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Staff_Transactions.Designer.cs">
+      <DependentUpon>Staff_Transactions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     <EmbeddedResource Include="StaffAnnouncmentMenu.resx">
       <DependentUpon>StaffAnnouncmentMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Staff_Transactions.resx">
+      <DependentUpon>Staff_Transactions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,16 +191,16 @@
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -78,5 +78,12 @@ namespace DBapplication
             placeholderPanel.Show();
             MainMenu.Hide();
         }
+
+        private void trans_Click(object sender, EventArgs e)
+        {
+            ShowContent(new Staff_Transactions());
+            placeholderPanel.Show();
+            MainMenu.Hide();
+        }
     }
 }
