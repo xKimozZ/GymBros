@@ -38,9 +38,29 @@ namespace DBapplication
             }
             DataTable dt = new DataTable();
             dt = controllerObj.LoginAttempt(Convert.ToInt32(textBox1.Text), textBox2.Text);
+            if (dt == null)
+            {
+                DataTable zby = new DataTable();
+                zby = controllerObj.getAllStaff();
+            }
             if (dt != null)
             {
-                MessageBox.Show("Success");
+                int ID = dt.Rows[0].Field<int>("User_ID");
+                DataTable pass = new DataTable();
+                pass = controllerObj.LoginStaff(ID);
+                if (pass != null)
+                {
+                    MessageBox.Show("Staff");
+                    Staff staff = new Staff();
+                    staff.Show();
+                    return;
+                }
+                else
+                { 
+                MessageBox.Show("Member");
+
+                return;
+                }
             }
             else
             {

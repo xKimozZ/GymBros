@@ -80,6 +80,17 @@ namespace DBapplication
             string query = $"SELECT User_ID FROM Users WHERE User_ID = '{UID}' AND Account_Pass = '{pass}';";
             return dbMan.ExecuteReader(query);
         }
+
+        public DataTable LoginStaff(int UID)
+        {
+            string query = $"SELECT Staff_ID FROM Staff WHERE Staff_ID = '{UID}';";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable LoginMember(int UID)
+        {
+            string query = $"SELECT Member_ID FROM Member WHERE Member_ID = '{UID}';";
+            return dbMan.ExecuteReader(query);
+        }
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
