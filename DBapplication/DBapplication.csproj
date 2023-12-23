@@ -143,6 +143,12 @@
     <Compile Include="StaffUpdateBody.Designer.cs">
       <DependentUpon>StaffUpdateBody.cs</DependentUpon>
     </Compile>
+    <Compile Include="Staff_Transactions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Staff_Transactions.Designer.cs">
+      <DependentUpon>Staff_Transactions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
