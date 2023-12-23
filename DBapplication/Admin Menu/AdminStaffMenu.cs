@@ -245,7 +245,7 @@ namespace DBapplication
                 MessageBox.Show("No Staff selected");
                 return;
             }
-            int result = controllerObj.DeleteStaff(Convert.ToInt32(comboBoxID.Text));
+            int result = controllerObj.DeleteUser(Convert.ToInt32(comboBoxID.Text));
             if (result == 1)
             {
                 MessageBox.Show("Staff deleted successfully!");

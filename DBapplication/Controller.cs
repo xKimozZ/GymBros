@@ -125,8 +125,6 @@ namespace DBapplication
 
         }
 
-
-
         public DataTable getNamesMembers()
         {
             string query = $"SELECT User_ID, Fname FROM Users INNER JOIN Members ON Users.User_ID = Members.Member_ID;";
@@ -170,10 +168,10 @@ namespace DBapplication
         public DataTable GetStaffAnnouncements()
         {
             string query = @"
-        SELECT Announcements.Message_Text, Staff.Staff_ID, Users.Fname + ' ' + Users.Lname AS SenderName, Staff.Role, Announcements.Message_Date
-        FROM Announcements
-        JOIN Staff ON Announcements.Sender_ID = Staff.Staff_ID
-        JOIN Users ON Announcements.Sender_ID = Users.User_ID";
+            SELECT Announcements.Message_Text, Staff.Staff_ID, Users.Fname + ' ' + Users.Lname AS SenderName, Staff.Role, Announcements.Message_Date
+            FROM Announcements
+            JOIN Staff ON Announcements.Sender_ID = Staff.Staff_ID
+            JOIN Users ON Announcements.Sender_ID = Users.User_ID";
 
             return dbMan.ExecuteReader(query);
         }
@@ -236,10 +234,10 @@ namespace DBapplication
 
             return dbMan.ExecuteNonQuery(staffUpdateQuery);
         }
-        public int DeleteStaff(int staffId)
+        public int DeleteUser(int userid)
         {
             string staffUpdateQuery = $"Delete Users " +
-                                      $"WHERE User_ID = {staffId};";
+                                      $"WHERE User_ID = {userid};";
 
             return dbMan.ExecuteNonQuery(staffUpdateQuery);
         }

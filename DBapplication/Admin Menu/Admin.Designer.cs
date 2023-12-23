@@ -81,17 +81,18 @@
             // buttonAnnouncement
             // 
             this.buttonAnnouncement.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonAnnouncement.Location = new System.Drawing.Point(21, 318);
+            this.buttonAnnouncement.Location = new System.Drawing.Point(22, 303);
             this.buttonAnnouncement.Name = "buttonAnnouncement";
             this.buttonAnnouncement.Size = new System.Drawing.Size(109, 55);
             this.buttonAnnouncement.TabIndex = 5;
             this.buttonAnnouncement.Text = "Announcements";
             this.buttonAnnouncement.UseVisualStyleBackColor = false;
+            this.buttonAnnouncement.Click += new System.EventHandler(this.buttonAnnouncement_Click);
             // 
             // buttonEquipment
             // 
             this.buttonEquipment.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonEquipment.Location = new System.Drawing.Point(21, 167);
+            this.buttonEquipment.Location = new System.Drawing.Point(22, 152);
             this.buttonEquipment.Name = "buttonEquipment";
             this.buttonEquipment.Size = new System.Drawing.Size(109, 46);
             this.buttonEquipment.TabIndex = 4;
@@ -101,7 +102,7 @@
             // buttonStaff
             // 
             this.buttonStaff.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonStaff.Location = new System.Drawing.Point(21, 63);
+            this.buttonStaff.Location = new System.Drawing.Point(22, 48);
             this.buttonStaff.Name = "buttonStaff";
             this.buttonStaff.Size = new System.Drawing.Size(109, 46);
             this.buttonStaff.TabIndex = 3;
@@ -112,7 +113,7 @@
             // buttonClasses
             // 
             this.buttonClasses.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonClasses.Location = new System.Drawing.Point(21, 271);
+            this.buttonClasses.Location = new System.Drawing.Point(22, 256);
             this.buttonClasses.Name = "buttonClasses";
             this.buttonClasses.Size = new System.Drawing.Size(109, 46);
             this.buttonClasses.TabIndex = 2;
@@ -122,7 +123,7 @@
             // buttonExtra
             // 
             this.buttonExtra.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonExtra.Location = new System.Drawing.Point(21, 219);
+            this.buttonExtra.Location = new System.Drawing.Point(22, 204);
             this.buttonExtra.Name = "buttonExtra";
             this.buttonExtra.Size = new System.Drawing.Size(109, 46);
             this.buttonExtra.TabIndex = 1;
@@ -132,7 +133,7 @@
             // buttonReports
             // 
             this.buttonReports.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonReports.Location = new System.Drawing.Point(21, 115);
+            this.buttonReports.Location = new System.Drawing.Point(22, 100);
             this.buttonReports.Name = "buttonReports";
             this.buttonReports.Size = new System.Drawing.Size(109, 46);
             this.buttonReports.TabIndex = 0;
