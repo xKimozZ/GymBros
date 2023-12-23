@@ -126,9 +126,15 @@ namespace DBapplication
         }
 
 
+
         public DataTable getNamesMembers()
         {
             string query = $"SELECT User_ID, Fname FROM Users INNER JOIN Members ON Users.User_ID = Members.Member_ID;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable getNamesStaff()
+        {
+            string query = $"SELECT Staff_ID, Lname FROM Users INNER JOIN Staff ON Users.User_ID = Staff.Staff_ID;";
             return dbMan.ExecuteReader(query);
         }
         public int AddPrivateSession(int memberId, int staffId, DateTime sessionDate, int price, bool didAttend)
@@ -179,11 +185,7 @@ namespace DBapplication
             VALUES (GETDATE(), '{messageText}', {senderId});";
             return dbMan.ExecuteNonQuery(query);
         }
-        public DataTable getNamesStaff()
-        {
-            string query = $"SELECT User_ID, Fname FROM Users INNER JOIN Staff ON Users.User_ID = Staff.Staff_ID;";
-            return dbMan.ExecuteReader(query);
-        }
+
         public int AddMember(string Fname , string Lname , string pass,int age, int contactInfo , int emergencyContact, int gender)
         {
             string userInsertQuery = $"INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) " +
@@ -195,7 +197,18 @@ namespace DBapplication
             dbMan.ExecuteNonQuery(userInsertQuery);
             return dbMan.ExecuteNonQuery(memberInsertQuery);
         }
+        public int AddStaff(string Fname, string Lname, string pass, int age, int contactInfo, int emergencyContact, int gender, int Salary, string Role)
+        {
+            string userInsertQuery = $"INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) " +
+                            $"VALUES ('{Fname}', '{Lname}', {gender}, {age}, '{pass}', {emergencyContact}, {contactInfo});";
 
+            string StaffInsertQuery = $"INSERT INTO Staff (Staff_ID, Salary, Role) " +
+                                       $"VALUES (SCOPE_IDENTITY(), {Salary}, '{Role}');";
+
+        
+            dbMan.ExecuteNonQuery(userInsertQuery);
+            return dbMan.ExecuteNonQuery(StaffInsertQuery);
+        }
         public int UpdateUser(int userId, string newFname, string newLname, string newPass, int newAge, int newContactInfo, int newEmergencyContact, int newGender)
         {
            
@@ -206,11 +219,34 @@ namespace DBapplication
 
             return dbMan.ExecuteNonQuery(userUpdateQuery);
         }
+
+        public int UpdateStaffRole(int staffId, string newRole)
+        {
+            string staffUpdateQuery = $"UPDATE Staff " +
+                                      $"SET Role = '{newRole}' " +
+                                      $"WHERE Staff_ID = {staffId};";
+
+            return dbMan.ExecuteNonQuery(staffUpdateQuery);
+        }
+        public int UpdateStaffSalary(int staffId, int Salary)
+        {
+            string staffUpdateQuery = $"UPDATE Staff " +
+                                      $"SET Salary = '{Salary}' " +
+                                      $"WHERE Staff_ID = {staffId};";
+
+            return dbMan.ExecuteNonQuery(staffUpdateQuery);
+        }
+        public int DeleteStaff(int staffId)
+        {
+            string staffUpdateQuery = $"Delete Users " +
+                                      $"WHERE User_ID = {staffId};";
+
+            return dbMan.ExecuteNonQuery(staffUpdateQuery);
+        }
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
         }
-
 
     }
 }
