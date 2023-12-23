@@ -63,9 +63,9 @@
             this.MainMenu.Controls.Add(this.buttonClasses);
             this.MainMenu.Controls.Add(this.buttonExtra);
             this.MainMenu.Controls.Add(this.buttonReports);
-            this.MainMenu.Location = new System.Drawing.Point(33, 26);
+            this.MainMenu.Location = new System.Drawing.Point(0, 26);
             this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(719, 376);
+            this.MainMenu.Size = new System.Drawing.Size(799, 376);
             this.MainMenu.TabIndex = 0;
             // 
             // label2
@@ -158,9 +158,9 @@
             // 
             // placeholderPanel
             // 
-            this.placeholderPanel.Location = new System.Drawing.Point(33, 27);
+            this.placeholderPanel.Location = new System.Drawing.Point(0, 27);
             this.placeholderPanel.Name = "placeholderPanel";
-            this.placeholderPanel.Size = new System.Drawing.Size(719, 375);
+            this.placeholderPanel.Size = new System.Drawing.Size(799, 375);
             this.placeholderPanel.TabIndex = 3;
             // 
             // Admin
@@ -169,7 +169,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(798, 460);
+            this.ClientSize = new System.Drawing.Size(798, 446);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.MainMenu);

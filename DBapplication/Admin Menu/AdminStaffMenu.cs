@@ -32,14 +32,14 @@ namespace DBapplication
             labelLname.Visible = false;
             panelStaffdel.Hide();
             panelManager.Hide();
-            panelAdAdmin.Hide();
+            panelAdminPay.Hide();
             panelAdd.Hide();
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)
         {
             panelManager.Hide();
-            panelAdAdmin.Hide();
+            panelAdminPay.Hide();
             panelAdd.Hide();
             panelStaffdel.Show();
 
@@ -55,7 +55,7 @@ namespace DBapplication
         private void buttonProfile_Click(object sender, EventArgs e)
         {
             panelStaffdel.Hide();
-            panelAdAdmin.Hide();
+            panelAdminPay.Hide();
             panelAdd.Hide();
             panelManager.Show();
 
@@ -68,27 +68,13 @@ namespace DBapplication
             panelselect.Top = buttonProfile.Top;
         }
 
-        private void buttonAdmin_Click(object sender, EventArgs e)
-        {
-            panelStaffdel.Hide();
-            panelManager.Hide();
-            panelAdd.Hide();
-            panelAdAdmin.Show();
 
-            labelLname.Visible = true;
-            labelID.Visible = true;
-            comboBoxID.Visible = true;
-            comboBoxID.Enabled = true;
-
-            panelselect.Visible = true;
-            panelselect.Top = buttonAdmin.Top;
-        }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             panelStaffdel.Hide();
             panelManager.Hide();
-            panelAdAdmin.Hide();
+            panelAdminPay.Hide();
             panelAdd.Show();
 
             labelID.Visible = false;
@@ -212,30 +198,6 @@ namespace DBapplication
             }
         }
 
-        private void buttonSalary_Click(object sender, EventArgs e)
-        {
-        //    controllerObj = new Controller();
-        //    if (comboBoxID.Text == "")   //validation part
-        //    {
-        //        MessageBox.Show("No Staff selected");
-        //        return;
-        //    }
-        //    int Salary;
-        //    if (!int.TryParse(textBoxSalary.Text, out Salary))
-        //    {
-        //        MessageBox.Show("Invalid Salary input. Please enter a valid number.");
-        //        return;
-        //    }
-        //    int result = controllerObj.UpdateStaffSalary(Convert.ToInt32(comboBoxID.Text), Salary);
-        //    if (result == 1)
-        //    {
-        //        MessageBox.Show("Salary changed successfully!");
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Error changing salary. Please check the input and try again.");
-        //    }
-        }
 
         private void buttonDel_Click(object sender, EventArgs e)
         {
@@ -254,6 +216,27 @@ namespace DBapplication
             {
                 MessageBox.Show("Error deleting Staff. Please check the input and try again.");
             }
+        }
+
+        private void buttonPay_Click(object sender, EventArgs e)
+        {
+            panelStaffdel.Hide();
+            panelManager.Hide();
+            panelAdd.Hide();
+            panelAdminPay.Show();
+
+            labelLname.Visible = true;
+            labelID.Visible = true;
+            comboBoxID.Visible = true;
+            comboBoxID.Enabled = true;
+
+            panelselect.Visible = true;
+            panelselect.Top = buttonPay.Top;
+        }
+
+        private void buttonPaypanel_Click(object sender, EventArgs e)
+        {
+            //Add Pay Functionality
         }
     }
 }
