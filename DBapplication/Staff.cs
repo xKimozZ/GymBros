@@ -79,15 +79,9 @@ namespace DBapplication
             MainMenu.Hide();
         }
 
-
         private void PTButton_Click(object sender, EventArgs e)
         {
             ShowContent(new PersonaltrainingStaffMenu());
-
-        private void trans_Click(object sender, EventArgs e)
-        {
-            ShowContent(new Staff_Transactions());
-
             placeholderPanel.Show();
             MainMenu.Hide();
         }

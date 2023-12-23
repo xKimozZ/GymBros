@@ -38,9 +38,6 @@
             this.EditMember = new System.Windows.Forms.Button();
             this.AddMember = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-
-            this.trans = new System.Windows.Forms.Button();
-
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +62,6 @@
             // 
             // MainMenu
             // 
-            this.MainMenu.Controls.Add(this.trans);
             this.MainMenu.Controls.Add(this.PTButton);
             this.MainMenu.Controls.Add(this.Announcment);
             this.MainMenu.Controls.Add(this.EditStaffprofile);
@@ -86,9 +82,7 @@
             this.PTButton.TabIndex = 8;
             this.PTButton.Text = "Personal Training";
             this.PTButton.UseVisualStyleBackColor = true;
-
             this.PTButton.Click += new System.EventHandler(this.PTButton_Click);
-
             // 
             // Announcment
             // 
@@ -140,16 +134,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Staff Menu";
             // 
-            // trans
-            // 
-            this.trans.Location = new System.Drawing.Point(12, 207);
-            this.trans.Name = "trans";
-            this.trans.Size = new System.Drawing.Size(115, 40);
-            this.trans.TabIndex = 9;
-            this.trans.Text = "Transactions";
-            this.trans.UseVisualStyleBackColor = true;
-            this.trans.Click += new System.EventHandler(this.trans_Click);
-            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -178,7 +162,6 @@
         private System.Windows.Forms.Button EditStaffprofile;
         private System.Windows.Forms.Button PTButton;
         private System.Windows.Forms.Button Announcment;
-        private System.Windows.Forms.Button trans;
     }
 }
 
