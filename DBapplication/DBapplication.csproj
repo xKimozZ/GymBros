@@ -119,7 +119,6 @@
     <Compile Include="StaffAnnouncmentMenu.Designer.cs">
       <DependentUpon>StaffAnnouncmentMenu.cs</DependentUpon>
     </Compile>
-
     <Compile Include="StaffCheckInPT.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,13 +142,6 @@
     </Compile>
     <Compile Include="StaffUpdateBody.Designer.cs">
       <DependentUpon>StaffUpdateBody.cs</DependentUpon>
-
-    <Compile Include="Staff_Transactions.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Staff_Transactions.Designer.cs">
-      <DependentUpon>Staff_Transactions.cs</DependentUpon>
-
     </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
@@ -198,7 +190,6 @@
     <EmbeddedResource Include="StaffAnnouncmentMenu.resx">
       <DependentUpon>StaffAnnouncmentMenu.cs</DependentUpon>
     </EmbeddedResource>
- 
     <EmbeddedResource Include="StaffCheckInPT.resx">
       <DependentUpon>StaffCheckInPT.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,10 +201,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffUpdateBody.resx">
       <DependentUpon>StaffUpdateBody.cs</DependentUpon>
-
-    <EmbeddedResource Include="Staff_Transactions.resx">
-      <DependentUpon>Staff_Transactions.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
@@ -253,14 +240,12 @@
     <None Include="Resources\abstract-geometric-blue-background-vector-3958327.jpg" />
   </ItemGroup>
   <ItemGroup>
-
     <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms">
       <Version>140.1000.523</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.SqlServer.Types">
       <Version>14.0.314.76</Version>
     </PackageReference>
-
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
