@@ -38,11 +38,6 @@ namespace DBapplication
             }
             DataTable dt = new DataTable();
             dt = controllerObj.LoginAttempt(Convert.ToInt32(textBox1.Text), textBox2.Text);
-            if (dt == null)
-            {
-                DataTable zby = new DataTable();
-                zby = controllerObj.getAllStaff();
-            }
             if (dt != null)
             {
                 int ID = dt.Rows[0].Field<int>("User_ID");
@@ -50,15 +45,27 @@ namespace DBapplication
                 pass = controllerObj.LoginStaff(ID);
                 if (pass != null)
                 {
-                    MessageBox.Show("Staff");
-                    Staff staff = new Staff();
-                    staff.Show();
-                    return;
+                    string role = pass.Rows[0]["Role"].ToString();
+                    if (role == "Admin")
+                    {
+                        MessageBox.Show("Admin");
+                        Staff staff = new Staff(); //temp until admin form is made
+                        staff.Show();
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show(role);
+                        Staff staff = new Staff();
+                        staff.Show();
+                        return;
+                    }
                 }
                 else
                 { 
                 MessageBox.Show("Member");
-
+                Member member = new Member(ID);
+                member.Show();
                 return;
                 }
             }

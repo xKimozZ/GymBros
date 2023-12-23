@@ -118,6 +118,18 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member.Designer.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberData.Designer.cs">
+      <DependentUpon>MemberData.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemberManage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -159,6 +171,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member.resx">
+      <DependentUpon>Member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberData.resx">
+      <DependentUpon>MemberData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberManage.resx">
       <DependentUpon>MemberManage.cs</DependentUpon>

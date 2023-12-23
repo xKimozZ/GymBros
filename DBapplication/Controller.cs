@@ -83,7 +83,7 @@ namespace DBapplication
 
         public DataTable LoginStaff(int UID)
         {
-            string query = $"SELECT Staff_ID FROM Staff WHERE Staff_ID = '{UID}';";
+            string query = $"SELECT Staff_ID, Role FROM Staff WHERE Staff_ID = '{UID}';";
             return dbMan.ExecuteReader(query);
         }
         public DataTable LoginMember(int UID)
