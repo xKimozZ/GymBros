@@ -69,16 +69,16 @@ namespace DBapplication
                 return;
             }
 
-            int gender = (radioButtonMale.Checked) ? 1 : 0; // Assuming you have radio buttons for gender
+            int gender = (radioButtonMale.Checked) ? 1 : 0; 
 
-            // Call the EditMember function with validated input
+            
             int result = controllerObj.UpdateUser(Convert.ToInt32(AppSession.UserId), fname, lname, pass, age, contactInfo, emergencyContact, gender);
 
-            // Check the result and provide appropriate feedback to the user
+            
             if (result == 1)
             {
                 MessageBox.Show("Profile editted successfully!");
-                dataGridView1.DataSource = controllerObj.getNamesStaff();
+                dataGridView1.DataSource = controllerObj.GetStaffInformation(AppSession.UserId);
                 dataGridView1.Refresh();
                 
             }
