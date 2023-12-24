@@ -17,12 +17,12 @@ namespace DBapplication
         public DataTable getAllMembers()
         {
             string query = @"
-            SELECT Users.User_ID, Users.Fname, Users.Lname,
+        SELECT Users.User_ID, Users.Fname, Users.Lname,
                CASE WHEN Users.Gender = 1 THEN 'Male' ELSE 'Female' END AS Gender,
                Users.Age, Users.Contact_Info, Users.Emrgncy_Contact,
-               Members.Renewal_Date, Members.Membership_Fees
-            FROM Users
-            JOIN Members ON Users.User_ID = Members.Member_ID;";
+               Members.Renewal_Date
+        FROM Users
+        JOIN Members ON Users.User_ID = Members.Member_ID;";
 
             return dbMan.ExecuteReader(query);
         }
@@ -30,12 +30,12 @@ namespace DBapplication
         public DataTable getAllStaff()
         {
             string query = @"
-            SELECT Users.User_ID, Users.Fname, Users.Lname,
+        SELECT Users.User_ID, Users.Fname, Users.Lname,
                CASE WHEN Users.Gender = 1 THEN 'Male' ELSE 'Female' END AS Gender,
                Users.Age, Users.Contact_Info, Users.Emrgncy_Contact,
-               Staff.Salary, Staff.Role
-            FROM Users
-            JOIN Staff ON Users.User_ID = Staff.Staff_ID;";
+               Staff.Role
+        FROM Users
+        JOIN Staff ON Users.User_ID = Staff.Staff_ID;";
 
             return dbMan.ExecuteReader(query);
         }
@@ -43,28 +43,27 @@ namespace DBapplication
         public DataTable GetMemberInformation(int memberId)
         {
             string query = $@"
-            SELECT Users.User_ID, Users.Fname, Users.Lname,
+        SELECT Users.User_ID, Users.Fname, Users.Lname,
                CASE WHEN Users.Gender = 1 THEN 'Male' ELSE 'Female' END AS Gender,
                Users.Age, Users.Contact_Info, Users.Emrgncy_Contact,
-               Members.Renewal_Date, Members.Membership_Fees
-            FROM Users
-            JOIN Members ON Users.User_ID = Members.Member_ID
-            WHERE Users.User_ID = {memberId}";
+               Members.Renewal_Date
+        FROM Users
+        JOIN Members ON Users.User_ID = Members.Member_ID
+        WHERE Users.User_ID = {memberId}";
 
             return dbMan.ExecuteReader(query);
         }
 
-
         public DataTable GetStaffInformation(int staffId)
         {
-             string query = $@"
-            SELECT Users.User_ID, Users.Fname, Users.Lname,
+            string query = $@"
+        SELECT Users.User_ID, Users.Fname, Users.Lname,
                CASE WHEN Users.Gender = 1 THEN 'Male' ELSE 'Female' END AS Gender,
                Users.Age, Users.Contact_Info, Users.Emrgncy_Contact,
-               Staff.Salary, Staff.Role
-            FROM Users
-            JOIN Staff ON Users.User_ID = Staff.Staff_ID
-            WHERE Users.User_ID = {staffId}";
+               Staff.Role
+        FROM Users
+        JOIN Staff ON Users.User_ID = Staff.Staff_ID
+        WHERE Users.User_ID = {staffId}";
 
             return dbMan.ExecuteReader(query);
         }
@@ -79,14 +78,14 @@ namespace DBapplication
             {
                 // Update the existing record
                 string updateQuery = $@"
-                UPDATE Body_Composition
-                SET Height = {height},
-                    Weight = {weight},
-                    Muscle_Prcntg = {musclePercentage},
-                    BodyFat_Prcntg = {bodyFatPercentage},
-                    Body_Type = '{bodyType}',
-                    Chronic_Disease = '{chronicDisease}'
-                WHERE Member_ID = {memberId}";
+            UPDATE Body_Composition
+            SET Height = {height},
+                Weight = {weight},
+                Muscle_Prcntg = {musclePercentage},
+                BodyFat_Prcntg = {bodyFatPercentage},
+                Body_Type = '{bodyType}',
+                Chronic_Disease = '{chronicDisease}'
+            WHERE Member_ID = {memberId}";
 
                 return dbMan.ExecuteNonQuery(updateQuery);
             }
@@ -94,8 +93,8 @@ namespace DBapplication
             {
                 // Insert a new record
                 string insertQuery = $@"
-                INSERT INTO Body_Composition (Member_ID, Height, Weight, Muscle_Prcntg, BodyFat_Prcntg, Body_Type, Chronic_Disease)
-                VALUES ({memberId}, {height}, {weight}, {musclePercentage}, {bodyFatPercentage}, '{bodyType}', '{chronicDisease}')";
+            INSERT INTO Body_Composition (Member_ID, Height, Weight, Muscle_Prcntg, BodyFat_Prcntg, Body_Type, Chronic_Disease)
+            VALUES ({memberId}, {height}, {weight}, {musclePercentage}, {bodyFatPercentage}, '{bodyType}', '{chronicDisease}')";
 
                 return dbMan.ExecuteNonQuery(insertQuery);
             }
@@ -115,7 +114,7 @@ namespace DBapplication
         public DataTable GetStaffAttendance(int staffId)
         {
             string query = $@"
-                SELECT PT_Session.Date,PT_Session.Price ,Users.Fname + ' ' + Users.Lname AS MemberName, PT_Session.Did_Attend
+                SELECT PT_Session.Date ,Users.Fname + ' ' + Users.Lname AS MemberName, PT_Session.Did_Attend
                 FROM PT_Session
                 JOIN Members ON PT_Session.Member_ID = Members.Member_ID
                 JOIN Users ON Members.Member_ID = Users.User_ID
@@ -135,19 +134,19 @@ namespace DBapplication
             string query = $"SELECT Staff_ID, Lname FROM Users INNER JOIN Staff ON Users.User_ID = Staff.Staff_ID;";
             return dbMan.ExecuteReader(query);
         }
-        public int AddPrivateSession(int memberId, int staffId, DateTime sessionDate, int price, bool didAttend)
+        public int AddPrivateSession(int memberId, int staffId, DateTime sessionDate, bool didAttend)
         {
             string query = $@"
-            INSERT INTO PT_Session (Date, Price, Member_ID, Staff_ID, Did_Attend)
-            VALUES ('{sessionDate.ToString("yyyy-MM-dd")}', {price}, {memberId}, {staffId}, {(didAttend ? 1 : 0)})";
+            INSERT INTO PT_Session (Date, Member_ID, Staff_ID, Did_Attend)
+            VALUES ('{sessionDate.ToString("yyyy-MM-dd")}', {memberId}, {staffId}, {(didAttend ? 1 : 0)})";
             return dbMan.ExecuteNonQuery(query);
         }
-        public int UpdatePrivateSession(int sessionId, DateTime sessionDate, int price, bool didAttend)
+        public int UpdatePrivateSession(int sessionId, DateTime sessionDate, bool didAttend)
         {
             string query = $@"
             UPDATE PT_Session
             SET Date = '{sessionDate.ToString("yyyy-MM-dd")}',
-            Price = {price},
+         
             Did_Attend = {(didAttend ? 1 : 0)}
             WHERE Session_ID = {sessionId}";
 
@@ -157,7 +156,7 @@ namespace DBapplication
         public DataTable GetSessionsByStaff(int staffId)
         {
             string query = $@"
-            SELECT Session_ID, Date, Price, Member_ID, Did_Attend
+            SELECT Session_ID, Date, Member_ID, Did_Attend
             FROM PT_Session
             WHERE Staff_ID = {staffId}";
 
@@ -189,8 +188,8 @@ namespace DBapplication
             string userInsertQuery = $"INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) " +
                             $"VALUES ('{Fname}', '{Lname}', {gender}, {age}, '{pass}', {emergencyContact}, {contactInfo});";
 
-            string memberInsertQuery = $"INSERT INTO Members (Member_ID, Renewal_Date, Membership_Fees) " +
-                                       $"VALUES (SCOPE_IDENTITY(),  DATEADD(MONTH, 1, GETDATE()), 500);";
+            string memberInsertQuery = $"INSERT INTO Members (Member_ID, Renewal_Date) " +
+                                       $"VALUES (SCOPE_IDENTITY(),  DATEADD(MONTH, 1, GETDATE()));";
 
             dbMan.ExecuteNonQuery(userInsertQuery);
             return dbMan.ExecuteNonQuery(memberInsertQuery);

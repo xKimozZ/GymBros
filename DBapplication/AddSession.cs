@@ -29,16 +29,9 @@ namespace DBapplication
         private void button1_Click(object sender, EventArgs e)
         {
             controllerObj = new Controller();
-            string PriceBox = textBox1.Text.Trim();
-
-            // Validate empty textboxes
-            if (string.IsNullOrEmpty(PriceBox))
-            {
-                MessageBox.Show("Please fill in all the required fields.");
-                return;
-            }
             
-            int result = controllerObj.AddPrivateSession(Convert.ToInt32(comboBox1.SelectedValue),AppSession.UserId ,dateTimePicker1.Value, Convert.ToInt32(textBox1.Text), false);
+            
+            int result = controllerObj.AddPrivateSession(Convert.ToInt32(comboBox1.SelectedValue),AppSession.UserId ,dateTimePicker1.Value, false);
             
 
             if (result == 1)

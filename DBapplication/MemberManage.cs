@@ -75,12 +75,12 @@ namespace DBapplication
                 return;
             }
 
-            int gender = (radioButtonMale.Checked) ? 1 : 0; // Assuming you have radio buttons for gender
+            int gender = (radioButtonMale.Checked) ? 1 : 0;
 
-            // Call the AddMember function with validated input
+        
             int result = controllerObj.AddMember(fname, lname, pass, age, contactInfo, emergencyContact, gender);
 
-            // Check the result and provide appropriate feedback to the user
+           
             if (result == 1)
             {
                 MessageBox.Show("Member added successfully!");
