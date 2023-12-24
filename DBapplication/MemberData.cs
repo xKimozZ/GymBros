@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace DBapplication
 {
@@ -78,6 +79,49 @@ namespace DBapplication
             {
                 MessageBox.Show("Error, Please check the input and try again.");
             }
+        }
+
+        private void txtAge_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtContactInfo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtEmergencyContact_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void MemberData_Load(object sender, EventArgs e)
+        {
+            controllerObj = new Controller();
+            DataTable dt;
+            int sessionID = 101;
+            dt = controllerObj.getMemberData(sessionID);
+            txtFname.Text = dt.Rows[0].Field<string>("Fname");
+            txtLname.Text = dt.Rows[0].Field<string>("Lname");
+            txtAge.Text = dt.Rows[0].Field<int>("Age").ToString();
+            txtContactInfo.Text = dt.Rows[0].Field<int>("Contact_info").ToString();
+            txtEmergencyContact.Text = dt.Rows[0].Field<int>("Emrgncy_Contact").ToString();
+            txtPass.Text = dt.Rows[0].Field<string>("Account_Pass");
+
+            if (dt.Rows[0].Field<bool>("Gender"))
+                radioButtonMale.Checked = true;
+            else
+                radioButtonFemale.Checked = true;
         }
     }
 }

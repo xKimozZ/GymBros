@@ -73,7 +73,7 @@ namespace DBapplication
 
         private void FitnessProgress_Click(object sender, EventArgs e)
         {
-            ShowContent(new StaffAnnouncmentMenu());
+            ShowContent(new BodyComp());
             placeholderPanel.Show();
             MainMenu.Hide();
         }

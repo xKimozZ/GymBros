@@ -99,6 +99,7 @@
             this.txtEmergencyContact.Name = "txtEmergencyContact";
             this.txtEmergencyContact.Size = new System.Drawing.Size(119, 22);
             this.txtEmergencyContact.TabIndex = 71;
+            this.txtEmergencyContact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmergencyContact_KeyPress);
             // 
             // txtContactInfo
             // 
@@ -106,6 +107,7 @@
             this.txtContactInfo.Name = "txtContactInfo";
             this.txtContactInfo.Size = new System.Drawing.Size(119, 22);
             this.txtContactInfo.TabIndex = 70;
+            this.txtContactInfo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactInfo_KeyPress);
             // 
             // txtAge
             // 
@@ -113,6 +115,7 @@
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(39, 22);
             this.txtAge.TabIndex = 69;
+            this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAge_KeyPress);
             // 
             // txtPass
             // 
@@ -252,6 +255,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MemberData";
             this.Size = new System.Drawing.Size(786, 419);
+            this.Load += new System.EventHandler(this.MemberData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

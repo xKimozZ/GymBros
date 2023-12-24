@@ -36,16 +36,13 @@ namespace DBapplication
                 MessageBox.Show("Password field empty.");
                 return;
             }
-            DataTable dt = new DataTable();
-            dt = controllerObj.LoginAttempt(Convert.ToInt32(textBox1.Text), textBox2.Text);
-            if (dt != null)
+            int checkID = controllerObj.LoginAttempt(Convert.ToInt32(textBox1.Text),textBox2.Text);
+            if (checkID != 0)
             {
-                int ID = dt.Rows[0].Field<int>("User_ID");
-                DataTable pass = new DataTable();
-                pass = controllerObj.LoginStaff(ID);
-                if (pass != null)
+                int pass = controllerObj.LoginMember(Convert.ToInt32(textBox1.Text));
+                if (pass == 0)
                 {
-                    string role = pass.Rows[0]["Role"].ToString();
+                    string role = controllerObj.LoginStaff(Convert.ToInt32(textBox1.Text));
                     if (role == "Admin")
                     {
                         MessageBox.Show("Admin");
@@ -62,7 +59,7 @@ namespace DBapplication
                 else
                 { 
                 MessageBox.Show("Member");
-                Member member = new Member(ID);
+                Member member = new Member(Convert.ToInt32(textBox1.Text));
                 member.Show();
                 }
                 this.Close();
@@ -84,6 +81,11 @@ namespace DBapplication
             {
                 e.Handled = true;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
