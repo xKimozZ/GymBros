@@ -55,16 +55,16 @@
     <Compile Include="AddSession.Designer.cs">
       <DependentUpon>AddSession.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin.cs">
+    <Compile Include="Admin Menu\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin.Designer.cs">
+    <Compile Include="Admin Menu\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminStaffMenu.cs">
+    <Compile Include="Admin Menu\AdminStaffMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AdminStaffMenu.Designer.cs">
+    <Compile Include="Admin Menu\AdminStaffMenu.Designer.cs">
       <DependentUpon>AdminStaffMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="AppSession.cs" />
@@ -143,6 +143,12 @@
     <Compile Include="StaffUpdateBody.Designer.cs">
       <DependentUpon>StaffUpdateBody.cs</DependentUpon>
     </Compile>
+    <Compile Include="Staff_Transactions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Staff_Transactions.Designer.cs">
+      <DependentUpon>Staff_Transactions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,10 +158,10 @@
     <EmbeddedResource Include="AddSession.resx">
       <DependentUpon>AddSession.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin.resx">
+    <EmbeddedResource Include="Admin Menu\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminStaffMenu.resx">
+    <EmbeddedResource Include="Admin Menu\AdminStaffMenu.resx">
       <DependentUpon>AdminStaffMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditMember.resx">

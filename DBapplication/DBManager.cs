@@ -13,13 +13,13 @@ namespace DBapplication
         // KAREEM:
         //static string DB_Connection_String = @"Data Source=.\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True";
         // GALAL:
-        //static string DB_Connection_String = @"Data Source=LAPTOP-3337RCUE\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True";
+        //static string DB_Connection_String = @"Data Source=.\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True";
         // HUSSEIN:
         //
         // EZZ:
         //Data Source=DESKTOP-MAINEZ\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True;Encrypt=False
 
-        static string DB_Connection_String = @"Data Source=DESKTOP-MAINEZ\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True;Encrypt=False";
+        static string DB_Connection_String = @"Data Source=.\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True;Encrypt=False";
         SqlConnection myConnection;
         static bool check=false;
         public DBManager()

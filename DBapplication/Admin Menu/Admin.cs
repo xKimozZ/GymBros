@@ -54,5 +54,12 @@ namespace DBapplication
             placeholderPanel.Show();
             MainMenu.Hide();
         }
+
+        private void buttonAnnouncement_Click(object sender, EventArgs e)
+        {
+            ShowContent(new StaffAnnouncmentMenu());
+            placeholderPanel.Show();
+            MainMenu.Hide();
+        }
     }
 }

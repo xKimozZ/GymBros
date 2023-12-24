@@ -29,27 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminStaffMenu));
-            this.panelAdAdmin = new System.Windows.Forms.Panel();
+            this.panelAdminPay = new System.Windows.Forms.Panel();
             this.buttonAddadmin = new System.Windows.Forms.Button();
             this.panelStaffdel = new System.Windows.Forms.Panel();
             this.buttonDel = new System.Windows.Forms.Button();
-            this.buttonAdmin = new System.Windows.Forms.Button();
+            this.buttonPay = new System.Windows.Forms.Button();
             this.buttonProfile = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelManager = new System.Windows.Forms.Panel();
             this.comboBoxRoles = new System.Windows.Forms.ComboBox();
-            this.textBoxSalary = new System.Windows.Forms.TextBox();
             this.buttonRoleChange = new System.Windows.Forms.Button();
-            this.buttonSalary = new System.Windows.Forms.Button();
             this.comboBoxID = new System.Windows.Forms.ComboBox();
             this.labelID = new System.Windows.Forms.Label();
             this.panelAdd = new System.Windows.Forms.Panel();
             this.comboBoxRole2 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBoxAdSalary = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -70,27 +66,27 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelselect = new System.Windows.Forms.Panel();
-            this.panelAdAdmin.SuspendLayout();
-            this.panelStaffdel.SuspendLayout();
+            this.buttonPaypanel = new System.Windows.Forms.Button();
+            this.panelAdminPay.SuspendLayout();
             this.panelManager.SuspendLayout();
             this.panelAdd.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelAdAdmin
+            // panelAdminPay
             // 
-            this.panelAdAdmin.Controls.Add(this.buttonAddadmin);
-            this.panelAdAdmin.Location = new System.Drawing.Point(292, 168);
-            this.panelAdAdmin.Name = "panelAdAdmin";
-            this.panelAdAdmin.Size = new System.Drawing.Size(365, 56);
-            this.panelAdAdmin.TabIndex = 24;
+            this.panelAdminPay.Controls.Add(this.buttonPaypanel);
+            this.panelAdminPay.Location = new System.Drawing.Point(292, 168);
+            this.panelAdminPay.Name = "panelAdminPay";
+            this.panelAdminPay.Size = new System.Drawing.Size(365, 57);
+            this.panelAdminPay.TabIndex = 24;
             // 
             // buttonAddadmin
             // 
-            this.buttonAddadmin.Location = new System.Drawing.Point(137, 20);
+            this.buttonAddadmin.Location = new System.Drawing.Point(31, 65);
             this.buttonAddadmin.Name = "buttonAddadmin";
-            this.buttonAddadmin.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddadmin.Size = new System.Drawing.Size(128, 23);
             this.buttonAddadmin.TabIndex = 2;
             this.buttonAddadmin.Text = "Make Admin";
             this.buttonAddadmin.UseVisualStyleBackColor = true;
@@ -98,7 +94,6 @@
             // 
             // panelStaffdel
             // 
-            this.panelStaffdel.Controls.Add(this.buttonDel);
             this.panelStaffdel.Location = new System.Drawing.Point(292, 168);
             this.panelStaffdel.Name = "panelStaffdel";
             this.panelStaffdel.Size = new System.Drawing.Size(365, 50);
@@ -106,7 +101,7 @@
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(137, 15);
+            this.buttonDel.Location = new System.Drawing.Point(137, 140);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(75, 23);
             this.buttonDel.TabIndex = 2;
@@ -114,20 +109,20 @@
             this.buttonDel.UseVisualStyleBackColor = true;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
-            // buttonAdmin
+            // buttonPay
             // 
-            this.buttonAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.buttonAdmin.FlatAppearance.BorderSize = 0;
-            this.buttonAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdmin.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.buttonAdmin.Location = new System.Drawing.Point(73, 297);
-            this.buttonAdmin.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonAdmin.Name = "buttonAdmin";
-            this.buttonAdmin.Size = new System.Drawing.Size(100, 54);
-            this.buttonAdmin.TabIndex = 22;
-            this.buttonAdmin.Text = "Add Admin";
-            this.buttonAdmin.UseVisualStyleBackColor = false;
-            this.buttonAdmin.Click += new System.EventHandler(this.buttonAdmin_Click);
+            this.buttonPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
+            this.buttonPay.FlatAppearance.BorderSize = 0;
+            this.buttonPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPay.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.buttonPay.Location = new System.Drawing.Point(73, 297);
+            this.buttonPay.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonPay.Name = "buttonPay";
+            this.buttonPay.Size = new System.Drawing.Size(100, 54);
+            this.buttonPay.TabIndex = 22;
+            this.buttonPay.Text = "Pay Salaries";
+            this.buttonPay.UseVisualStyleBackColor = false;
+            this.buttonPay.Click += new System.EventHandler(this.buttonPay_Click);
             // 
             // buttonProfile
             // 
@@ -135,7 +130,7 @@
             this.buttonProfile.FlatAppearance.BorderSize = 0;
             this.buttonProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonProfile.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.buttonProfile.Location = new System.Drawing.Point(73, 241);
+            this.buttonProfile.Location = new System.Drawing.Point(73, 185);
             this.buttonProfile.Margin = new System.Windows.Forms.Padding(1);
             this.buttonProfile.Name = "buttonProfile";
             this.buttonProfile.Size = new System.Drawing.Size(100, 54);
@@ -150,12 +145,12 @@
             this.buttonRemove.FlatAppearance.BorderSize = 0;
             this.buttonRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRemove.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.buttonRemove.Location = new System.Drawing.Point(73, 185);
+            this.buttonRemove.Location = new System.Drawing.Point(73, 241);
             this.buttonRemove.Margin = new System.Windows.Forms.Padding(1);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(100, 54);
             this.buttonRemove.TabIndex = 20;
-            this.buttonRemove.Text = "Remove";
+            this.buttonRemove.Text = "PlaceHolder";
             this.buttonRemove.UseVisualStyleBackColor = false;
             this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
@@ -188,50 +183,33 @@
             // 
             // panelManager
             // 
+            this.panelManager.Controls.Add(this.buttonDel);
+            this.panelManager.Controls.Add(this.buttonAddadmin);
             this.panelManager.Controls.Add(this.comboBoxRoles);
-            this.panelManager.Controls.Add(this.textBoxSalary);
             this.panelManager.Controls.Add(this.buttonRoleChange);
-            this.panelManager.Controls.Add(this.buttonSalary);
-            this.panelManager.Location = new System.Drawing.Point(292, 168);
+            this.panelManager.Location = new System.Drawing.Point(292, 115);
             this.panelManager.Name = "panelManager";
-            this.panelManager.Size = new System.Drawing.Size(365, 113);
+            this.panelManager.Size = new System.Drawing.Size(365, 180);
             this.panelManager.TabIndex = 25;
             // 
             // comboBoxRoles
             // 
             this.comboBoxRoles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRoles.FormattingEnabled = true;
-            this.comboBoxRoles.Location = new System.Drawing.Point(216, 20);
+            this.comboBoxRoles.Location = new System.Drawing.Point(218, 91);
             this.comboBoxRoles.Name = "comboBoxRoles";
             this.comboBoxRoles.Size = new System.Drawing.Size(128, 21);
             this.comboBoxRoles.TabIndex = 5;
             // 
-            // textBoxSalary
-            // 
-            this.textBoxSalary.Location = new System.Drawing.Point(29, 20);
-            this.textBoxSalary.Name = "textBoxSalary";
-            this.textBoxSalary.Size = new System.Drawing.Size(116, 20);
-            this.textBoxSalary.TabIndex = 4;
-            // 
             // buttonRoleChange
             // 
-            this.buttonRoleChange.Location = new System.Drawing.Point(216, 63);
+            this.buttonRoleChange.Location = new System.Drawing.Point(218, 62);
             this.buttonRoleChange.Name = "buttonRoleChange";
             this.buttonRoleChange.Size = new System.Drawing.Size(128, 23);
             this.buttonRoleChange.TabIndex = 3;
             this.buttonRoleChange.Text = "Change Role";
             this.buttonRoleChange.UseVisualStyleBackColor = true;
             this.buttonRoleChange.Click += new System.EventHandler(this.buttonRoleChange_Click);
-            // 
-            // buttonSalary
-            // 
-            this.buttonSalary.Location = new System.Drawing.Point(23, 63);
-            this.buttonSalary.Name = "buttonSalary";
-            this.buttonSalary.Size = new System.Drawing.Size(128, 23);
-            this.buttonSalary.TabIndex = 2;
-            this.buttonSalary.Text = "Change Salary";
-            this.buttonSalary.UseVisualStyleBackColor = true;
-            this.buttonSalary.Click += new System.EventHandler(this.buttonSalary_Click);
             // 
             // comboBoxID
             // 
@@ -259,8 +237,6 @@
             // 
             this.panelAdd.Controls.Add(this.comboBoxRole2);
             this.panelAdd.Controls.Add(this.label10);
-            this.panelAdd.Controls.Add(this.textBoxAdSalary);
-            this.panelAdd.Controls.Add(this.label9);
             this.panelAdd.Controls.Add(this.radioButtonFemale);
             this.panelAdd.Controls.Add(this.radioButtonMale);
             this.panelAdd.Controls.Add(this.label4);
@@ -286,7 +262,7 @@
             // 
             this.comboBoxRole2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRole2.FormattingEnabled = true;
-            this.comboBoxRole2.Location = new System.Drawing.Point(346, 189);
+            this.comboBoxRole2.Location = new System.Drawing.Point(346, 152);
             this.comboBoxRole2.Name = "comboBoxRole2";
             this.comboBoxRole2.Size = new System.Drawing.Size(90, 21);
             this.comboBoxRole2.TabIndex = 53;
@@ -294,30 +270,12 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(283, 193);
+            this.label10.Location = new System.Drawing.Point(283, 157);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(29, 13);
             this.label10.TabIndex = 52;
             this.label10.Text = "Role";
-            // 
-            // textBoxAdSalary
-            // 
-            this.textBoxAdSalary.Location = new System.Drawing.Point(93, 190);
-            this.textBoxAdSalary.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxAdSalary.Name = "textBoxAdSalary";
-            this.textBoxAdSalary.Size = new System.Drawing.Size(90, 20);
-            this.textBoxAdSalary.TabIndex = 51;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(14, 193);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 13);
-            this.label9.TabIndex = 50;
-            this.label9.Text = "Salary";
             // 
             // radioButtonFemale
             // 
@@ -486,7 +444,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
-            this.panel1.Controls.Add(this.buttonAdmin);
+            this.panel1.Controls.Add(this.buttonPay);
             this.panel1.Controls.Add(this.buttonProfile);
             this.panel1.Controls.Add(this.buttonRemove);
             this.panel1.Controls.Add(this.buttonAdd);
@@ -517,6 +475,16 @@
             this.panelselect.TabIndex = 28;
             this.panelselect.Visible = false;
             // 
+            // buttonPaypanel
+            // 
+            this.buttonPaypanel.Location = new System.Drawing.Point(137, 18);
+            this.buttonPaypanel.Name = "buttonPaypanel";
+            this.buttonPaypanel.Size = new System.Drawing.Size(75, 23);
+            this.buttonPaypanel.TabIndex = 0;
+            this.buttonPaypanel.Text = "Pay";
+            this.buttonPaypanel.UseVisualStyleBackColor = true;
+            this.buttonPaypanel.Click += new System.EventHandler(this.buttonPaypanel_Click);
+            // 
             // AdminStaffMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,17 +495,15 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.comboBoxID);
+            this.Controls.Add(this.panelAdminPay);
+            this.Controls.Add(this.panelAdd);
             this.Controls.Add(this.panelStaffdel);
             this.Controls.Add(this.panelManager);
-            this.Controls.Add(this.panelAdd);
-            this.Controls.Add(this.panelAdAdmin);
             this.DoubleBuffered = true;
             this.Name = "AdminStaffMenu";
             this.Size = new System.Drawing.Size(719, 376);
-            this.panelAdAdmin.ResumeLayout(false);
-            this.panelStaffdel.ResumeLayout(false);
+            this.panelAdminPay.ResumeLayout(false);
             this.panelManager.ResumeLayout(false);
-            this.panelManager.PerformLayout();
             this.panelAdd.ResumeLayout(false);
             this.panelAdd.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -550,20 +516,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panelAdAdmin;
+        private System.Windows.Forms.Panel panelAdminPay;
         private System.Windows.Forms.Button buttonAddadmin;
         private System.Windows.Forms.Panel panelStaffdel;
         private System.Windows.Forms.Button buttonDel;
-        private System.Windows.Forms.Button buttonAdmin;
+        private System.Windows.Forms.Button buttonPay;
         private System.Windows.Forms.Button buttonProfile;
         private System.Windows.Forms.Button buttonRemove;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelManager;
         private System.Windows.Forms.ComboBox comboBoxRoles;
-        private System.Windows.Forms.TextBox textBoxSalary;
         private System.Windows.Forms.Button buttonRoleChange;
-        private System.Windows.Forms.Button buttonSalary;
         private System.Windows.Forms.ComboBox comboBoxID;
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.Panel panelAdd;
@@ -588,8 +552,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxRole2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBoxAdSalary;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label labelLname;
+        private System.Windows.Forms.Button buttonPaypanel;
     }
 }

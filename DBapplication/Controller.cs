@@ -125,8 +125,6 @@ namespace DBapplication
 
         }
 
-
-
         public DataTable getNamesMembers()
         {
             string query = $"SELECT User_ID, Fname FROM Users INNER JOIN Members ON Users.User_ID = Members.Member_ID;";
@@ -170,10 +168,10 @@ namespace DBapplication
         public DataTable GetStaffAnnouncements()
         {
             string query = @"
-        SELECT Announcements.Message_Text, Staff.Staff_ID, Users.Fname + ' ' + Users.Lname AS SenderName, Staff.Role, Announcements.Message_Date
-        FROM Announcements
-        JOIN Staff ON Announcements.Sender_ID = Staff.Staff_ID
-        JOIN Users ON Announcements.Sender_ID = Users.User_ID";
+            SELECT Announcements.Message_Text, Staff.Staff_ID, Users.Fname + ' ' + Users.Lname AS SenderName, Staff.Role, Announcements.Message_Date
+            FROM Announcements
+            JOIN Staff ON Announcements.Sender_ID = Staff.Staff_ID
+            JOIN Users ON Announcements.Sender_ID = Users.User_ID";
 
             return dbMan.ExecuteReader(query);
         }
@@ -197,13 +195,13 @@ namespace DBapplication
             dbMan.ExecuteNonQuery(userInsertQuery);
             return dbMan.ExecuteNonQuery(memberInsertQuery);
         }
-        public int AddStaff(string Fname, string Lname, string pass, int age, int contactInfo, int emergencyContact, int gender, int Salary, string Role)
+        public int AddStaff(string Fname, string Lname, string pass, int age, int contactInfo, int emergencyContact, int gender, string Role)
         {
             string userInsertQuery = $"INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) " +
                             $"VALUES ('{Fname}', '{Lname}', {gender}, {age}, '{pass}', {emergencyContact}, {contactInfo});";
 
-            string StaffInsertQuery = $"INSERT INTO Staff (Staff_ID, Salary, Role) " +
-                                       $"VALUES (SCOPE_IDENTITY(), {Salary}, '{Role}');";
+            string StaffInsertQuery = $"INSERT INTO Staff (Staff_ID, Role) " +
+                                       $"VALUES (SCOPE_IDENTITY(), '{Role}');";
 
         
             dbMan.ExecuteNonQuery(userInsertQuery);
@@ -228,21 +226,84 @@ namespace DBapplication
 
             return dbMan.ExecuteNonQuery(staffUpdateQuery);
         }
-        public int UpdateStaffSalary(int staffId, int Salary)
-        {
-            string staffUpdateQuery = $"UPDATE Staff " +
-                                      $"SET Salary = '{Salary}' " +
-                                      $"WHERE Staff_ID = {staffId};";
+        //public int UpdateStaffSalary(int staffId, int Salary)
+        //{
+        //    string staffUpdateQuery = $"UPDATE Staff " +
+        //                              $"SET Salary = '{Salary}' " +
+        //                              $"WHERE Staff_ID = {staffId};";
 
-            return dbMan.ExecuteNonQuery(staffUpdateQuery);
-        }
-        public int DeleteStaff(int staffId)
+        //    return dbMan.ExecuteNonQuery(staffUpdateQuery);
+        //}
+        public int DeleteUser(int userid)
         {
             string staffUpdateQuery = $"Delete Users " +
-                                      $"WHERE User_ID = {staffId};";
+                                      $"WHERE User_ID = {userid};";
 
             return dbMan.ExecuteNonQuery(staffUpdateQuery);
         }
+
+        public DataTable GetStaffOwnTransactions(string date1, string date2, int id)
+        {
+            string query;
+            if (date1 == "")
+            {
+                query = $"SELECT FR.Transaction_Type AS Type, FR.Transaction_Amount AS Amount, " +
+                        $"ST.Transaction_Date AS Date " +
+                        $"FROM Financial_Records AS FR, Staff_Trans AS ST " +
+                        $"WHERE ST.Transaction_Date <= '{date2}' AND " +
+                        $"ST.Staff_ID = {id} AND FR.Transaction_Type = ST.Transaction_Type;";
+            }
+            else if (date2 == "")
+            {
+                query = $"SELECT FR.Transaction_Type AS Type, FR.Transaction_Amount AS Amount, " +
+                    $"ST.Transaction_Date AS Date " +
+                    $"FROM Financial_Records AS FR, Staff_Trans AS ST " +
+                    $"WHERE ST.Transaction_Date >= '{date1}' AND " +
+                    $"ST.Staff_ID = {id} AND FR.Transaction_Type = ST.Transaction_Type;";
+            }
+            else
+            {
+                query = $"SELECT FR.Transaction_Type AS Type, FR.Transaction_Amount AS Amount, " +
+                    $"ST.Transaction_Date AS Date " +
+                    $"FROM Financial_Records AS FR, Staff_Trans AS ST " +
+                    $"WHERE ST.Transaction_Date >= '{date1}' AND ST.Transaction_Date <= '{date2}' AND " +
+                    $"ST.Staff_ID = {id} AND FR.Transaction_Type = ST.Transaction_Type;";
+            }
+
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetMemberTransactions(string date1, string date2, int id)
+        {
+            string query;
+            if (date1 == "")
+            {
+                query = $"SELECT FR.Transaction_Type AS Type, FR.Transaction_Amount AS Amount, " +
+                        $"MT.Transaction_Date AS Date " +
+                        $"FROM Financial_Records AS FR, Mem_Trans AS MT " +
+                        $"WHERE MT.Transaction_Date <= '{date2}' AND " +
+                        $"MT.Member_ID = {id} AND FR.Transaction_Type = MT.Transaction_Type;";
+            }
+            else if (date2 == "")
+            {
+                query = $"SELECT FR.Transaction_Type AS Type, FR.Transaction_Amount AS Amount, " +
+                        $"MT.Transaction_Date AS Date " +
+                        $"FROM Financial_Records AS FR, Mem_Trans AS MT " +
+                        $"WHERE MT.Transaction_Date >= '{date1}' AND " +
+                        $"MT.Member_ID = {id} AND FR.Transaction_Type = MT.Transaction_Type;";
+            }
+            else
+            {
+                query = $"SELECT FR.Transaction_Type AS Type, FR.Transaction_Amount AS Amount, " +
+                    $"MT.Transaction_Date AS Date " +
+                    $"FROM Financial_Records AS FR, Mem_Trans AS MT " +
+                    $"WHERE MT.Transaction_Date >= '{date1}' AND MT.Transaction_Date <= '{date2}' AND " +
+                    $"MT.Member_ID = {id} AND FR.Transaction_Type = MT.Transaction_Type;";
+            }
+
+            return dbMan.ExecuteReader(query);
+        }
+
         public void TerminateConnection()
         {
             dbMan.CloseConnection();

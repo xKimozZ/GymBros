@@ -30,12 +30,29 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.gymBrosDBDataSet = new DBapplication.GymBrosDBDataSet();
             this.gymBrosDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.gymBrosDBDataSet)).BeginInit();
+            this.gymBrosDBDataSet = new DBapplication.GymBrosDBDataSet();
+            this.Financial_RecordsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.gymBrosDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymBrosDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Financial_RecordsBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // gymBrosDBDataSetBindingSource
+            // 
+            this.gymBrosDBDataSetBindingSource.DataSource = this.gymBrosDBDataSet;
+            this.gymBrosDBDataSetBindingSource.Position = 0;
+            // 
+            // gymBrosDBDataSet
+            // 
+            this.gymBrosDBDataSet.DataSetName = "GymBrosDBDataSet";
+            this.gymBrosDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Financial_RecordsBindingSource
+            // 
+            this.Financial_RecordsBindingSource.DataMember = "Financial_Records";
+            this.Financial_RecordsBindingSource.DataSource = this.gymBrosDBDataSet;
             // 
             // reportViewer1
             // 
@@ -50,16 +67,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(678, 514);
             this.reportViewer1.TabIndex = 0;
             // 
-            // gymBrosDBDataSet
-            // 
-            this.gymBrosDBDataSet.DataSetName = "GymBrosDBDataSet";
-            this.gymBrosDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gymBrosDBDataSetBindingSource
-            // 
-            this.gymBrosDBDataSetBindingSource.DataSource = this.gymBrosDBDataSet;
-            this.gymBrosDBDataSetBindingSource.Position = 0;
-            // 
             // Reportuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -67,16 +74,17 @@
             this.Controls.Add(this.reportViewer1);
             this.Name = "Reportuc";
             this.Size = new System.Drawing.Size(678, 514);
-            ((System.ComponentModel.ISupportInitialize)(this.gymBrosDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymBrosDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymBrosDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Financial_RecordsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource gymBrosDBDataSetBindingSource;
         private GymBrosDBDataSet gymBrosDBDataSet;
+        private System.Windows.Forms.BindingSource Financial_RecordsBindingSource;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
