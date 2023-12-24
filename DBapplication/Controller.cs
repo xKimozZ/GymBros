@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Windows.Forms;
+using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 
 namespace DBapplication
 {
@@ -14,6 +15,7 @@ namespace DBapplication
         {
             dbMan = new DBManager();
         }
+
         public DataTable getAllMembers()
         {
             string query = @"
@@ -54,6 +56,17 @@ namespace DBapplication
             return dbMan.ExecuteReader(query);
         }
 
+        public DataTable GetSessionsForMember(int memberId)
+        {
+            string query = $@"
+            SELECT Session_ID, Date, Price, Did_Attend
+            FROM PT_Session
+            WHERE Member_ID = {memberId}";
+
+            return dbMan.ExecuteReader(query);
+        }
+
+
         public DataTable GetStaffInformation(int staffId)
         {
             string query = $@"
@@ -67,49 +80,31 @@ namespace DBapplication
 
             return dbMan.ExecuteReader(query);
         }
-
+        // stored 
         public int AddOrUpdateBodyComposition(int memberId, int height, int weight, float musclePercentage, float bodyFatPercentage, string bodyType, string chronicDisease)
         {
-            // Check if a body composition record already exists for the member
-            string checkQuery = $"SELECT COUNT(*) FROM Body_Composition WHERE Member_ID = {memberId}";
-            object existingRecordCountObj = dbMan.ExecuteScalar(checkQuery);
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@MemberId", memberId);
+            parameters.Add("@Height", height);
+            parameters.Add("@Weight", weight);
+            parameters.Add("@MusclePercentage", musclePercentage);
+            parameters.Add("@BodyFatPercentage", bodyFatPercentage);
+            parameters.Add("@BodyType", bodyType);
+            parameters.Add("@ChronicDisease", chronicDisease);
 
-            if (existingRecordCountObj != null && int.TryParse(existingRecordCountObj.ToString(), out int existingRecordCount) && existingRecordCount > 0)
-            {
-                // Update the existing record
-                string updateQuery = $@"
-            UPDATE Body_Composition
-            SET Height = {height},
-                Weight = {weight},
-                Muscle_Prcntg = {musclePercentage},
-                BodyFat_Prcntg = {bodyFatPercentage},
-                Body_Type = '{bodyType}',
-                Chronic_Disease = '{chronicDisease}'
-            WHERE Member_ID = {memberId}";
-
-                return dbMan.ExecuteNonQuery(updateQuery);
-            }
-            else
-            {
-                // Insert a new record
-                string insertQuery = $@"
-            INSERT INTO Body_Composition (Member_ID, Height, Weight, Muscle_Prcntg, BodyFat_Prcntg, Body_Type, Chronic_Disease)
-            VALUES ({memberId}, {height}, {weight}, {musclePercentage}, {bodyFatPercentage}, '{bodyType}', '{chronicDisease}')";
-
-                return dbMan.ExecuteNonQuery(insertQuery);
-            }
+            return dbMan.ExecuteNonQueryStored("AddOrUpdateBodyCompositionProcedure", parameters);
         }
 
-        public int UpdateSessionCheckInStatus(int sessionId)
+        // stored 
+        public int UpdateSessionCheckInStatus(int sessionId, int memberId)
         {
-            string updateQuery = $@"
-                                    UPDATE PT_Session
-                                    SET Did_Attend = 1
-                                    WHERE Session_ID = {sessionId}";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@SessionId", sessionId);
+            parameters.Add("@MemberId", memberId);
 
-            return dbMan.ExecuteNonQuery(updateQuery);
-
+            return dbMan.ExecuteNonQueryStored("UpdateSessionCheckInStatusProcedure", parameters);
         }
+
 
         public DataTable GetStaffAttendance(int staffId)
         {
@@ -134,89 +129,98 @@ namespace DBapplication
             string query = $"SELECT Staff_ID, Lname FROM Users INNER JOIN Staff ON Users.User_ID = Staff.Staff_ID;";
             return dbMan.ExecuteReader(query);
         }
+        //stored
         public int AddPrivateSession(int memberId, int staffId, DateTime sessionDate, bool didAttend)
         {
-            string query = $@"
-            INSERT INTO PT_Session (Date, Member_ID, Staff_ID, Did_Attend)
-            VALUES ('{sessionDate.ToString("yyyy-MM-dd")}', {memberId}, {staffId}, {(didAttend ? 1 : 0)})";
-            return dbMan.ExecuteNonQuery(query);
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@MemberId", memberId);
+            parameters.Add("@StaffId", staffId);
+            parameters.Add("@SessionDate", sessionDate);
+            parameters.Add("@DidAttend", didAttend);
+
+            return dbMan.ExecuteNonQueryStored("AddPrivateSessionProcedure", parameters);
         }
+        //stored
         public int UpdatePrivateSession(int sessionId, DateTime sessionDate, bool didAttend)
         {
-            string query = $@"
-            UPDATE PT_Session
-            SET Date = '{sessionDate.ToString("yyyy-MM-dd")}',
-         
-            Did_Attend = {(didAttend ? 1 : 0)}
-            WHERE Session_ID = {sessionId}";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@SessionId", sessionId);
+            parameters.Add("@SessionDate", sessionDate);
+            parameters.Add("@DidAttend", didAttend);
 
-            return dbMan.ExecuteNonQuery(query);
+            return dbMan.ExecuteNonQueryStored("UpdatePrivateSessionProcedure", parameters);
         }
 
+        //stored
         public DataTable GetSessionsByStaff(int staffId)
         {
-            string query = $@"
-            SELECT Session_ID, Date, Member_ID, Did_Attend
-            FROM PT_Session
-            WHERE Staff_ID = {staffId}";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@StaffId", staffId);
 
-            return dbMan.ExecuteReader(query);
-
+            return dbMan.ExecuteReaderStored("GetSessionsByStaffProcedure", parameters);
         }
 
+        //stored
         public DataTable GetStaffAnnouncements()
         {
-            string query = @"
-            SELECT Announcements.Message_Text, Staff.Staff_ID, Users.Fname + ' ' + Users.Lname AS SenderName, Staff.Role, Announcements.Message_Date
-            FROM Announcements
-            JOIN Staff ON Announcements.Sender_ID = Staff.Staff_ID
-            JOIN Users ON Announcements.Sender_ID = Users.User_ID";
-
-            return dbMan.ExecuteReader(query);
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReaderStored("GetStaffAnnouncementsProcedure" , parameters);
         }
 
+        //stored
         public int SendAnnouncement(int senderId, string messageText)
         {
-            string query = $@"
-            INSERT INTO Announcements (Message_Date, Message_Text, Sender_ID)
-            VALUES (GETDATE(), '{messageText}', {senderId});";
-            return dbMan.ExecuteNonQuery(query);
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@SenderId", senderId);
+            parameters.Add("@MessageText", messageText);
+
+            return dbMan.ExecuteNonQueryStored("SendAnnouncementProcedure", parameters);
         }
 
-        public int AddMember(string Fname , string Lname , string pass,int age, int contactInfo , int emergencyContact, int gender)
+        //stored
+        public int AddMember(string Fname, string Lname, string pass, int age, int contactInfo, int emergencyContact, int gender)
         {
-            string userInsertQuery = $"INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) " +
-                            $"VALUES ('{Fname}', '{Lname}', {gender}, {age}, '{pass}', {emergencyContact}, {contactInfo});";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@Fname", Fname);
+            parameters.Add("@Lname", Lname);
+            parameters.Add("@Pass", pass);
+            parameters.Add("@Age", age);
+            parameters.Add("@ContactInfo", contactInfo);
+            parameters.Add("@EmergencyContact", emergencyContact);
+            parameters.Add("@Gender", gender);
 
-            string memberInsertQuery = $"INSERT INTO Members (Member_ID, Renewal_Date) " +
-                                       $"VALUES (SCOPE_IDENTITY(),  DATEADD(MONTH, 1, GETDATE()));";
-
-            dbMan.ExecuteNonQuery(userInsertQuery);
-            return dbMan.ExecuteNonQuery(memberInsertQuery);
+            return dbMan.ExecuteNonQueryStored("AddMemberProcedure", parameters);
         }
+        //stored
         public int AddStaff(string Fname, string Lname, string pass, int age, int contactInfo, int emergencyContact, int gender, string Role)
         {
-            string userInsertQuery = $"INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) " +
-                            $"VALUES ('{Fname}', '{Lname}', {gender}, {age}, '{pass}', {emergencyContact}, {contactInfo});";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@Fname", Fname);
+            parameters.Add("@Lname", Lname);
+            parameters.Add("@Pass", pass);
+            parameters.Add("@Age", age);
+            parameters.Add("@ContactInfo", contactInfo);
+            parameters.Add("@EmergencyContact", emergencyContact);
+            parameters.Add("@Gender", gender);
+            parameters.Add("@Role", Role);
 
-            string StaffInsertQuery = $"INSERT INTO Staff (Staff_ID, Role) " +
-                                       $"VALUES (SCOPE_IDENTITY(), '{Role}');";
-
-        
-            dbMan.ExecuteNonQuery(userInsertQuery);
-            return dbMan.ExecuteNonQuery(StaffInsertQuery);
+            return dbMan.ExecuteNonQueryStored("AddStaffProcedure", parameters);
         }
+        //stored
         public int UpdateUser(int userId, string newFname, string newLname, string newPass, int newAge, int newContactInfo, int newEmergencyContact, int newGender)
         {
-           
-            string userUpdateQuery = $"UPDATE Users " +
-                                     $"SET Fname = '{newFname}', Lname = '{newLname}', Gender = {newGender}, Age = {newAge}, " +
-                                     $"Account_Pass = '{newPass}', Emrgncy_Contact = {newEmergencyContact}, Contact_Info = {newContactInfo} " +
-                                     $"WHERE User_ID = {userId};";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@UserId", userId);
+            parameters.Add("@NewFname", newFname);
+            parameters.Add("@NewLname", newLname);
+            parameters.Add("@NewPass", newPass);
+            parameters.Add("@NewAge", newAge);
+            parameters.Add("@NewContactInfo", newContactInfo);
+            parameters.Add("@NewEmergencyContact", newEmergencyContact);
+            parameters.Add("@NewGender", newGender);
 
-            return dbMan.ExecuteNonQuery(userUpdateQuery);
+            return dbMan.ExecuteNonQueryStored("UpdateUserProcedure", parameters);
         }
-
         public int UpdateStaffRole(int staffId, string newRole)
         {
             string staffUpdateQuery = $"UPDATE Staff " +
