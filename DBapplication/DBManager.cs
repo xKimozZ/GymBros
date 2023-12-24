@@ -80,6 +80,69 @@ namespace DBapplication
             }
         }
 
+        public DataTable ExecuteReaderStored(string storedProcedureName, Dictionary<string, object> parameters)
+        {
+            try
+            {
+                SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
+
+                myCommand.CommandType = CommandType.StoredProcedure;
+
+                if (parameters != null)
+                {
+                    foreach (KeyValuePair<string, object> Param in parameters)
+                    {
+                        myCommand.Parameters.Add(new SqlParameter(Param.Key, Param.Value));
+                    }
+                }
+
+                SqlDataReader reader = myCommand.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    DataTable dt = new DataTable();
+                    dt.Load(reader);
+                    reader.Close();
+                    return dt;
+                }
+                else
+                {
+                    return null;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+
+        public int ExecuteNonQueryStored(string storedProcedureName, Dictionary<string, object> parameters)
+        {
+            try
+            {
+                SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
+                myCommand.CommandType = CommandType.StoredProcedure;
+
+                foreach (KeyValuePair<string, object> param in parameters)
+                {
+                    myCommand.Parameters.Add(new SqlParameter(param.Key, param.Value));
+                }
+
+                int rowsAffected = myCommand.ExecuteNonQuery();
+
+                
+                return (rowsAffected > 0) ? 1 : 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return 0; 
+            }
+        }
+
+
+
         public object ExecuteScalar(string query)
         {
             try
