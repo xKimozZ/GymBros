@@ -32,7 +32,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Sessionbox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.MemberBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
@@ -64,26 +66,46 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 26);
+            this.label4.Location = new System.Drawing.Point(21, 58);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 16);
             this.label4.TabIndex = 17;
             this.label4.Text = "Session to Update";
             // 
-            // comboBox1
+            // Sessionbox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(178, 23);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 16;
+            this.Sessionbox.FormattingEnabled = true;
+            this.Sessionbox.Location = new System.Drawing.Point(178, 55);
+            this.Sessionbox.Name = "Sessionbox";
+            this.Sessionbox.Size = new System.Drawing.Size(121, 24);
+            this.Sessionbox.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Member";
+            // 
+            // MemberBox
+            // 
+            this.MemberBox.FormattingEnabled = true;
+            this.MemberBox.Location = new System.Drawing.Point(178, 18);
+            this.MemberBox.Name = "MemberBox";
+            this.MemberBox.Size = new System.Drawing.Size(121, 24);
+            this.MemberBox.TabIndex = 18;
+            this.MemberBox.SelectedIndexChanged += new System.EventHandler(this.MemberBox_SelectedIndexChanged);
             // 
             // StaffPTUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.MemberBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Sessionbox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker1);
@@ -100,6 +122,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Sessionbox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox MemberBox;
     }
 }

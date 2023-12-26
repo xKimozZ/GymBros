@@ -150,12 +150,13 @@ namespace DBapplication
             return dbMan.ExecuteNonQueryStored("AddPrivateSessionProcedure", parameters);
         }
         //stored
-        public int UpdatePrivateSession(int sessionId, DateTime sessionDate, bool didAttend)
+        public int UpdatePrivateSession(int sessionId, DateTime sessionDate, bool didAttend,int memberId)
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
-            parameters.Add("@SessionId", sessionId);
-            parameters.Add("@SessionDate", sessionDate);
-            parameters.Add("@DidAttend", didAttend);
+            parameters.Add("@sessionId", sessionId);
+            parameters.Add("@memberId", memberId);
+            parameters.Add("@sessionDate", sessionDate);
+            parameters.Add("@didAttend", didAttend);
 
             return dbMan.ExecuteNonQueryStored("UpdatePrivateSessionProcedure", parameters);
         }

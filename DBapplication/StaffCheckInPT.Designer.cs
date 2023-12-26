@@ -33,7 +33,6 @@
             this.sessionLbl = new System.Windows.Forms.Label();
             this.MemLbl = new System.Windows.Forms.Label();
             this.MemberBox = new System.Windows.Forms.ComboBox();
-            this.memberPick = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkin
@@ -81,21 +80,10 @@
             this.MemberBox.TabIndex = 5;
             this.MemberBox.SelectedIndexChanged += new System.EventHandler(this.MemberBox_SelectedIndexChanged);
             // 
-            // memberPick
-            // 
-            this.memberPick.Location = new System.Drawing.Point(251, 20);
-            this.memberPick.Name = "memberPick";
-            this.memberPick.Size = new System.Drawing.Size(118, 23);
-            this.memberPick.TabIndex = 7;
-            this.memberPick.Text = "Choose member";
-            this.memberPick.UseVisualStyleBackColor = true;
-            this.memberPick.Click += new System.EventHandler(this.memberPick_Click);
-            // 
             // StaffCheckInPT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.memberPick);
             this.Controls.Add(this.MemLbl);
             this.Controls.Add(this.MemberBox);
             this.Controls.Add(this.sessionLbl);
@@ -115,6 +103,5 @@
         private System.Windows.Forms.Label sessionLbl;
         private System.Windows.Forms.Label MemLbl;
         private System.Windows.Forms.ComboBox MemberBox;
-        private System.Windows.Forms.Button memberPick;
     }
 }

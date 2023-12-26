@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DBapplication
 {
@@ -24,10 +25,7 @@ namespace DBapplication
             MemberBox.DataSource = members;
             MemberBox.ValueMember = "User_ID";
             MemberBox.DisplayMember = "Fname";
-            sessionLbl.Visible = false;
-            SessionBox.Visible = false;
-            //// Fill sessions ComboBox for the initially selected member
-            //UpdateSessionsComboBox(Convert.ToInt32(comboBox2.SelectedValue));
+           
         }
 
 
@@ -56,17 +54,27 @@ namespace DBapplication
             }
         }
 
-        private void memberPick_Click(object sender, EventArgs e)
-        {
-            UpdateSessionsComboBox(Convert.ToInt32(MemberBox.SelectedValue));
-            sessionLbl.Visible = true;
-            SessionBox.Visible = true;
-        }
-
+     
         private void MemberBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            sessionLbl.Visible = false;
-            SessionBox.Visible = false;
+            if (MemberBox.SelectedValue != null)
+            {
+                // Update sessions ComboBox based on the selected member
+                int memberId;
+                if (MemberBox.SelectedValue is DataRowView dataRowView)
+                {
+                    // Access the actual value from the DataRowView
+                    memberId = Convert.ToInt32(dataRowView["User_ID"]);
+                }
+                else
+                {
+                    // If not a DataRowView, directly convert the value
+                    memberId = Convert.ToInt32(MemberBox.SelectedValue);
+                }
+
+                UpdateSessionsComboBox(memberId);
+            }
+          
         }
     }
 }
