@@ -116,6 +116,7 @@ END;
 
 CREATE PROCEDURE UpdatePrivateSessionProcedure
     @sessionId INT,
+	@memberId INT,
     @sessionDate DATE,
     @didAttend BIT
 AS
@@ -123,7 +124,7 @@ BEGIN
     UPDATE PT_Session
     SET Date = @sessionDate,
         Did_Attend = @didAttend
-    WHERE Session_ID = @sessionId;
+    WHERE Session_ID = @sessionId AND Member_ID = @memberId;
 END;
 
 CREATE PROCEDURE GetSessionsByStaffProcedure
