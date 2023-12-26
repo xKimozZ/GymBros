@@ -18,18 +18,18 @@ namespace DBapplication
             InitializeComponent();
             controllerObj = new Controller();
 
-            // fill sessions combobox
-            DataTable Sessions = controllerObj.GetSessionsByStaff(AppSession.UserId);
-            comboBox1.DataSource = Sessions;
-            comboBox1.ValueMember = "Session_ID";
-            comboBox1.DisplayMember = "Date";
+            // Fill members ComboBox
+            DataTable members = controllerObj.getNamesMembers();
+            MemberBox.DataSource = members;
+            MemberBox.ValueMember = "User_ID";
+            MemberBox.DisplayMember = "Fname";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             controllerObj = new Controller();
          
-            int result = controllerObj.UpdatePrivateSession(Convert.ToInt32(comboBox1.SelectedValue), dateTimePicker1.Value, false);
+            int result = controllerObj.UpdatePrivateSession(Convert.ToInt32(Sessionbox.SelectedValue), dateTimePicker1.Value, false,Convert.ToInt32( MemberBox.SelectedValue));
 
 
             if (result == 1)
@@ -44,18 +44,38 @@ namespace DBapplication
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    
+
+        
+        private void UpdateSessionsComboBox(int memberId)
         {
 
+            // Fill sessions ComboBox for the specified member
+            DataTable sessions = controllerObj.GetSessionsByMemberAndStaff(memberId, AppSession.UserId);
+            Sessionbox.DataSource = sessions;
+            Sessionbox.ValueMember = "Session_ID";
+            Sessionbox.DisplayMember = "Date";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void MemberBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-            DataTable sessionsByThisStaff = controllerObj.GetSessionsByStaff(AppSession.UserId);
-            comboBox1.DataSource = sessionsByThisStaff;
-            comboBox1.ValueMember = "Session_ID";
-            comboBox1.DisplayMember = "Date";
+            if (MemberBox.SelectedValue != null)
+            {
+                // Update sessions ComboBox based on the selected member
+                int memberId;
+                if (MemberBox.SelectedValue is DataRowView dataRowView)
+                {
+                    // Access the actual value from the DataRowView
+                    memberId = Convert.ToInt32(dataRowView["User_ID"]);
+                }
+                else
+                {
+                    // If not a DataRowView, directly convert the value
+                    memberId = Convert.ToInt32(MemberBox.SelectedValue);
+                }
+
+                UpdateSessionsComboBox(memberId);
+            }
         }
     }
     }
