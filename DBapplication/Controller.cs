@@ -59,13 +59,22 @@ namespace DBapplication
         public DataTable GetSessionsForMember(int memberId)
         {
             string query = $@"
-            SELECT Session_ID, Date, Price, Did_Attend
+            SELECT Session_ID, Date, Did_Attend
             FROM PT_Session
             WHERE Member_ID = {memberId}";
 
             return dbMan.ExecuteReader(query);
         }
 
+        public DataTable GetSessionsByMemberAndStaff(int memberId, int staffId)
+        {
+            string query = $@"
+        SELECT Session_ID, Date, Did_Attend
+        FROM PT_Session
+        WHERE Member_ID = {memberId} AND Staff_ID = {staffId}";
+
+            return dbMan.ExecuteReader(query);
+        }
 
         public DataTable GetStaffInformation(int staffId)
         {
@@ -99,8 +108,8 @@ namespace DBapplication
         public int UpdateSessionCheckInStatus(int sessionId, int memberId)
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
-            parameters.Add("@SessionId", sessionId);
-            parameters.Add("@MemberId", memberId);
+            parameters.Add("@sessionId", sessionId);
+            parameters.Add("@memberId", memberId);
 
             return dbMan.ExecuteNonQueryStored("UpdateSessionCheckInStatusProcedure", parameters);
         }
