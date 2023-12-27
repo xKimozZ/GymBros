@@ -370,6 +370,15 @@ namespace DBapplication
             return dbMan.ExecuteNonQuery(query);
         }
 
+        public int updateEquimpentStatus(int id, string status)
+        {
+            string query = $"UPDATE Equipment " +
+                                      $"SET Status = '{status}' " +
+                                      $"WHERE Equipment_ID = {id};";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+
         public int generateMaintenanceRequest(int reporter_id, int equip_id, DateTime rqst_date, int dmg, string desc, string status)
         {
             string query = $"INSERT INTO Maintains " +
@@ -377,6 +386,71 @@ namespace DBapplication
                 $"VALUES ({reporter_id}, {equip_id}, '{rqst_date:yyyy-MM-dd}', {dmg}, '{desc}', '{status}')";
             return dbMan.ExecuteNonQuery(query);
         }
+
+        public string getEquipmentStatus(int id)
+        {
+            string query = $"SELECT STATUS FROM Equipment " +
+                           $"WHERE Equipment_ID = {id};";
+
+            return (dbMan.ExecuteScalar(query)).ToString();
+        }
+        public DataTable getAttendingClassMembers(string classType)
+        {
+            string query = $"SELECT DISTINCT U.User_ID, U.Fname FROM Users AS U " +
+                $"WHERE U.User_ID IN(" +
+                $"SELECT A.Member_ID FROM Attends_Class AS A " +
+                $"WHERE Class_Type = '{classType}');";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int getNumClassAttendances(int id, string classType)
+        {
+            string query = $"SELECT Num_Attended_Classes FROM Attends_Class " +
+                           $"WHERE Member_ID = {id} AND Class_Type = '{classType}';";
+            return Convert.ToInt32(dbMan.ExecuteScalar(query));
+        }
+
+        public int updateNumClassAttendances(int id, int newVal, string classType)
+        {
+            string query;
+            if (id <= -1)
+            {
+                query = $"UPDATE Attends_Class " +
+                            $"SET Num_Attended_Classes = {newVal};";
+            }
+            else
+            {
+                query = $"UPDATE Attends_Class " +
+                           $"SET Num_Attended_Classes = {newVal} " +
+                           $"WHERE Member_ID = {id} AND Class_Type = '{classType}';";
+            }
+
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int dropClass(int id, string classType)
+        {
+            string query = $"DELETE FROM Attends_Class " +
+                $"WHERE Member_ID = {id} AND Class_Type = '{classType}';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int updateClassDateTime(DateTime newDate, TimeSpan newTime, string classType)
+        {
+            string query = $"UPDATE Classes " +
+                           $"SET Date = '{newDate:yyyy-MM-dd}', Time = '{newTime:hh\\:mm}' " +
+                           $"WHERE Class_Type = '{classType}';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable getAllClassAttenders(string class_type)
+        {
+            string query = $"SELECT * FROM Attends_Class " +
+                            $"WHERE Class_Type = '{class_type}';";
+            return dbMan.ExecuteReader(query);
+        }
+
         public int LoginAttempt(int UID, string pass)
         {
             string query = $"SELECT User_ID FROM Users WHERE User_ID = '{UID}' AND Account_Pass = '{pass}';";
@@ -397,6 +471,12 @@ namespace DBapplication
         public string FnameUser(int UID)
         {
             string query = $"Select Fname FROM Users WHERE User_ID = '{UID}';";
+            return dbMan.ExecuteScalar(query).ToString();
+        }
+
+        public string LnameUser(int UID)
+        {
+            string query = $"Select Lname FROM Users WHERE User_ID = '{UID}';";
             return dbMan.ExecuteScalar(query).ToString();
         }
 
@@ -600,6 +680,90 @@ namespace DBapplication
         {
             string insertQuery = $"INSERT INTO Mem_Trans (Member_ID, Transaction_Type, Transaction_Date) VALUES ({UID}, '{transactionType}', GETDATE())";
             return dbMan.ExecuteNonQuery(insertQuery);
+        }
+
+        public DataTable GetAllClasses()
+        {
+            string query = "SELECT Class_Type, Class_Mgr, Instructor_ID, Availability, Date, Time, Location " +
+                "FROM Classes;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DateTime getDateClass(string classType)
+        {
+            string query = $"SELECT Date FROM Classes " +
+                           $"WHERE Class_Type = '{classType}';";
+            return DateTime.Parse((dbMan.ExecuteScalar(query)).ToString());
+        }
+
+        public TimeSpan getTimeClass(string classType)
+        {
+            string query = $"SELECT Time FROM Classes " +
+                           $"WHERE Class_Type = '{classType}';";
+            return TimeSpan.Parse((dbMan.ExecuteScalar(query)).ToString());
+        }
+
+        public DataTable GetAllES()
+        {
+            string query = "SELECT Service_Name, Service_Mgr_ID, Availability " +
+                "FROM Extra_Service;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable getAttendingESMembers(string es_type)
+        {
+            string query = $"SELECT DISTINCT U.User_ID, U.Fname FROM Users AS U " +
+                $"WHERE U.User_ID IN(" +
+                $"SELECT A.Member_ID FROM Uses_Service AS A " +
+                $"WHERE Service_Name = '{es_type}');";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable getAllESAttenders(string es_type)
+        {
+            string query = $"SELECT * FROM Uses_Service " +
+                            $"WHERE Service_Name = '{es_type}';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int getNumESAttendances(int id, string service)
+        {
+            string query = $"SELECT Num_Attended_Sessions FROM Uses_Service " +
+                           $"WHERE Member_ID = {id} AND Service_Name = '{service}';";
+            return Convert.ToInt32(dbMan.ExecuteScalar(query));
+        }
+
+        public DateTime getSubLenES(int id, string service)
+        {
+            string query = $"SELECT Subscription_Len FROM Uses_Service " +
+                           $"WHERE Member_ID = {id} AND Service_Name = '{service}';";
+            return DateTime.Parse((dbMan.ExecuteScalar(query)).ToString());
+        }
+
+        public int updateNumESAttendances(int id, int newVal, string service)
+        {
+            string query;
+            if (id <= -1)
+            {
+                query = $"UPDATE Uses_Service " +
+                            $"SET Num_Attended_Sessions = {newVal};";
+            }
+            else
+            {
+                query = $"UPDATE Uses_Service " +
+                           $"SET Num_Attended_Sessions = {newVal} " +
+                           $"WHERE Member_ID = {id} AND Service_Name = '{service}';";
+            }
+
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int dropES(int id, string service)
+        {
+            string query = $"DELETE FROM Uses_Service " +
+                $"WHERE Member_ID = {id} AND Service_Name = '{service}';";
+            return dbMan.ExecuteNonQuery(query);
         }
 
         public void TerminateConnection()

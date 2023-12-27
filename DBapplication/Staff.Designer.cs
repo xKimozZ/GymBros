@@ -32,6 +32,7 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.placeholderPanel = new System.Windows.Forms.Panel();
             this.MainMenu = new System.Windows.Forms.Panel();
+            this.class_btn = new System.Windows.Forms.Button();
             this.maintains = new System.Windows.Forms.Button();
             this.trans = new System.Windows.Forms.Button();
             this.PTButton = new System.Windows.Forms.Button();
@@ -40,6 +41,7 @@
             this.EditMember = new System.Windows.Forms.Button();
             this.AddMember = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +68,8 @@
             // MainMenu
             // 
             this.MainMenu.Controls.Add(this.label2);
+            this.MainMenu.Controls.Add(this.button1);
+            this.MainMenu.Controls.Add(this.class_btn);
             this.MainMenu.Controls.Add(this.maintains);
             this.MainMenu.Controls.Add(this.trans);
             this.MainMenu.Controls.Add(this.PTButton);
@@ -82,6 +86,19 @@
             // maintains
             // 
             this.maintains.Location = new System.Drawing.Point(159, 202);
+            // class_btn
+            // 
+            this.class_btn.Location = new System.Drawing.Point(408, 202);
+            this.class_btn.Name = "class_btn";
+            this.class_btn.Size = new System.Drawing.Size(129, 40);
+            this.class_btn.TabIndex = 11;
+            this.class_btn.Text = "Classes";
+            this.class_btn.UseVisualStyleBackColor = true;
+            this.class_btn.Click += new System.EventHandler(this.class_btn_Click);
+            // 
+            // maintains
+            // 
+            this.maintains.Location = new System.Drawing.Point(254, 202);
             this.maintains.Name = "maintains";
             this.maintains.Size = new System.Drawing.Size(129, 40);
             this.maintains.TabIndex = 10;
@@ -91,7 +108,7 @@
             // 
             // trans
             // 
-            this.trans.Location = new System.Drawing.Point(12, 202);
+            this.trans.Location = new System.Drawing.Point(107, 202);
             this.trans.Name = "trans";
             this.trans.Size = new System.Drawing.Size(115, 40);
             this.trans.TabIndex = 9;
@@ -162,6 +179,16 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Staff Main Menu";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(571, 202);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 40);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Extra Services";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -193,6 +220,8 @@
         private System.Windows.Forms.Button trans;
         private System.Windows.Forms.Button maintains;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button class_btn;
+        private System.Windows.Forms.Button button1;
     }
 }
 

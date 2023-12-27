@@ -80,7 +80,7 @@
             this.dmgCombo.FormattingEnabled = true;
             this.dmgCombo.Location = new System.Drawing.Point(140, 16);
             this.dmgCombo.Name = "dmgCombo";
-            this.dmgCombo.Size = new System.Drawing.Size(148, 24);
+            this.dmgCombo.Size = new System.Drawing.Size(176, 24);
             this.dmgCombo.TabIndex = 75;
             // 
             // rqust_desc
@@ -150,7 +150,7 @@
             this.equipCombo.FormattingEnabled = true;
             this.equipCombo.Location = new System.Drawing.Point(163, 123);
             this.equipCombo.Name = "equipCombo";
-            this.equipCombo.Size = new System.Drawing.Size(148, 24);
+            this.equipCombo.Size = new System.Drawing.Size(176, 24);
             this.equipCombo.TabIndex = 84;
             // 
             // dataGridView1

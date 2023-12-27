@@ -36,7 +36,12 @@ namespace DBapplication
             int equimpent_id = Convert.ToInt32(equipCombo.SelectedValue);
             DateTime currentDate = DateTime.Now;
             DateTime nextMonth = currentDate.AddMonths(1);
-            if (dmg_radio.Checked)
+            string status = controllerObj.getEquipmentStatus(equimpent_id);
+            if (status == "Out of Order")
+            {
+                MessageBox.Show("Already reported");
+            }
+            else if (dmg_radio.Checked)
             {
                 int reporter_id = AppSession.UserId;
                 int dmg_estimate = Convert.ToInt32(dmgCombo.SelectedValue);
@@ -50,8 +55,11 @@ namespace DBapplication
                     int r = 0;
                     r += controllerObj.generateMaintenanceRequest(reporter_id, equimpent_id, currentDate, dmg_estimate, desc, "Pending");
                     r += controllerObj.updateEquimpentMaintenanceDate(equimpent_id, nextMonth);
-                    if (r == 2) MessageBox.Show("Success");
-                    else MessageBox.Show("Fail");
+                    r += controllerObj.updateEquimpentStatus(equimpent_id, "Out of Order");
+                    if (r == 3)
+                        MessageBox.Show("Success");
+                    else
+                        MessageBox.Show("Fail");
                 }
             }
             else
