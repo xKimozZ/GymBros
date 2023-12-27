@@ -61,6 +61,12 @@
     <Compile Include="Admin Menu\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin Menu\AdminEquipmentMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\AdminEquipmentMenu.Designer.cs">
+      <DependentUpon>AdminEquipmentMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin Menu\AdminStaffMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,11 +107,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportuc.cs">
+    <Compile Include="Reportsuc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Reportuc.Designer.cs">
-      <DependentUpon>Reportuc.cs</DependentUpon>
+    <Compile Include="Reportsuc.Designer.cs">
+      <DependentUpon>Reportsuc.cs</DependentUpon>
     </Compile>
     <Compile Include="Staff.cs">
       <SubType>Form</SubType>
@@ -161,6 +167,9 @@
     <EmbeddedResource Include="Admin Menu\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin Menu\AdminEquipmentMenu.resx">
+      <DependentUpon>AdminEquipmentMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin Menu\AdminStaffMenu.resx">
       <DependentUpon>AdminStaffMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,8 +196,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="Reportuc.resx">
-      <DependentUpon>Reportuc.cs</DependentUpon>
+    <EmbeddedResource Include="Reportsuc.resx">
+      <DependentUpon>Reportsuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>

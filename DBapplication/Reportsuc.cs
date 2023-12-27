@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBapplication.GymBrosDBDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,13 +11,13 @@ using System.Windows.Forms;
 
 namespace DBapplication
 {
-    public partial class Reportuc : UserControl
+    public partial class Reportsuc : UserControl
     {
-        public Reportuc()
+        public Reportsuc()
         {
             InitializeComponent();
+            staff_TransTableAdapter.Fill(gymBrosDBDataSet.Staff_Trans);
             reportViewer1.RefreshReport();
         }
-
     }
 }
