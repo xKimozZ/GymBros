@@ -400,6 +400,12 @@ namespace DBapplication
             return dbMan.ExecuteScalar(query).ToString();
         }
 
+        public string LnameUser(int UID)
+        {
+            string query = $"Select Lname FROM Users WHERE User_ID = '{UID}';";
+            return dbMan.ExecuteScalar(query).ToString();
+        }
+
         public DataTable getMemberData(int UID)
         {
             string query = $"SELECT Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact" +

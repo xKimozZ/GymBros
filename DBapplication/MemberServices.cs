@@ -43,14 +43,21 @@ namespace DBapplication
         private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
         {
             string selectedService = (string)comboBox1.SelectedValue;
+            services.PrimaryKey = new DataColumn[] { services.Columns["Service_Name"] };
             DataRow row = services.Rows.Find(selectedService);
             bool availability = Convert.ToBoolean(row["Availability"]);
             string description = row["Description"].ToString();
             int serviceMgrID = Convert.ToInt32(row["Service_Mgr_ID"]);
 
-            int cost = controllerObj.TransactionAmount("Extra_Service_payment");
-            string manname = controllerObj.FnameUser(serviceMgrID);
-            label3.Text = $"Cost: {cost}, Availability: {availability}, Manager: {manname}";
+            string avail;
+            if (availability)
+                avail = "Yes";
+            else
+                avail = "No";
+
+                int cost = controllerObj.TransactionAmount("Extra_Service_payment");
+            string manname = controllerObj.FnameUser(serviceMgrID) + controllerObj.LnameUser(serviceMgrID);
+            label3.Text = $"Cost: {cost}, Availabile: {avail}, Manager: {manname}";
             label4.Text = $"{description}";
         }
     }
