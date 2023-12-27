@@ -30,7 +30,6 @@
         {
             this.txtMuscle = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Editbutton = new System.Windows.Forms.Button();
             this.txtChronic = new System.Windows.Forms.TextBox();
             this.txtType = new System.Windows.Forms.TextBox();
@@ -43,7 +42,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtMuscle
@@ -63,16 +61,6 @@
             this.label9.TabIndex = 96;
             this.label9.Text = "Muscle %";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(524, 242);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(237, 157);
-            this.dataGridView1.TabIndex = 93;
-            // 
             // Editbutton
             // 
             this.Editbutton.Location = new System.Drawing.Point(286, 325);
@@ -89,6 +77,7 @@
             this.txtChronic.Name = "txtChronic";
             this.txtChronic.Size = new System.Drawing.Size(119, 22);
             this.txtChronic.TabIndex = 91;
+            this.txtChronic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtChronic_KeyPress);
             // 
             // txtType
             // 
@@ -96,6 +85,7 @@
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(119, 22);
             this.txtType.TabIndex = 90;
+            this.txtType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtType_KeyPress);
             // 
             // txtFat
             // 
@@ -182,9 +172,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.Controls.Add(this.txtMuscle);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Editbutton);
             this.Controls.Add(this.txtChronic);
             this.Controls.Add(this.txtType);
@@ -200,7 +190,7 @@
             this.Name = "BodyComp";
             this.Size = new System.Drawing.Size(786, 419);
             this.Load += new System.EventHandler(this.BodyComp_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BodyComp_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,7 +200,6 @@
 
         private System.Windows.Forms.TextBox txtMuscle;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Editbutton;
         private System.Windows.Forms.TextBox txtChronic;
         private System.Windows.Forms.TextBox txtType;

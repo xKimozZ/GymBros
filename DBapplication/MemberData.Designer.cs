@@ -30,7 +30,6 @@
         {
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Editbutton = new System.Windows.Forms.Button();
             this.txtEmergencyContact = new System.Windows.Forms.TextBox();
             this.txtContactInfo = new System.Windows.Forms.TextBox();
@@ -48,7 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtRecheck = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // radioButtonFemale
@@ -72,16 +70,6 @@
             this.radioButtonMale.TabStop = true;
             this.radioButtonMale.Text = "Male";
             this.radioButtonMale.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(524, 242);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(237, 157);
-            this.dataGridView1.TabIndex = 73;
             // 
             // Editbutton
             // 
@@ -123,6 +111,9 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(119, 22);
             this.txtPass.TabIndex = 68;
+            this.txtPass.UseSystemPasswordChar = true;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
+            this.txtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPass_KeyPress);
             // 
             // txtLname
             // 
@@ -130,6 +121,8 @@
             this.txtLname.Name = "txtLname";
             this.txtLname.Size = new System.Drawing.Size(119, 22);
             this.txtLname.TabIndex = 67;
+            this.txtLname.TextChanged += new System.EventHandler(this.txtLname_TextChanged);
+            this.txtLname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLname_KeyPress);
             // 
             // txtFname
             // 
@@ -137,6 +130,7 @@
             this.txtFname.Name = "txtFname";
             this.txtFname.Size = new System.Drawing.Size(119, 22);
             this.txtFname.TabIndex = 66;
+            this.txtFname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFname_KeyPress);
             // 
             // label8
             // 
@@ -217,8 +211,11 @@
             // 
             this.txtRecheck.Location = new System.Drawing.Point(130, 214);
             this.txtRecheck.Name = "txtRecheck";
+            this.txtRecheck.ReadOnly = true;
             this.txtRecheck.Size = new System.Drawing.Size(119, 22);
             this.txtRecheck.TabIndex = 77;
+            this.txtRecheck.UseSystemPasswordChar = true;
+            this.txtRecheck.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRecheck_KeyPress);
             // 
             // label9
             // 
@@ -238,7 +235,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.radioButtonFemale);
             this.Controls.Add(this.radioButtonMale);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Editbutton);
             this.Controls.Add(this.txtEmergencyContact);
             this.Controls.Add(this.txtContactInfo);
@@ -257,7 +253,7 @@
             this.Name = "MemberData";
             this.Size = new System.Drawing.Size(786, 419);
             this.Load += new System.EventHandler(this.MemberData_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MemberData_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,7 +263,6 @@
 
         private System.Windows.Forms.RadioButton radioButtonFemale;
         private System.Windows.Forms.RadioButton radioButtonMale;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Editbutton;
         private System.Windows.Forms.TextBox txtEmergencyContact;
         private System.Windows.Forms.TextBox txtContactInfo;

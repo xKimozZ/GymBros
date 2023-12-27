@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DBapplication
 {
@@ -63,7 +64,7 @@ namespace DBapplication
 
             int gender = (radioButtonMale.Checked) ? 1 : 0; // Assuming you have radio buttons for gender
             
-            int SessionID = 101; //Temporary.
+            int SessionID = AppSession.UserId; //Temporary.
 
             // Call the EditMember function with validated input
             int result = controllerObj.UpdateUser(SessionID, fname, lname, pass, age, contactInfo, emergencyContact, gender);
@@ -72,8 +73,6 @@ namespace DBapplication
             if (result == 1)
             {
                 MessageBox.Show("Member editted successfully!");
-                dataGridView1.DataSource = controllerObj.getNamesMembers();
-                dataGridView1.Refresh();
             }
             else
             {
@@ -87,6 +86,8 @@ namespace DBapplication
             {
                 e.Handled = true;
             }
+            else if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
         }
 
         private void txtContactInfo_KeyPress(object sender, KeyPressEventArgs e)
@@ -95,6 +96,8 @@ namespace DBapplication
             {
                 e.Handled = true;
             }
+            else if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
         }
 
         private void txtEmergencyContact_KeyPress(object sender, KeyPressEventArgs e)
@@ -103,6 +106,8 @@ namespace DBapplication
             {
                 e.Handled = true;
             }
+            else if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
         }
 
         private void MemberData_Load(object sender, EventArgs e)
@@ -111,6 +116,8 @@ namespace DBapplication
             DataTable dt;
             int sessionID = AppSession.UserId;
             dt = controllerObj.getMemberData(sessionID);
+            if (dt == null)
+                return;
             txtFname.Text = dt.Rows[0].Field<string>("Fname");
             txtLname.Text = dt.Rows[0].Field<string>("Lname");
             txtAge.Text = dt.Rows[0].Field<int>("Age").ToString();
@@ -122,6 +129,52 @@ namespace DBapplication
                 radioButtonMale.Checked = true;
             else
                 radioButtonFemale.Checked = true;
+        }
+
+        private void MemberData_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
+        }
+
+        private void txtFname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
+        }
+
+        private void txtLname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
+        }
+
+        private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
+        }
+
+        private void txtRecheck_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPass.Text != "")
+                txtRecheck.ReadOnly = false;
+            else
+            {
+                txtRecheck.ReadOnly = true;
+                txtRecheck.Text = "";
+            }
         }
     }
 }

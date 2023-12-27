@@ -80,7 +80,7 @@ namespace DBapplication
 
         private void Payment_Click(object sender, EventArgs e)
         {
-            ShowContent(new StaffAnnouncmentMenu());
+            ShowContent(new MemberPay());
             placeholderPanel.Show();
             MainMenu.Hide();
         }

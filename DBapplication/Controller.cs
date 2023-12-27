@@ -522,6 +522,32 @@ namespace DBapplication
             string query = "SELECT * FROM Suppliers;";
             return dbMan.ExecuteReader(query);
         }
+
+        public DateTime GetRenewalDate(int UID)
+        {
+            string query = $"SELECT Renewal_Date FROM Members WHERE Member_ID = '{UID}';";
+            return (DateTime)dbMan.ExecuteScalar(query);
+        }
+
+        public int TransactionAmount(string type)
+        {
+            string query = $"Select Transaction_Amount FROM Financial_Records WHERE Transaction_Type = '{type}';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public int UpdateRenewalDate(DateTime newdate,int UID)
+        {
+
+            string userUpdateQuery = $"UPDATE Members SET Renewal_Date = '{newdate}' WHERE Member_ID = {UID};";
+
+            return dbMan.ExecuteNonQuery(userUpdateQuery);
+        }
+
+        public int InsertMemberTransaction(int UID, string transactionType)
+        {
+            string insertQuery = $"INSERT INTO Mem_Trans (Member_ID, Transaction_Type, Transaction_Date) VALUES ({UID}, '{transactionType}', GETDATE())";
+            return dbMan.ExecuteNonQuery(insertQuery);
+        }
+
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
