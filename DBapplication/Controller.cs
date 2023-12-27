@@ -340,6 +340,12 @@ namespace DBapplication
             return Convert.ToInt32(dbMan.ExecuteScalar(query));
         }
 
+        public string FnameUser(int UID)
+        {
+            string query = $"Select Fname FROM Users WHERE User_ID = '{UID}';";
+            return dbMan.ExecuteScalar(query).ToString();
+        }
+
         public DataTable getMemberData(int UID)
         {
             string query = $"SELECT Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact" +

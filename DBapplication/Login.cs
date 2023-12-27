@@ -39,8 +39,10 @@ namespace DBapplication
             int checkID = controllerObj.LoginAttempt(Convert.ToInt32(textBox1.Text),textBox2.Text);
             if (checkID != 0)
             {
-                int pass = controllerObj.LoginMember(Convert.ToInt32(textBox1.Text));
-                if (pass == 0)
+                string fname = controllerObj.FnameUser(Convert.ToInt32(textBox1.Text));
+                AppSession.Login(Convert.ToInt32(textBox1.Text), fname);
+                int IsMember = controllerObj.LoginMember(Convert.ToInt32(textBox1.Text));
+                if (IsMember == 0)
                 {
                     string role = controllerObj.LoginStaff(Convert.ToInt32(textBox1.Text));
                     if (role == "Admin")
