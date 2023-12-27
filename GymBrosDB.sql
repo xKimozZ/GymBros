@@ -299,7 +299,7 @@ INSERT INTO Staff (Staff_ID, Role) VALUES
 (101, 'Front Desk');
 
 INSERT INTO Staff (Staff_ID, Role) VALUES
-(104, 'Trainer');
+(103, 'Trainer');
 
 INSERT INTO Members(Member_ID, Renewal_Date) VALUES
 (100, '2024-1-1');
@@ -313,8 +313,6 @@ INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('Mem
 INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('Class_payment', 2000);
 INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('Extra_Service_payment', 500);
 INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('PT_Session_payment', 1000);
-DELETE FROM Financial_Records;
-
 
 INSERT INTO Staff_Trans (Staff_ID, Transaction_Type, Transaction_Date) VALUES (101, 'Salary_Staff', '2023-12-13');
 INSERT INTO Staff_Trans (Staff_ID, Transaction_Type, Transaction_Date) VALUES (101, 'Salary_Staff', '2023-11-13');
