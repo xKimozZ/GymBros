@@ -100,6 +100,8 @@ namespace DBapplication
 
             return dbMan.ExecuteReader(query);
         }
+
+
         // stored 
         public int AddOrUpdateBodyComposition(int memberId, int height, int weight, float musclePercentage, float bodyFatPercentage, string bodyType, string chronicDisease)
         {

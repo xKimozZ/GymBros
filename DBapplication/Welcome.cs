@@ -21,7 +21,8 @@ namespace DBapplication
             //AdminLogin a = new AdminLogin();
             Admin a = new Admin();
             a.Show();
-             
+            //Login l = new Login();
+            //l.Show();
         }
 
         //private void button2_Click(object sender, EventArgs e)
@@ -39,6 +40,8 @@ namespace DBapplication
         {
             Staff s = new Staff();
             s.Show();
+            //Login l = new Login();
+            //l.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
