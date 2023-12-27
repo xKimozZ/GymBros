@@ -21,7 +21,7 @@ namespace DBapplication
             DataTable members = controllerObj.getNamesMembers();
             memberCombo.DataSource = members;
             memberCombo.ValueMember = "User_ID";
-            memberCombo.DisplayMember = "User_ID";
+            memberCombo.DisplayMember = "Fname";
         }
 
         private void own_trans_Click(object sender, EventArgs e)
