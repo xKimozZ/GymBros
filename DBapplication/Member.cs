@@ -59,7 +59,7 @@ namespace DBapplication
 
         private void Announcements_Click(object sender, EventArgs e)
         {
-            ShowContent(new StaffAnnouncmentMenu());
+            ShowContent(new MemberAnnouncements());
             placeholderPanel.Show();
             MainMenu.Hide();
         }

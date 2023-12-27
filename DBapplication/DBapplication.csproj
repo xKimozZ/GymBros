@@ -117,6 +117,12 @@
     <Compile Include="Member.Designer.cs">
       <DependentUpon>Member.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberAnnouncements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberAnnouncements.Designer.cs">
+      <DependentUpon>MemberAnnouncements.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemberData.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Member.resx">
       <DependentUpon>Member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberAnnouncements.resx">
+      <DependentUpon>MemberAnnouncements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberData.resx">
       <DependentUpon>MemberData.cs</DependentUpon>
