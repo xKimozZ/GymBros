@@ -1,259 +1,264 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<PropertyGroup>
-		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		<Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-		<ProductVersion>8.0.30703</ProductVersion>
-		<SchemaVersion>2.0</SchemaVersion>
-		<ProjectGuid>{DC8232D5-B804-4766-8840-C88C50EAD01E}</ProjectGuid>
-		<OutputType>WinExe</OutputType>
-		<AppDesignerFolder>Properties</AppDesignerFolder>
-		<RootNamespace>DBapplication</RootNamespace>
-		<AssemblyName>DBapplication</AssemblyName>
-		<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-		<TargetFrameworkProfile>
-		</TargetFrameworkProfile>
-		<FileAlignment>512</FileAlignment>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-		<PlatformTarget>x86</PlatformTarget>
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>full</DebugType>
-		<Optimize>false</Optimize>
-		<OutputPath>bin\Debug\</OutputPath>
-		<DefineConstants>DEBUG;TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-		<Prefer32Bit>false</Prefer32Bit>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-		<PlatformTarget>x86</PlatformTarget>
-		<DebugType>pdbonly</DebugType>
-		<Optimize>true</Optimize>
-		<OutputPath>bin\Release\</OutputPath>
-		<DefineConstants>TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-		<Prefer32Bit>false</Prefer32Bit>
-	</PropertyGroup>
-	<ItemGroup>
-		<Reference Include="System" />
-		<Reference Include="System.Core" />
-		<Reference Include="System.Xml.Linq" />
-		<Reference Include="System.Data.DataSetExtensions" />
-		<Reference Include="Microsoft.CSharp" />
-		<Reference Include="System.Data" />
-		<Reference Include="System.Deployment" />
-		<Reference Include="System.Drawing" />
-		<Reference Include="System.Windows.Forms" />
-		<Reference Include="System.Xml" />
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="AddSession.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="AddSession.Designer.cs">
-			<DependentUpon>AddSession.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Admin Menu\Admin.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="Admin Menu\Admin.Designer.cs">
-			<DependentUpon>Admin.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Admin Menu\AdminClassesMenu.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="Admin Menu\AdminClassesMenu.Designer.cs">
-			<DependentUpon>AdminClassesMenu.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Admin Menu\AdminEquipmentMenu.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="Admin Menu\AdminEquipmentMenu.Designer.cs">
-			<DependentUpon>AdminEquipmentMenu.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Admin Menu\AdminExtraMenu.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="Admin Menu\AdminExtraMenu.Designer.cs">
-			<DependentUpon>AdminExtraMenu.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Admin Menu\AdminStaffMenu.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="Admin Menu\AdminStaffMenu.Designer.cs">
-			<DependentUpon>AdminStaffMenu.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Admin Menu\Report2.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="Admin Menu\Report2.Designer.cs">
-			<DependentUpon>Report2.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Admin Menu\Report3.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="Admin Menu\Report3.Designer.cs">
-			<DependentUpon>Report3.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Admin Menu\ReportMenu.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="Admin Menu\ReportMenu.Designer.cs">
-			<DependentUpon>ReportMenu.cs</DependentUpon>
-		</Compile>
-		<Compile Include="AppSession.cs" />
-		<Compile Include="BodyComp.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="BodyComp.Designer.cs">
-			<DependentUpon>BodyComp.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Controller.cs" />
-		<Compile Include="DBManager.cs" />
-		<Compile Include="EditMember.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="EditMember.Designer.cs">
-			<DependentUpon>EditMember.cs</DependentUpon>
-		</Compile>
-		<Compile Include="EditStaffOwnProfile.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="EditStaffOwnProfile.Designer.cs">
-			<DependentUpon>EditStaffOwnProfile.cs</DependentUpon>
-		</Compile>
-		<Compile Include="GymBrosDBDataSet.cs">
-			<DependentUpon>GymBrosDBDataSet.xsd</DependentUpon>
-		</Compile>
-		<Compile Include="GymBrosDBDataSet.Designer.cs">
-			<AutoGen>True</AutoGen>
-			<DesignTime>True</DesignTime>
-			<DependentUpon>GymBrosDBDataSet.xsd</DependentUpon>
-		</Compile>
-		<Compile Include="Login.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="Login.Designer.cs">
-			<DependentUpon>Login.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Member.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="Member.Designer.cs">
-			<DependentUpon>Member.cs</DependentUpon>
-		</Compile>
-		<Compile Include="MemberAnnouncements.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="MemberAnnouncements.Designer.cs">
-			<DependentUpon>MemberAnnouncements.cs</DependentUpon>
-		</Compile>
-		<Compile Include="MemberData.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="MemberData.Designer.cs">
-			<DependentUpon>MemberData.cs</DependentUpon>
-		</Compile>
-		<Compile Include="MemberManage.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="MemberManage.Designer.cs">
-			<DependentUpon>MemberManage.cs</DependentUpon>
-		</Compile>
-		<Compile Include="MemberPay.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="MemberPay.Designer.cs">
-			<DependentUpon>MemberPay.cs</DependentUpon>
-		</Compile>
-		<Compile Include="PersonaltrainingStaffMenu.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="PersonaltrainingStaffMenu.Designer.cs">
-			<DependentUpon>PersonaltrainingStaffMenu.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Program.cs" />
-		<Compile Include="Properties\AssemblyInfo.cs" />
-		<Compile Include="Admin Menu\Reportsuc.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="Admin Menu\Reportsuc.Designer.cs">
-			<DependentUpon>Reportsuc.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Staff.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="Staff.Designer.cs">
-			<DependentUpon>Staff.cs</DependentUpon>
-		</Compile>
-		<Compile Include="StaffAnnouncmentMenu.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="StaffAnnouncmentMenu.Designer.cs">
-			<DependentUpon>StaffAnnouncmentMenu.cs</DependentUpon>
-		</Compile>
-		<Compile Include="StaffCheckInPT.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="StaffCheckInPT.Designer.cs">
-			<DependentUpon>StaffCheckInPT.cs</DependentUpon>
-		</Compile>
-		<Compile Include="StaffMaintenance.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="StaffMaintenance.Designer.cs">
-			<DependentUpon>StaffMaintenance.cs</DependentUpon>
-		</Compile>
-		<Compile Include="StaffPTUpdate.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="StaffPTUpdate.Designer.cs">
-			<DependentUpon>StaffPTUpdate.cs</DependentUpon>
-		</Compile>
-		<Compile Include="StaffPTView.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="StaffPTView.Designer.cs">
-			<DependentUpon>StaffPTView.cs</DependentUpon>
-		</Compile>
-		<Compile Include="StaffUpdateBody.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="StaffUpdateBody.Designer.cs">
-			<DependentUpon>StaffUpdateBody.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Staff_Transactions.cs">
-			<SubType>UserControl</SubType>
-		</Compile>
-		<Compile Include="Staff_Transactions.Designer.cs">
-			<DependentUpon>Staff_Transactions.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Welcome.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="Welcome.Designer.cs">
-			<DependentUpon>Welcome.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="AddSession.resx">
-			<DependentUpon>AddSession.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Admin Menu\Admin.resx">
-			<DependentUpon>Admin.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Admin Menu\AdminClassesMenu.resx">
-			<DependentUpon>AdminClassesMenu.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Admin Menu\AdminEquipmentMenu.resx">
-			<DependentUpon>AdminEquipmentMenu.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Admin Menu\AdminExtraMenu.resx">
-			<DependentUpon>AdminExtraMenu.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Admin Menu\AdminStaffMenu.resx">
-			<DependentUpon>AdminStaffMenu.cs</DependentUpon>
-		</EmbeddedResource>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC8232D5-B804-4766-8840-C88C50EAD01E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DBapplication</RootNamespace>
+    <AssemblyName>DBapplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddSession.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddSession.Designer.cs">
+      <DependentUpon>AddSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Menu\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Menu\AdminClassesMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\AdminClassesMenu.Designer.cs">
+      <DependentUpon>AdminClassesMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Menu\AdminEquipmentMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\AdminEquipmentMenu.Designer.cs">
+      <DependentUpon>AdminEquipmentMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Menu\AdminExtraMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\AdminExtraMenu.Designer.cs">
+      <DependentUpon>AdminExtraMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Menu\AdminStaffMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\AdminStaffMenu.Designer.cs">
+      <DependentUpon>AdminStaffMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Menu\Report2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\Report2.Designer.cs">
+      <DependentUpon>Report2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Menu\Report3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\Report3.Designer.cs">
+      <DependentUpon>Report3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Menu\ReportMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\ReportMenu.Designer.cs">
+      <DependentUpon>ReportMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppSession.cs" />
+    <Compile Include="MemberBodyComp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberBodyComp.Designer.cs">
+      <DependentUpon>MemberBodyComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller.cs" />
+    <Compile Include="DBManager.cs" />
+    <Compile Include="EditMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditMember.Designer.cs">
+      <DependentUpon>EditMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditStaffOwnProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditStaffOwnProfile.Designer.cs">
+      <DependentUpon>EditStaffOwnProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GymBrosDBDataSet.cs">
+      <DependentUpon>GymBrosDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GymBrosDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymBrosDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member.Designer.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberAnnouncements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberAnnouncements.Designer.cs">
+      <DependentUpon>MemberAnnouncements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberData.Designer.cs">
+      <DependentUpon>MemberData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberManage.Designer.cs">
+      <DependentUpon>MemberManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberPay.Designer.cs">
+      <DependentUpon>MemberPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberServices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberServices.Designer.cs">
+      <DependentUpon>MemberServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonaltrainingStaffMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PersonaltrainingStaffMenu.Designer.cs">
+      <DependentUpon>PersonaltrainingStaffMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Admin Menu\Reportsuc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\Reportsuc.Designer.cs">
+      <DependentUpon>Reportsuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffAnnouncmentMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaffAnnouncmentMenu.Designer.cs">
+      <DependentUpon>StaffAnnouncmentMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffCheckInPT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaffCheckInPT.Designer.cs">
+      <DependentUpon>StaffCheckInPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffMaintenance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaffMaintenance.Designer.cs">
+      <DependentUpon>StaffMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffPTUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaffPTUpdate.Designer.cs">
+      <DependentUpon>StaffPTUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffPTView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaffPTView.Designer.cs">
+      <DependentUpon>StaffPTView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffUpdateBody.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaffUpdateBody.Designer.cs">
+      <DependentUpon>StaffUpdateBody.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff_Transactions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Staff_Transactions.Designer.cs">
+      <DependentUpon>Staff_Transactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddSession.resx">
+      <DependentUpon>AddSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Menu\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Menu\AdminClassesMenu.resx">
+      <DependentUpon>AdminClassesMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Menu\AdminEquipmentMenu.resx">
+      <DependentUpon>AdminEquipmentMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Menu\AdminExtraMenu.resx">
+      <DependentUpon>AdminExtraMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Menu\AdminStaffMenu.resx">
+      <DependentUpon>AdminStaffMenu.cs</DependentUpon>
 		<EmbeddedResource Include="Admin Menu\Report2.resx">
 			<DependentUpon>Report2.cs</DependentUpon>
 		</EmbeddedResource>
@@ -263,120 +268,123 @@
 		<EmbeddedResource Include="Admin Menu\ReportMenu.resx">
 			<DependentUpon>ReportMenu.cs</DependentUpon>
 		</EmbeddedResource>
-		<EmbeddedResource Include="BodyComp.resx">
-			<DependentUpon>BodyComp.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="EditMember.resx">
-			<DependentUpon>EditMember.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="EditStaffOwnProfile.resx">
-			<DependentUpon>EditStaffOwnProfile.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Login.resx">
-			<DependentUpon>Login.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Maintenance.rdlc" />
-		<EmbeddedResource Include="Member.resx">
-			<DependentUpon>Member.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="MemberAnnouncements.resx">
-			<DependentUpon>MemberAnnouncements.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="MemberData.resx">
-			<DependentUpon>MemberData.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="MemberManage.resx">
-			<DependentUpon>MemberManage.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="MemberPay.resx">
-			<DependentUpon>MemberPay.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="PersonaltrainingStaffMenu.resx">
-			<DependentUpon>PersonaltrainingStaffMenu.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Properties\Resources.resx">
-			<Generator>ResXFileCodeGenerator</Generator>
-			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
-			<SubType>Designer</SubType>
-		</EmbeddedResource>
-		<Compile Include="Properties\Resources.Designer.cs">
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Resources.resx</DependentUpon>
-			<DesignTime>True</DesignTime>
-		</Compile>
-		<EmbeddedResource Include="Report1.rdlc" />
-		<EmbeddedResource Include="Admin Menu\Reportsuc.resx">
-			<DependentUpon>Reportsuc.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Staff.resx">
-			<DependentUpon>Staff.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="StaffAnnouncmentMenu.resx">
-			<DependentUpon>StaffAnnouncmentMenu.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="StaffCheckInPT.resx">
-			<DependentUpon>StaffCheckInPT.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="StaffMaintenance.resx">
-			<DependentUpon>StaffMaintenance.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="StaffPTUpdate.resx">
-			<DependentUpon>StaffPTUpdate.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="StaffPTView.resx">
-			<DependentUpon>StaffPTView.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="StaffUpdateBody.resx">
-			<DependentUpon>StaffUpdateBody.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Supplier Transaction.rdlc" />
-		<EmbeddedResource Include="Welcome.resx">
-			<DependentUpon>Welcome.cs</DependentUpon>
-		</EmbeddedResource>
-		<None Include="app.config" />
-		<None Include="GymBrosDBDataSet.xsc">
-			<DependentUpon>GymBrosDBDataSet.xsd</DependentUpon>
-		</None>
-		<None Include="GymBrosDBDataSet.xsd">
-			<Generator>MSDataSetGenerator</Generator>
-			<LastGenOutput>GymBrosDBDataSet.Designer.cs</LastGenOutput>
-			<SubType>Designer</SubType>
-		</None>
-		<None Include="GymBrosDBDataSet.xss">
-			<DependentUpon>GymBrosDBDataSet.xsd</DependentUpon>
-		</None>
-		<None Include="Properties\Settings.settings">
-			<Generator>SettingsSingleFileGenerator</Generator>
-			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
-		</None>
-		<Compile Include="Properties\Settings.Designer.cs">
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Settings.settings</DependentUpon>
-			<DesignTimeSharedInput>True</DesignTimeSharedInput>
-		</Compile>
-	</ItemGroup>
-	<ItemGroup>
-		<None Include="Resources\istockphoto-610855984-612x612.jpg" />
-	</ItemGroup>
-	<ItemGroup>
-		<None Include="Resources\360_F_166620979_YEjNRefWLF42MUvr42oE53HynM52RHSp.jpg" />
-	</ItemGroup>
-	<ItemGroup>
-		<None Include="Resources\360_F_312409000_eMqNEV0nWOAQT4fT2OWDXpO0r1IJz32U.jpg" />
-	</ItemGroup>
-	<ItemGroup>
-		<None Include="Resources\abstract-geometric-blue-background-vector-3958327.jpg" />
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms">
-			<Version>140.1000.523</Version>
-		</PackageReference>
-		<PackageReference Include="Microsoft.SqlServer.Types">
-			<Version>14.0.314.76</Version>
-		</PackageReference>
-	</ItemGroup>
-	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-	<!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+    </EmbeddedResource>MemberBodyComp.resx">
+      <DependentUpon>MemberBodyComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMember.resx">
+      <DependentUpon>EditMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditStaffOwnProfile.resx">
+      <DependentUpon>EditStaffOwnProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance.rdlc" />
+    <EmbeddedResource Include="Member.resx">
+      <DependentUpon>Member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberAnnouncements.resx">
+      <DependentUpon>MemberAnnouncements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberData.resx">
+      <DependentUpon>MemberData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberManage.resx">
+      <DependentUpon>MemberManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberPay.resx">
+      <DependentUpon>MemberPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberServices.resx">
+      <DependentUpon>MemberServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonaltrainingStaffMenu.resx">
+      <DependentUpon>PersonaltrainingStaffMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Admin Menu\Reportsuc.resx">
+      <DependentUpon>Reportsuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffAnnouncmentMenu.resx">
+      <DependentUpon>StaffAnnouncmentMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffCheckInPT.resx">
+      <DependentUpon>StaffCheckInPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffMaintenance.resx">
+      <DependentUpon>StaffMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffPTUpdate.resx">
+      <DependentUpon>StaffPTUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffPTView.resx">
+      <DependentUpon>StaffPTView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffUpdateBody.resx">
+      <DependentUpon>StaffUpdateBody.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier Transaction.rdlc" />
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="GymBrosDBDataSet.xsc">
+      <DependentUpon>GymBrosDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GymBrosDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GymBrosDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GymBrosDBDataSet.xss">
+      <DependentUpon>GymBrosDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-610855984-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_166620979_YEjNRefWLF42MUvr42oE53HynM52RHSp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_312409000_eMqNEV0nWOAQT4fT2OWDXpO0r1IJz32U.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-geometric-blue-background-vector-3958327.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms">
+      <Version>140.1000.523</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SqlServer.Types">
+      <Version>14.0.314.76</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
