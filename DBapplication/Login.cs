@@ -84,11 +84,25 @@ namespace DBapplication
             {
                 e.Handled = true;
             }
+            else if (e.KeyChar == (char)Keys.Enter)
+                button2_Click(sender, e);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                button2_Click(sender, e);
+        }
+
+        private void Login_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                button2_Click(sender, e);
         }
     }
 }

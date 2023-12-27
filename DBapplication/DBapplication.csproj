@@ -135,6 +135,12 @@
     <Compile Include="MemberManage.Designer.cs">
       <DependentUpon>MemberManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberPay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberPay.Designer.cs">
+      <DependentUpon>MemberPay.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonaltrainingStaffMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -241,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemberManage.resx">
       <DependentUpon>MemberManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberPay.resx">
+      <DependentUpon>MemberPay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonaltrainingStaffMenu.resx">
       <DependentUpon>PersonaltrainingStaffMenu.cs</DependentUpon>
