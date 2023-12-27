@@ -40,6 +40,7 @@ namespace DBapplication
             if (checkID != 0)
             {
                 string fname = controllerObj.FnameUser(Convert.ToInt32(textBox1.Text));
+                // User session
                 AppSession.Login(Convert.ToInt32(textBox1.Text), fname);
                 int IsMember = controllerObj.LoginMember(Convert.ToInt32(textBox1.Text));
                 if (IsMember == 0)

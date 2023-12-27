@@ -12,11 +12,12 @@ namespace DBapplication
 {
     public partial class Staff : Form
     {
-       
-        public Staff()
+        Controller controllerObj;
+      public Staff()
         {
 
             InitializeComponent();
+            controllerObj = new Controller();
             // Hard code login session 
             AppSession.Login(101,"John");
             
@@ -81,9 +82,18 @@ namespace DBapplication
 
         private void PTButton_Click(object sender, EventArgs e)
         {
+            string role = controllerObj.GetRoleByStaffId(AppSession.UserId);
+            if (role.ToLower() != "trainer")
+            {
+                MessageBox.Show("Access denied, you are not a trainer");
+            }
+            else
+            {
+
             ShowContent(new PersonaltrainingStaffMenu());
             placeholderPanel.Show();
             MainMenu.Hide();
+            }
         }
 
         private void trans_Click(object sender, EventArgs e)
