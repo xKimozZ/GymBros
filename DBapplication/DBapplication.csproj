@@ -100,6 +100,9 @@
     <Compile Include="EditStaffOwnProfile.Designer.cs">
       <DependentUpon>EditStaffOwnProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="GymBrosDBDataSet.cs">
+      <DependentUpon>GymBrosDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GymBrosDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -116,6 +119,12 @@
     </Compile>
     <Compile Include="Member.Designer.cs">
       <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberAnnouncements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberAnnouncements.Designer.cs">
+      <DependentUpon>MemberAnnouncements.cs</DependentUpon>
     </Compile>
     <Compile Include="MemberData.cs">
       <SubType>UserControl</SubType>
@@ -226,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Member.resx">
       <DependentUpon>Member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberAnnouncements.resx">
+      <DependentUpon>MemberAnnouncements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberData.resx">
       <DependentUpon>MemberData.cs</DependentUpon>

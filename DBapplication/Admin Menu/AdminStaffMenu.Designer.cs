@@ -32,11 +32,9 @@
             this.panelAdminPay = new System.Windows.Forms.Panel();
             this.buttonPaypanel = new System.Windows.Forms.Button();
             this.buttonAddadmin = new System.Windows.Forms.Button();
-            this.panelStaffdel = new System.Windows.Forms.Panel();
             this.buttonDel = new System.Windows.Forms.Button();
             this.buttonPay = new System.Windows.Forms.Button();
             this.buttonProfile = new System.Windows.Forms.Button();
-            this.buttonRemove = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelManager = new System.Windows.Forms.Panel();
@@ -102,13 +100,6 @@
             this.buttonAddadmin.UseVisualStyleBackColor = true;
             this.buttonAddadmin.Click += new System.EventHandler(this.buttonAddadmin_Click);
             // 
-            // panelStaffdel
-            // 
-            this.panelStaffdel.Location = new System.Drawing.Point(292, 168);
-            this.panelStaffdel.Name = "panelStaffdel";
-            this.panelStaffdel.Size = new System.Drawing.Size(365, 50);
-            this.panelStaffdel.TabIndex = 23;
-            // 
             // buttonDel
             // 
             this.buttonDel.Location = new System.Drawing.Point(137, 140);
@@ -125,7 +116,7 @@
             this.buttonPay.FlatAppearance.BorderSize = 0;
             this.buttonPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPay.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.buttonPay.Location = new System.Drawing.Point(73, 297);
+            this.buttonPay.Location = new System.Drawing.Point(73, 241);
             this.buttonPay.Margin = new System.Windows.Forms.Padding(1);
             this.buttonPay.Name = "buttonPay";
             this.buttonPay.Size = new System.Drawing.Size(100, 54);
@@ -148,21 +139,6 @@
             this.buttonProfile.Text = "Profile Manager";
             this.buttonProfile.UseVisualStyleBackColor = false;
             this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click);
-            // 
-            // buttonRemove
-            // 
-            this.buttonRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.buttonRemove.FlatAppearance.BorderSize = 0;
-            this.buttonRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRemove.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.buttonRemove.Location = new System.Drawing.Point(73, 241);
-            this.buttonRemove.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(100, 54);
-            this.buttonRemove.TabIndex = 20;
-            this.buttonRemove.Text = "PlaceHolder";
-            this.buttonRemove.UseVisualStyleBackColor = false;
-            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // buttonAdd
             // 
@@ -456,7 +432,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
             this.panel1.Controls.Add(this.buttonPay);
             this.panel1.Controls.Add(this.buttonProfile);
-            this.panel1.Controls.Add(this.buttonRemove);
             this.panel1.Controls.Add(this.buttonAdd);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -495,10 +470,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.comboBoxID);
-            this.Controls.Add(this.panelAdminPay);
             this.Controls.Add(this.panelAdd);
-            this.Controls.Add(this.panelStaffdel);
             this.Controls.Add(this.panelManager);
+            this.Controls.Add(this.panelAdminPay);
             this.DoubleBuffered = true;
             this.Name = "AdminStaffMenu";
             this.Size = new System.Drawing.Size(719, 376);
@@ -518,11 +492,9 @@
 
         private System.Windows.Forms.Panel panelAdminPay;
         private System.Windows.Forms.Button buttonAddadmin;
-        private System.Windows.Forms.Panel panelStaffdel;
         private System.Windows.Forms.Button buttonDel;
         private System.Windows.Forms.Button buttonPay;
         private System.Windows.Forms.Button buttonProfile;
-        private System.Windows.Forms.Button buttonRemove;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelManager;

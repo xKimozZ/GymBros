@@ -446,9 +446,82 @@ namespace DBapplication
 
             return dbMan.ExecuteNonQuery(classInsertQuery);
         }
+        public int UpdateClass(string classType, int newClassMgr, string newDescription, int newInstructorId, DateTime newDate, TimeSpan newTime, string newLocation, int newClassMaxLimit, bool newAvailability)
+        { 
+            string classUpdateQuery = $@"
+        UPDATE Classes
+        SET Class_Mgr = {newClassMgr},
+            Description = '{newDescription}',
+            Instructor_ID = {newInstructorId},
+            Date = '{newDate:yyyy-MM-dd}',
+            Time = '{newTime:hh\\:mm}',
+            Location = '{newLocation}',
+            Class_Max_Limit = {newClassMaxLimit},
+            Availability = {(newAvailability ? 1 : 0)}
+        WHERE Class_Type = '{classType}';";
 
+            return dbMan.ExecuteNonQuery(classUpdateQuery);
+        }
+        public DataTable GetAllClassTypes()
+        {
+            string query = "SELECT Class_Type FROM Classes;";
+            return dbMan.ExecuteReader(query);
+        }
+        public int DeleteClass(string classType)
+        {
+            string deleteQuery = $"DELETE FROM Classes WHERE Class_Type = '{classType}';";
+            return dbMan.ExecuteNonQuery(deleteQuery);
+        }
 
+        public DataTable GetPendingMaintenanceRequests()
+        {
+            string query = @"
+        SELECT *
+        FROM Maintains
+        WHERE Maintains.Status = 'Pending';";
 
+            return dbMan.ExecuteReader(query);
+        }
+        public int GetDmgEstimateByEquipmentId(int equipmentId)
+        {
+            string dmgEstimateQuery = $"SELECT Dmg_Estimate FROM Maintains WHERE Equipment_ID = {equipmentId}";
+            object result = dbMan.ExecuteScalar(dmgEstimateQuery);
+
+            // Check if the result is not null and return the damage estimate as an integer
+            return result != null && int.TryParse(result.ToString(), out int dmgEstimate) ? dmgEstimate : -1; // You can use any default value you prefer
+        }
+        public int UpdateEquipmentStatus(int equipmentId, string newStatus)
+        {
+            string updateQuery = $"UPDATE Equipment SET Status = '{newStatus}' WHERE Equipment_ID = {equipmentId};";
+            return dbMan.ExecuteNonQuery(updateQuery);
+        }
+        public int UpdateEquipmentMaintenanceStatus(int equipmentId, string newStatus)
+        {
+            string updateQuery = $"UPDATE Equipment SET  Status = '{newStatus}' WHERE Equipment_ID = {equipmentId};";
+            return dbMan.ExecuteNonQuery(updateQuery);
+        }
+        public int DeleteMaintainsRecord(int equipmentId)
+        {
+            string deleteQuery = $"DELETE FROM Maintains WHERE Equipment_ID = {equipmentId};";
+            return dbMan.ExecuteNonQuery(deleteQuery);
+        }
+        public int InsertEquipment(string model, DateTime purchaseDate, int supplierId)
+        {
+            // Calculate Maintenance_Sched date as one month after the Purchase_Date
+            DateTime maintenanceSched = purchaseDate.AddMonths(1);
+
+            string insertQuery = $@"
+        INSERT INTO Equipment (Model, Purchase_Date, Maintenance_Sched, Status, Supplier_ID)
+        VALUES
+        ('{model}', '{purchaseDate:yyyy-MM-dd}', '{maintenanceSched:yyyy-MM-dd}', 'Good', {supplierId});";
+
+            return dbMan.ExecuteNonQuery(insertQuery);
+        }
+        public DataTable GetAllSuppliers()
+        {
+            string query = "SELECT * FROM Suppliers;";
+            return dbMan.ExecuteReader(query);
+        }
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
