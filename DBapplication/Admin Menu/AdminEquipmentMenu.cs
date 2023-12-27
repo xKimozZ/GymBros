@@ -19,7 +19,9 @@ namespace DBapplication.Admin_Menu
             controllerObj = new Controller();
             InitializeComponent();
             panelMaintain.Hide();
+            panelbuy.Hide();
             LoadPendinRequests();
+            LoadSuppliers();
         }
         private void LoadPendinRequests()
         {
@@ -29,7 +31,15 @@ namespace DBapplication.Admin_Menu
             comboBoxEquipmentID.DataSource = Equipment;
             dataGridView2.DataSource = Equipment;
             dataGridView2.Refresh();
-
+        }
+        private void LoadSuppliers()
+        {
+            DataTable Supplier = controllerObj.GetAllSuppliers();
+            comboBoxSupplier.DisplayMember = "Supplier_ID";
+            comboBoxSupplier.ValueMember = "Supplier_ID";
+            comboBoxSupplier.DataSource = Supplier;
+            dataGridView1.DataSource = Supplier;
+            dataGridView1.Refresh();
         }
         private void buttonmaint_Click(object sender, EventArgs e)
         {
@@ -120,6 +130,50 @@ namespace DBapplication.Admin_Menu
         private void buttonManage_Click(object sender, EventArgs e)
         {
             panelMaintain.Show();
+            panelbuy.Hide();
+            panelselect.Visible = true;
+            panelselect.Top = buttonmaint.Top;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            controllerObj = new Controller();
+
+            // Validate model input
+            string model = txtModel.Text.Trim();
+            if (string.IsNullOrEmpty(model))
+            {
+                MessageBox.Show("Please enter a valid model for the equipment.");
+                return;
+            }
+
+            int supplierId;
+
+            // Validate supplier selection
+            if (!int.TryParse(comboBoxSupplier.SelectedValue?.ToString(), out supplierId))
+            {
+                MessageBox.Show("Please select a valid supplier from the list.");
+                return;
+            }
+
+            // add a new equipment
+            int result = controllerObj.InsertEquipment(model, DateTime.Now, supplierId);
+
+            if (result == 1)
+            {
+                MessageBox.Show("Equipment bought successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Error buying equipment. Please check the input and try again.");
+            }
+        }
+
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            panelMaintain.Hide();
+            panelbuy.Show();
             panelselect.Visible = true;
             panelselect.Top = buttonmaint.Top;
         }

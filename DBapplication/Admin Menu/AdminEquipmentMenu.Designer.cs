@@ -36,17 +36,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMaintain = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.comboBoxEquipmentID = new System.Windows.Forms.ComboBox();
             this.buttonmaint = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panelbuy = new System.Windows.Forms.Panel();
+            this.buttonbuy = new System.Windows.Forms.Button();
+            this.comboBoxSupplier = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SupplierID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMaintain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panelbuy.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelselect
@@ -99,17 +105,18 @@
             this.buttonAdd.TabIndex = 19;
             this.buttonAdd.Text = "Buy";
             this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(8, 79);
+            this.label1.Location = new System.Drawing.Point(3, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 20);
+            this.label1.Size = new System.Drawing.Size(168, 18);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Classes Management";
+            this.label1.Text = "Equipment Management";
             // 
             // pictureBox1
             // 
@@ -132,6 +139,23 @@
             this.panelMaintain.Size = new System.Drawing.Size(466, 314);
             this.panelMaintain.TabIndex = 70;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(63, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Equipment ID";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(209, 72);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView2.TabIndex = 51;
+            // 
             // comboBoxEquipmentID
             // 
             this.comboBoxEquipmentID.FormattingEnabled = true;
@@ -153,43 +177,74 @@
             this.buttonmaint.UseVisualStyleBackColor = false;
             this.buttonmaint.Click += new System.EventHandler(this.buttonmaint_Click);
             // 
-            // dataGridView2
+            // panelbuy
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(209, 72);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView2.TabIndex = 51;
+            this.panelbuy.Controls.Add(this.SupplierID);
+            this.panelbuy.Controls.Add(this.label3);
+            this.panelbuy.Controls.Add(this.txtModel);
+            this.panelbuy.Controls.Add(this.dataGridView1);
+            this.panelbuy.Controls.Add(this.comboBoxSupplier);
+            this.panelbuy.Controls.Add(this.buttonbuy);
+            this.panelbuy.Location = new System.Drawing.Point(253, 29);
+            this.panelbuy.Name = "panelbuy";
+            this.panelbuy.Size = new System.Drawing.Size(466, 314);
+            this.panelbuy.TabIndex = 53;
             // 
-            // label2
+            // buttonbuy
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Equipment ID";
+            this.buttonbuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
+            this.buttonbuy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonbuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonbuy.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonbuy.Location = new System.Drawing.Point(177, 240);
+            this.buttonbuy.Name = "buttonbuy";
+            this.buttonbuy.Size = new System.Drawing.Size(115, 40);
+            this.buttonbuy.TabIndex = 49;
+            this.buttonbuy.Text = "$";
+            this.buttonbuy.UseVisualStyleBackColor = false;
+            this.buttonbuy.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel2
+            // comboBoxSupplier
             // 
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(253, 29);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(466, 314);
-            this.panel2.TabIndex = 53;
+            this.comboBoxSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSupplier.FormattingEnabled = true;
+            this.comboBoxSupplier.Location = new System.Drawing.Point(62, 86);
+            this.comboBoxSupplier.Name = "comboBoxSupplier";
+            this.comboBoxSupplier.Size = new System.Drawing.Size(105, 21);
+            this.comboBoxSupplier.TabIndex = 50;
             // 
-            // button1
+            // dataGridView1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(177, 240);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 40);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "$";
-            this.button1.UseVisualStyleBackColor = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(209, 72);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 51;
+            // 
+            // txtModel
+            // 
+            this.txtModel.Location = new System.Drawing.Point(67, 155);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(100, 20);
+            this.txtModel.TabIndex = 52;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 158);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 53;
+            this.label3.Text = "Model";
+            // 
+            // SupplierID
+            // 
+            this.SupplierID.AutoSize = true;
+            this.SupplierID.Location = new System.Drawing.Point(3, 89);
+            this.SupplierID.Name = "SupplierID";
+            this.SupplierID.Size = new System.Drawing.Size(56, 13);
+            this.SupplierID.TabIndex = 54;
+            this.SupplierID.Text = "SupplierID";
             // 
             // AdminEquipmentMenu
             // 
@@ -198,7 +253,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.Controls.Add(this.panelselect);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelbuy);
             this.Controls.Add(this.panelMaintain);
             this.Name = "AdminEquipmentMenu";
             this.Size = new System.Drawing.Size(799, 375);
@@ -208,7 +263,9 @@
             this.panelMaintain.ResumeLayout(false);
             this.panelMaintain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.panelbuy.ResumeLayout(false);
+            this.panelbuy.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,7 +282,12 @@
         private System.Windows.Forms.ComboBox comboBoxEquipmentID;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelbuy;
+        private System.Windows.Forms.Button buttonbuy;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBoxSupplier;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.Label SupplierID;
+        private System.Windows.Forms.Label label3;
     }
 }

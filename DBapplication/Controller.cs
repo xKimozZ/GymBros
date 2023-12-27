@@ -505,7 +505,23 @@ namespace DBapplication
             string deleteQuery = $"DELETE FROM Maintains WHERE Equipment_ID = {equipmentId};";
             return dbMan.ExecuteNonQuery(deleteQuery);
         }
+        public int InsertEquipment(string model, DateTime purchaseDate, int supplierId)
+        {
+            // Calculate Maintenance_Sched date as one month after the Purchase_Date
+            DateTime maintenanceSched = purchaseDate.AddMonths(1);
 
+            string insertQuery = $@"
+        INSERT INTO Equipment (Model, Purchase_Date, Maintenance_Sched, Status, Supplier_ID)
+        VALUES
+        ('{model}', '{purchaseDate:yyyy-MM-dd}', '{maintenanceSched:yyyy-MM-dd}', 'Good', {supplierId});";
+
+            return dbMan.ExecuteNonQuery(insertQuery);
+        }
+        public DataTable GetAllSuppliers()
+        {
+            string query = "SELECT * FROM Suppliers;";
+            return dbMan.ExecuteReader(query);
+        }
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
