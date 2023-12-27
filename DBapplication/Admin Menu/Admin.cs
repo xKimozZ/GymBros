@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBapplication.Admin_Menu;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -58,6 +59,13 @@ namespace DBapplication
         private void buttonAnnouncement_Click(object sender, EventArgs e)
         {
             ShowContent(new StaffAnnouncmentMenu());
+            placeholderPanel.Show();
+            MainMenu.Hide();
+        }
+
+        private void buttonClasses_Click(object sender, EventArgs e)
+        {
+            ShowContent(new AdminClassesMenu());
             placeholderPanel.Show();
             MainMenu.Hide();
         }

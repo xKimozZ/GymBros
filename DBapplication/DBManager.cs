@@ -19,7 +19,7 @@ namespace DBapplication
         // EZZ:
         //Data Source=DESKTOP-MAINEZ\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True;Encrypt=False
 
-        static string DB_Connection_String = @"Data Source=.\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True;Encrypt=False";
+        static string DB_Connection_String = @"Data Source=.\SQLEXPRESS;Initial Catalog=GymBrosDB;Integrated Security=True;Encrypt=False; MultipleActiveResultSets=True;";
         SqlConnection myConnection;
         static bool check=false;
         public DBManager()
@@ -78,6 +78,7 @@ namespace DBapplication
                 Console.WriteLine(ex.Message);
                 return null;
             }
+
         }
 
         public DataTable ExecuteReaderStored(string storedProcedureName, Dictionary<string, object> parameters)

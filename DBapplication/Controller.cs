@@ -41,6 +41,16 @@ namespace DBapplication
 
             return dbMan.ExecuteReader(query);
         }
+        public DataTable GetStaffByRole(string role)
+        {
+            string query = $@"
+        SELECT *
+        FROM Staff
+        WHERE Staff.Role = '{role}';";
+
+            return dbMan.ExecuteReader(query);
+        }
+
 
         public DataTable GetMemberInformation(int memberId)
         {
@@ -322,6 +332,18 @@ namespace DBapplication
             string insertQuery = $"INSERT INTO Staff_Trans (Staff_ID, Transaction_Type, Transaction_Date) VALUES ({staffId}, '{transactionType}', GETDATE())";
             return dbMan.ExecuteNonQuery(insertQuery);
         }
+        public int InsertClass(string classType, int classMgr, string description, int instructorId, DateTime date, TimeSpan time, string location, int classMaxLimit)
+        {
+            string classInsertQuery = $"INSERT INTO Classes " +
+                                      $"(Class_Type, Class_Mgr, Availability, Description, Instructor_ID, Date, Time, Location, Registered_Num, Class_Max_Limit) " +
+                                      $"VALUES " +
+                                      $"('{classType}', {classMgr}, 1, '{description}', {instructorId}, '{date:yyyy-MM-dd}', '{time:hh\\:mm}', '{location}', 0, {classMaxLimit});";
+
+            return dbMan.ExecuteNonQuery(classInsertQuery);
+        }
+
+
+
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
