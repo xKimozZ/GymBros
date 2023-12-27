@@ -69,6 +69,7 @@
             this.textBox2.Size = new System.Drawing.Size(153, 22);
             this.textBox2.TabIndex = 109;
             this.textBox2.UseSystemPasswordChar = true;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox1
             // 
@@ -77,6 +78,8 @@
             this.textBox1.Size = new System.Drawing.Size(153, 22);
             this.textBox1.TabIndex = 108;
             this.textBox1.UseSystemPasswordChar = true;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label3
             // 
@@ -108,6 +111,7 @@
             this.Editbutton.TabIndex = 103;
             this.Editbutton.Text = "Pay";
             this.Editbutton.UseVisualStyleBackColor = true;
+            this.Editbutton.Click += new System.EventHandler(this.Editbutton_Click);
             // 
             // label1
             // 
@@ -127,6 +131,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 113;
+            this.comboBox1.DropDown += new System.EventHandler(this.comboBox1_DropDown);
             this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
             // 
             // comboBox2

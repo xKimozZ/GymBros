@@ -6,6 +6,7 @@ using System.Data;
 using System.Windows.Forms;
 using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 using System.Deployment.Internal;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace DBapplication
 {
@@ -606,6 +607,34 @@ namespace DBapplication
         {
             string insertQuery = $"INSERT INTO Mem_Trans (Member_ID, Transaction_Type, Transaction_Date) VALUES ({UID}, '{transactionType}', GETDATE())";
             return dbMan.ExecuteNonQuery(insertQuery);
+        }
+
+        public int AlreadyUseService(int UID, string serviceType)
+        { 
+            string query = $"SELECT COUNT(*) FROM Uses_Service WHERE Member_ID = {UID} AND Service_Name = '{serviceType}';";
+            return Convert.ToInt32(dbMan.ExecuteScalar(query));
+        }
+
+        public DateTime GetSubscriptionRenewal(int UID, string serviceType)
+        {
+            string query = $"SELECT Subscription_Len FROM Uses_Service WHERE Member_ID = {UID} AND Service_Name = '{serviceType}';";
+            return (DateTime)dbMan.ExecuteScalar(query);
+        }
+
+        public int InsertServiceUsing(int UID, string serviceType, DateTime newdate)
+        {
+            string insertQuery = $"INSERT INTO Uses_Service " +
+                $"(Member_ID, Service_Name, Subscription_Len, Num_Attended_Sessions)\r\n" +
+                $"VALUES ({UID}, '{serviceType}', '{newdate}', 0);";
+            return dbMan.ExecuteNonQuery(insertQuery);
+        }
+
+        public int UpdateServiceRenewal(DateTime newdate, int UID)
+        {
+
+            string userUpdateQuery = $"UPDATE Uses_Service SET Subscription_Len = '{newdate}' WHERE Member_ID = {UID};";
+
+            return dbMan.ExecuteNonQuery(userUpdateQuery);
         }
 
         public void TerminateConnection()
