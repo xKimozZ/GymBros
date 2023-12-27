@@ -282,6 +282,7 @@ ALTER TABLE Members DROP COLUMN Membership_Fees;
 ALTER TABLE Classes DROP COLUMN Price;
 ALTER TABLE Extra_Service DROP COLUMN Price;
 ALTER TABLE PT_Session DROP COLUMN Price;
+ALTER TABLE Attends_Class DROP COLUMN Num_Of_Classes;
 
 INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) VALUES
 ('Galal', 'Mohamed', 1, 20, '123', 012, 012);
@@ -295,11 +296,29 @@ INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Con
 INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) VALUES
 ('Om', 'Sayed', 0, 101, '123456', 010, 010);
 
+INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) VALUES
+('3m', 'Ragab', 1, 1000, '1234567', 000, 000);
+
+INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) VALUES
+('Elon', 'Musk', 1, 50, '12', 911, 911);
+
+INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) VALUES
+('Jeff', 'Bezos', 1, 55, '1', 121, 121);
+
 INSERT INTO Staff (Staff_ID, Role) VALUES
 (101, 'Front Desk');
 
-INSERT INTO Staff (Staff_ID, Role) VALUES
+INSERT INTO Staff (Staff_ID, Role) VALUES	-- Om Sayed
 (103, 'Trainer');
+
+INSERT INTO Staff (Staff_ID, Role) VALUES	-- 3m Ragab
+(104, 'Trainer');
+
+INSERT INTO Staff (Staff_ID, Role) VALUES	-- Elon
+(105, 'Manager');
+
+INSERT INTO Staff (Staff_ID, Role) VALUES	-- Bezos
+(106, 'Manager');
 
 INSERT INTO Members(Member_ID, Renewal_Date) VALUES
 (100, '2024-1-1');
@@ -345,3 +364,39 @@ INSERT INTO Equipment(Model, Purchase_Date, Maintenance_Sched, Status, Supplier_
 ('SQUAT RACK', '2023-5-13', '2023-6-13', 'Good', 1001);
 INSERT INTO Equipment(Model, Purchase_Date, Maintenance_Sched, Status, Supplier_ID) VALUES
 ('DUMBELL RACK', '2023-11-1', '2023-12-1', 'Good', 1002);
+
+INSERT INTO Classes(Class_Type, Class_Mgr, Availability, Description, Instructor_ID, Date, Time, Location, Registered_Num, Class_Max_Limit) VALUES
+('Yoga1', 105, 1, 'Nice Yoga', 103, '2023-12-30', '13:00', 'Basement', 0, 100);
+INSERT INTO Classes(Class_Type, Class_Mgr, Availability, Description, Instructor_ID, Date, Time, Location, Registered_Num, Class_Max_Limit) VALUES
+('Air Bending', 106, 1, 'Avatar', 104, '2023-12-25', '9:00', 'Everest', 0, 10);
+INSERT INTO Classes(Class_Type, Class_Mgr, Availability, Description, Instructor_ID, Date, Time, Location, Registered_Num, Class_Max_Limit) VALUES
+('Fire Bending', 105, 1, 'Avatar 2', 103, '2024-1-1', '6:00', 'Pompei', 0, 200);
+INSERT INTO Classes(Class_Type, Class_Mgr, Availability, Description, Instructor_ID, Date, Time, Location, Registered_Num, Class_Max_Limit) VALUES
+('Water Bending', 106, 1, 'Avatar 3', 104, '2023-12-20', '23:00', 'Bermuda Triangle', 0, 50);
+
+INSERT INTO Attends_Class(Member_ID, Class_Type, Num_Attended_Classes) VALUES
+(100, 'Air Bending', 0);
+INSERT INTO Attends_Class(Member_ID, Class_Type, Num_Attended_Classes) VALUES
+(102, 'Yoga1', 0);
+INSERT INTO Attends_Class(Member_ID, Class_Type, Num_Attended_Classes) VALUES
+(100, 'Fire Bending', 0);
+INSERT INTO Attends_Class(Member_ID, Class_Type, Num_Attended_Classes) VALUES
+(102, 'Water Bending', 0);
+
+INSERT INTO Extra_Service(Service_Name, Availability, Description, Service_Mgr_ID) VALUES
+('Massage', 1, 'Chill', 105);
+INSERT INTO Extra_Service(Service_Name, Availability, Description, Service_Mgr_ID) VALUES
+('Jacuzzi', 1, 'Chill More', 106);
+INSERT INTO Extra_Service(Service_Name, Availability, Description, Service_Mgr_ID) VALUES
+('Tan', 1, 'Chill More More', 105);
+INSERT INTO Extra_Service(Service_Name, Availability, Description, Service_Mgr_ID) VALUES
+('Oil', 1, 'Sad', 106);
+
+INSERT INTO Uses_Service(Member_ID, Service_Name, Subscription_Len, Num_Attended_Sessions) VALUES
+(100, 'Massage', '2023-12-30', 0);
+INSERT INTO Uses_Service(Member_ID, Service_Name, Subscription_Len, Num_Attended_Sessions) VALUES
+(102, 'Jacuzzi', '2023-12-25', 0);
+INSERT INTO Uses_Service(Member_ID, Service_Name, Subscription_Len, Num_Attended_Sessions) VALUES
+(100, 'Tan', '2023-12-20', 0);
+INSERT INTO Uses_Service(Member_ID, Service_Name, Subscription_Len, Num_Attended_Sessions) VALUES
+(102, 'Oil', '2024-1-1', 0);	

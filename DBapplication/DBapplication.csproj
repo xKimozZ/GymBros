@@ -206,6 +206,18 @@
     <Compile Include="StaffCheckInPT.Designer.cs">
       <DependentUpon>StaffCheckInPT.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffClasses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaffClasses.Designer.cs">
+      <DependentUpon>StaffClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffES.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaffES.Designer.cs">
+      <DependentUpon>StaffES.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffMaintenance.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -325,6 +337,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffCheckInPT.resx">
       <DependentUpon>StaffCheckInPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffClasses.resx">
+      <DependentUpon>StaffClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffES.resx">
+      <DependentUpon>StaffES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffMaintenance.resx">
       <DependentUpon>StaffMaintenance.cs</DependentUpon>

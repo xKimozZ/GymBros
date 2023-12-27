@@ -18,8 +18,6 @@ namespace DBapplication
 
             InitializeComponent();
             controllerObj = new Controller();
-            // Hard code login session 
-            AppSession.Login(104,"John");
             
         }
 
@@ -106,6 +104,20 @@ namespace DBapplication
         private void maintains_Click(object sender, EventArgs e)
         {
             ShowContent(new StaffMaintenance());
+            placeholderPanel.Show();
+            MainMenu.Hide();
+        }
+
+        private void class_btn_Click(object sender, EventArgs e)
+        {
+            ShowContent(new StaffClasses());
+            placeholderPanel.Show();
+            MainMenu.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ShowContent(new StaffES());
             placeholderPanel.Show();
             MainMenu.Hide();
         }
