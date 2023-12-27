@@ -18,7 +18,7 @@ namespace DBapplication
 
             InitializeComponent();
             // Hard code login session 
-            AppSession.Login(101,"John");
+            //AppSession.Login(101,"John");
             
         }
 
@@ -81,6 +81,7 @@ namespace DBapplication
 
         private void PTButton_Click(object sender, EventArgs e)
         {
+            
             ShowContent(new PersonaltrainingStaffMenu());
             placeholderPanel.Show();
             MainMenu.Hide();
