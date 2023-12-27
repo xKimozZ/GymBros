@@ -313,6 +313,10 @@ INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('Mem
 INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('Class_payment', 2000);
 INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('Extra_Service_payment', 500);
 INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('PT_Session_payment', 1000);
+INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('Equipment_payment', 10000);
+INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('High_severity_maintenance', 1000);
+INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('Mid_severity_maintenance', 500);
+INSERT INTO Financial_Records(Transaction_Type, Transaction_Amount) VALUES ('Low_severity_maintenance', 100);
 
 INSERT INTO Staff_Trans (Staff_ID, Transaction_Type, Transaction_Date) VALUES (101, 'Salary_Staff', '2023-12-13');
 INSERT INTO Staff_Trans (Staff_ID, Transaction_Type, Transaction_Date) VALUES (101, 'Salary_Staff', '2023-11-13');
