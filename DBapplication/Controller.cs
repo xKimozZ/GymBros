@@ -467,7 +467,11 @@ namespace DBapplication
             string query = "SELECT Class_Type FROM Classes;";
             return dbMan.ExecuteReader(query);
         }
-
+        public int DeleteClass(string classType)
+        {
+            string deleteQuery = $"DELETE FROM Classes WHERE Class_Type = '{classType}';";
+            return dbMan.ExecuteNonQuery(deleteQuery);
+        }
 
         public void TerminateConnection()
         {

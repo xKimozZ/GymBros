@@ -21,6 +21,8 @@ namespace DBapplication.Admin_Menu
             InitializeComponent();
             panelAdd.Hide();
             panelUpdate.Hide();
+            paneldel.Hide();
+
             labelMgr.Visible = false;
             labelId.Visible = false;
             comboBoxClassMgr.Visible = false;
@@ -42,6 +44,9 @@ namespace DBapplication.Admin_Menu
             comboBoxClassType.DisplayMember = "Class_Type";
             comboBoxClassType.ValueMember = "Class_Type";
             comboBoxClassType.DataSource = classTypes;
+            comboBoxdel.DisplayMember = "Class_Type";
+            comboBoxdel.ValueMember = "Class_Type";
+            comboBoxdel.DataSource = classTypes;
         }
         private void LoadClassManagers()
         {
@@ -123,6 +128,7 @@ namespace DBapplication.Admin_Menu
         {
             panelAdd.Show();
             panelUpdate.Hide();
+            paneldel.Hide();
             panelselect.Visible = true;
             panelselect.Top = buttonAdd.Top;
             labelMgr.Visible = true;
@@ -210,6 +216,7 @@ namespace DBapplication.Admin_Menu
         {
             panelAdd.Hide();
             panelUpdate.Show();
+            paneldel.Hide();
             panelselect.Visible = true;
             panelselect.Top = buttonManage.Top;
             labelMgr.Visible = true;
@@ -218,6 +225,43 @@ namespace DBapplication.Admin_Menu
             comboBoxClassMgr.Enabled = true;
             comboBoxInstructorId.Visible = true;
             comboBoxInstructorId.Enabled = true;
+        }
+
+        private void buttonDel_Click(object sender, EventArgs e)
+        {
+            string classType = comboBoxClassType.SelectedValue?.ToString();
+
+            if (string.IsNullOrEmpty(classType))
+            {
+                MessageBox.Show("Please select a valid Class Type from the list.");
+                return;
+            }
+
+            int result = controllerObj.DeleteClass(classType);
+
+            if (result == 1)
+            {
+                MessageBox.Show("Class deleted successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Error deleting class. Please check the input and try again.");
+            }
+        }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            labelMgr.Visible = false;
+            labelId.Visible = false;
+            comboBoxClassMgr.Visible = false;
+            comboBoxClassMgr.Enabled = false;
+            comboBoxInstructorId.Visible = false;
+            comboBoxInstructorId.Enabled = false;
+            panelselect.Visible = true;
+            panelselect.Top = buttonRemove.Top;
+            paneldel.Show();
+            panelUpdate.Hide();
+            panelAdd.Hide();
         }
     }
 }

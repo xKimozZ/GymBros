@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminClassesMenu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonPay = new System.Windows.Forms.Button();
             this.buttonManage = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
@@ -68,16 +67,20 @@
             this.label15 = new System.Windows.Forms.Label();
             this.comboBoxClassType = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.paneldel = new System.Windows.Forms.Panel();
+            this.buttonDel = new System.Windows.Forms.Button();
+            this.comboBoxdel = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelAdd.SuspendLayout();
             this.panelUpdate.SuspendLayout();
+            this.paneldel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
-            this.panel1.Controls.Add(this.buttonPay);
             this.panel1.Controls.Add(this.buttonManage);
             this.panel1.Controls.Add(this.buttonRemove);
             this.panel1.Controls.Add(this.buttonAdd);
@@ -87,20 +90,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(174, 376);
             this.panel1.TabIndex = 28;
-            // 
-            // buttonPay
-            // 
-            this.buttonPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.buttonPay.FlatAppearance.BorderSize = 0;
-            this.buttonPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPay.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.buttonPay.Location = new System.Drawing.Point(73, 297);
-            this.buttonPay.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonPay.Name = "buttonPay";
-            this.buttonPay.Size = new System.Drawing.Size(100, 54);
-            this.buttonPay.TabIndex = 22;
-            this.buttonPay.Text = "Pay Salaries";
-            this.buttonPay.UseVisualStyleBackColor = false;
             // 
             // buttonManage
             // 
@@ -128,8 +117,9 @@
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(100, 54);
             this.buttonRemove.TabIndex = 20;
-            this.buttonRemove.Text = "PlaceHolder";
+            this.buttonRemove.Text = "Remove Class";
             this.buttonRemove.UseVisualStyleBackColor = false;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // buttonAdd
             // 
@@ -191,7 +181,7 @@
             this.panelAdd.Controls.Add(this.label6);
             this.panelAdd.Controls.Add(this.label3);
             this.panelAdd.Controls.Add(this.label2);
-            this.panelAdd.Location = new System.Drawing.Point(244, 48);
+            this.panelAdd.Location = new System.Drawing.Point(245, 26);
             this.panelAdd.Name = "panelAdd";
             this.panelAdd.Size = new System.Drawing.Size(462, 303);
             this.panelAdd.TabIndex = 30;
@@ -234,7 +224,7 @@
             // 
             this.comboBoxInstructorId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxInstructorId.FormattingEnabled = true;
-            this.comboBoxInstructorId.Location = new System.Drawing.Point(593, 115);
+            this.comboBoxInstructorId.Location = new System.Drawing.Point(594, 93);
             this.comboBoxInstructorId.Name = "comboBoxInstructorId";
             this.comboBoxInstructorId.Size = new System.Drawing.Size(90, 21);
             this.comboBoxInstructorId.TabIndex = 56;
@@ -242,7 +232,7 @@
             // labelId
             // 
             this.labelId.AutoSize = true;
-            this.labelId.Location = new System.Drawing.Point(494, 118);
+            this.labelId.Location = new System.Drawing.Point(495, 96);
             this.labelId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelId.Name = "labelId";
             this.labelId.Size = new System.Drawing.Size(68, 13);
@@ -253,7 +243,7 @@
             // 
             this.comboBoxClassMgr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxClassMgr.FormattingEnabled = true;
-            this.comboBoxClassMgr.Location = new System.Drawing.Point(593, 75);
+            this.comboBoxClassMgr.Location = new System.Drawing.Point(594, 53);
             this.comboBoxClassMgr.Name = "comboBoxClassMgr";
             this.comboBoxClassMgr.Size = new System.Drawing.Size(90, 21);
             this.comboBoxClassMgr.TabIndex = 54;
@@ -319,7 +309,7 @@
             // labelMgr
             // 
             this.labelMgr.AutoSize = true;
-            this.labelMgr.Location = new System.Drawing.Point(490, 79);
+            this.labelMgr.Location = new System.Drawing.Point(491, 57);
             this.labelMgr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMgr.Name = "labelMgr";
             this.labelMgr.Size = new System.Drawing.Size(77, 13);
@@ -361,7 +351,7 @@
             this.panelUpdate.Controls.Add(this.label12);
             this.panelUpdate.Controls.Add(this.label14);
             this.panelUpdate.Controls.Add(this.label15);
-            this.panelUpdate.Location = new System.Drawing.Point(244, 48);
+            this.panelUpdate.Location = new System.Drawing.Point(245, 26);
             this.panelUpdate.Name = "panelUpdate";
             this.panelUpdate.Size = new System.Drawing.Size(462, 303);
             this.panelUpdate.TabIndex = 65;
@@ -489,11 +479,54 @@
             this.checkBox1.Text = "Available";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // paneldel
+            // 
+            this.paneldel.Controls.Add(this.comboBoxdel);
+            this.paneldel.Controls.Add(this.label5);
+            this.paneldel.Controls.Add(this.buttonDel);
+            this.paneldel.Location = new System.Drawing.Point(240, 24);
+            this.paneldel.Name = "paneldel";
+            this.paneldel.Size = new System.Drawing.Size(467, 305);
+            this.paneldel.TabIndex = 67;
+            // 
+            // buttonDel
+            // 
+            this.buttonDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
+            this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDel.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonDel.Location = new System.Drawing.Point(183, 241);
+            this.buttonDel.Name = "buttonDel";
+            this.buttonDel.Size = new System.Drawing.Size(115, 40);
+            this.buttonDel.TabIndex = 47;
+            this.buttonDel.Text = "Delete Class";
+            this.buttonDel.UseVisualStyleBackColor = false;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            // 
+            // comboBoxdel
+            // 
+            this.comboBoxdel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxdel.FormattingEnabled = true;
+            this.comboBoxdel.Location = new System.Drawing.Point(208, 116);
+            this.comboBoxdel.Name = "comboBoxdel";
+            this.comboBoxdel.Size = new System.Drawing.Size(90, 21);
+            this.comboBoxdel.TabIndex = 68;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(144, 119);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.TabIndex = 67;
+            this.label5.Text = "Class Type";
+            // 
             // AdminClassesMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.Controls.Add(this.paneldel);
             this.Controls.Add(this.panelselect);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBoxInstructorId);
@@ -503,7 +536,7 @@
             this.Controls.Add(this.panelUpdate);
             this.Controls.Add(this.panelAdd);
             this.Name = "AdminClassesMenu";
-            this.Size = new System.Drawing.Size(800, 375);
+            this.Size = new System.Drawing.Size(800, 348);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -511,6 +544,8 @@
             this.panelAdd.PerformLayout();
             this.panelUpdate.ResumeLayout(false);
             this.panelUpdate.PerformLayout();
+            this.paneldel.ResumeLayout(false);
+            this.paneldel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -519,7 +554,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonPay;
         private System.Windows.Forms.Button buttonManage;
         private System.Windows.Forms.Button buttonRemove;
         private System.Windows.Forms.Button buttonAdd;
@@ -557,5 +591,9 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBoxClassType;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Panel paneldel;
+        private System.Windows.Forms.ComboBox comboBoxdel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonDel;
     }
 }

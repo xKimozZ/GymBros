@@ -31,31 +31,14 @@ namespace DBapplication
             comboBoxID.DataSource = st;
 
             labelLname.Visible = false;
-            panelStaffdel.Hide();
             panelManager.Hide();
             panelAdminPay.Hide();
             panelAdd.Hide();
         }
 
-        private void buttonRemove_Click(object sender, EventArgs e)
-        {
-            panelManager.Hide();
-            panelAdminPay.Hide();
-            panelAdd.Hide();
-            panelStaffdel.Show();
-
-            labelLname.Visible = true;
-            labelID.Visible = true;
-            comboBoxID.Visible = true;
-            comboBoxID.Enabled = true;
-
-            panelselect.Visible = true;
-            panelselect.Top = buttonRemove.Top;
-        }
 
         private void buttonProfile_Click(object sender, EventArgs e)
         {
-            panelStaffdel.Hide();
             panelAdminPay.Hide();
             panelAdd.Hide();
             panelManager.Show();
@@ -73,7 +56,6 @@ namespace DBapplication
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            panelStaffdel.Hide();
             panelManager.Hide();
             panelAdminPay.Hide();
             panelAdd.Show();
@@ -216,7 +198,6 @@ namespace DBapplication
 
         private void buttonPay_Click(object sender, EventArgs e)
         {
-            panelStaffdel.Hide();
             panelManager.Hide();
             panelAdd.Hide();
             panelAdminPay.Show();
