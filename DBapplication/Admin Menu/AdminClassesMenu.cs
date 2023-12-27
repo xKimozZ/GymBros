@@ -263,5 +263,14 @@ namespace DBapplication.Admin_Menu
             panelUpdate.Hide();
             panelAdd.Hide();
         }
+
+        private void textBoxclassupd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
     }
 }

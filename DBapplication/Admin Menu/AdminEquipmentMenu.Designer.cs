@@ -41,12 +41,12 @@
             this.comboBoxEquipmentID = new System.Windows.Forms.ComboBox();
             this.buttonmaint = new System.Windows.Forms.Button();
             this.panelbuy = new System.Windows.Forms.Panel();
-            this.buttonbuy = new System.Windows.Forms.Button();
-            this.comboBoxSupplier = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtModel = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.SupplierID = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBoxSupplier = new System.Windows.Forms.ComboBox();
+            this.buttonbuy = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMaintain.SuspendLayout();
@@ -190,6 +190,48 @@
             this.panelbuy.Size = new System.Drawing.Size(466, 314);
             this.panelbuy.TabIndex = 53;
             // 
+            // SupplierID
+            // 
+            this.SupplierID.AutoSize = true;
+            this.SupplierID.Location = new System.Drawing.Point(3, 89);
+            this.SupplierID.Name = "SupplierID";
+            this.SupplierID.Size = new System.Drawing.Size(56, 13);
+            this.SupplierID.TabIndex = 54;
+            this.SupplierID.Text = "SupplierID";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 158);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 53;
+            this.label3.Text = "Model";
+            // 
+            // txtModel
+            // 
+            this.txtModel.Location = new System.Drawing.Point(67, 155);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(100, 20);
+            this.txtModel.TabIndex = 52;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(209, 72);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 51;
+            // 
+            // comboBoxSupplier
+            // 
+            this.comboBoxSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSupplier.FormattingEnabled = true;
+            this.comboBoxSupplier.Location = new System.Drawing.Point(62, 86);
+            this.comboBoxSupplier.Name = "comboBoxSupplier";
+            this.comboBoxSupplier.Size = new System.Drawing.Size(105, 21);
+            this.comboBoxSupplier.TabIndex = 50;
+            // 
             // buttonbuy
             // 
             this.buttonbuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
@@ -204,48 +246,6 @@
             this.buttonbuy.UseVisualStyleBackColor = false;
             this.buttonbuy.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBoxSupplier
-            // 
-            this.comboBoxSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSupplier.FormattingEnabled = true;
-            this.comboBoxSupplier.Location = new System.Drawing.Point(62, 86);
-            this.comboBoxSupplier.Name = "comboBoxSupplier";
-            this.comboBoxSupplier.Size = new System.Drawing.Size(105, 21);
-            this.comboBoxSupplier.TabIndex = 50;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(209, 72);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 51;
-            // 
-            // txtModel
-            // 
-            this.txtModel.Location = new System.Drawing.Point(67, 155);
-            this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(100, 20);
-            this.txtModel.TabIndex = 52;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 158);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
-            this.label3.TabIndex = 53;
-            this.label3.Text = "Model";
-            // 
-            // SupplierID
-            // 
-            this.SupplierID.AutoSize = true;
-            this.SupplierID.Location = new System.Drawing.Point(3, 89);
-            this.SupplierID.Name = "SupplierID";
-            this.SupplierID.Size = new System.Drawing.Size(56, 13);
-            this.SupplierID.TabIndex = 54;
-            this.SupplierID.Text = "SupplierID";
-            // 
             // AdminEquipmentMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,8 +253,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.Controls.Add(this.panelselect);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelbuy);
             this.Controls.Add(this.panelMaintain);
+            this.Controls.Add(this.panelbuy);
             this.Name = "AdminEquipmentMenu";
             this.Size = new System.Drawing.Size(799, 375);
             this.panel1.ResumeLayout(false);

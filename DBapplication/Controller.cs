@@ -335,6 +335,11 @@ namespace DBapplication
             string insertQuery = $"INSERT INTO Staff_Trans (Staff_ID, Transaction_Type, Transaction_Date) VALUES ({staffId}, '{transactionType}', GETDATE())";
             return dbMan.ExecuteNonQuery(insertQuery);
         }
+        public int InsertSupplierTransaction(int supplierId, string transactionType)
+        {
+            string insertQuery = $"INSERT INTO Supplier_Trans (Supplier_ID, Transaction_Type, Transaction_Date) VALUES ({supplierId}, '{transactionType}', GETDATE())";
+            return dbMan.ExecuteNonQuery(insertQuery);
+        }
 
         public DataTable getEquimpent()
         {
@@ -359,7 +364,7 @@ namespace DBapplication
         public int updateEquimpentMaintenanceDate(int id, DateTime newDate)
         {
             string query = $"UPDATE Equipment " +
-                                      $"SET Maintenance_Sched = '{newDate}' " +
+                                      $"SET Maintenance_Sched = '{newDate:yyyy-MM-dd}' " +
                                       $"WHERE Equipment_ID = {id};";
 
             return dbMan.ExecuteNonQuery(query);
@@ -369,7 +374,7 @@ namespace DBapplication
         {
             string query = $"INSERT INTO Maintains " +
                 $"(Reporter_ID, Equipment_ID, Request_Date, Dmg_Estimate, Request_Description, Status) " +
-                $"VALUES ({reporter_id}, {equip_id}, '{rqst_date}', {dmg}, '{desc}', '{status}')";
+                $"VALUES ({reporter_id}, {equip_id}, '{rqst_date:yyyy-MM-dd}', {dmg}, '{desc}', '{status}')";
             return dbMan.ExecuteNonQuery(query);
         }
         public int LoginAttempt(int UID, string pass)
@@ -446,6 +451,17 @@ namespace DBapplication
 
             return dbMan.ExecuteNonQuery(classInsertQuery);
         }
+        public int InsertExtraService(string serviceName, string description, int serviceMgrId)
+        {
+            string insertQuery = $@"
+        INSERT INTO Extra_Service (Service_Name, Availability, Description, Service_Mgr_ID)
+        VALUES
+        ('{serviceName}', 1, '{description}', {serviceMgrId});";
+
+            return dbMan.ExecuteNonQuery(insertQuery);
+        }
+
+
         public int UpdateClass(string classType, int newClassMgr, string newDescription, int newInstructorId, DateTime newDate, TimeSpan newTime, string newLocation, int newClassMaxLimit, bool newAvailability)
         { 
             string classUpdateQuery = $@"
@@ -462,6 +478,17 @@ namespace DBapplication
 
             return dbMan.ExecuteNonQuery(classUpdateQuery);
         }
+        public int UpdateExtraService(string serviceName, string description, int serviceMgrId)
+        {
+            string updateQuery = $@"
+        UPDATE Extra_Service
+        SET Description = '{description}',
+            Service_Mgr_ID = {serviceMgrId}
+        WHERE Service_Name = '{serviceName}';";
+
+            return dbMan.ExecuteNonQuery(updateQuery);
+        }
+
         public DataTable GetAllClassTypes()
         {
             string query = "SELECT Class_Type FROM Classes;";
@@ -497,7 +524,7 @@ namespace DBapplication
         }
         public int UpdateEquipmentMaintenanceStatus(int equipmentId, string newStatus)
         {
-            string updateQuery = $"UPDATE Equipment SET  Status = '{newStatus}' WHERE Equipment_ID = {equipmentId};";
+            string updateQuery = $"UPDATE Maintains SET  Status = '{newStatus}' WHERE Equipment_ID = {equipmentId};";
             return dbMan.ExecuteNonQuery(updateQuery);
         }
         public int DeleteMaintainsRecord(int equipmentId)
@@ -522,6 +549,15 @@ namespace DBapplication
             string query = "SELECT * FROM Suppliers;";
             return dbMan.ExecuteReader(query);
         }
+        public int GetSupplierIdByEquipmentId(int equipmentId)
+        {
+            string query = $"SELECT Supplier_ID FROM Equipment WHERE Equipment_ID = {equipmentId}";
+            object result = dbMan.ExecuteScalar(query);
+
+            // Check if the result is not null and return the supplier ID as an integer
+            return result != null ? Convert.ToInt32(result) : -1; // Return -1 if supplier ID is not found or an error occurs
+        }
+
         public void TerminateConnection()
         {
             dbMan.CloseConnection();

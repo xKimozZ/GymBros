@@ -73,6 +73,12 @@
     <Compile Include="Admin Menu\AdminEquipmentMenu.Designer.cs">
       <DependentUpon>AdminEquipmentMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin Menu\AdminExtraMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\AdminExtraMenu.Designer.cs">
+      <DependentUpon>AdminExtraMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin Menu\AdminStaffMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -217,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Menu\AdminEquipmentMenu.resx">
       <DependentUpon>AdminEquipmentMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Menu\AdminExtraMenu.resx">
+      <DependentUpon>AdminExtraMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Menu\AdminStaffMenu.resx">
       <DependentUpon>AdminStaffMenu.cs</DependentUpon>
