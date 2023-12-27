@@ -125,6 +125,12 @@
     <Compile Include="StaffCheckInPT.Designer.cs">
       <DependentUpon>StaffCheckInPT.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffMaintenance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaffMaintenance.Designer.cs">
+      <DependentUpon>StaffMaintenance.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffPTUpdate.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffCheckInPT.resx">
       <DependentUpon>StaffCheckInPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffMaintenance.resx">
+      <DependentUpon>StaffMaintenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffPTUpdate.resx">
       <DependentUpon>StaffPTUpdate.cs</DependentUpon>

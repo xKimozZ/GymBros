@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
+using System.Deployment.Internal;
 
 namespace DBapplication
 {
@@ -322,6 +323,44 @@ namespace DBapplication
             string insertQuery = $"INSERT INTO Staff_Trans (Staff_ID, Transaction_Type, Transaction_Date) VALUES ({staffId}, '{transactionType}', GETDATE())";
             return dbMan.ExecuteNonQuery(insertQuery);
         }
+
+        public DataTable getEquimpent()
+        {
+            string query = $"SELECT Equipment_ID, Model FROM " +
+                           $"Equipment;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable getStaffRequiredMaintain(DateTime date)
+        {
+            string query = $"SELECT Equipment_ID, Model FROM " +
+                           $"Equipment WHERE '{date}' >= Maintenance_Sched;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DateTime getEquimpentMaintenanceDate(int id)
+        {
+            string query = $"SELECT Maintenance_Sched FROM " +
+                           $"Equipment WHERE Equipment_ID = {id};";
+            return DateTime.Parse((dbMan.ExecuteScalar(query)).ToString());
+        }
+        public int updateEquimpentMaintenanceDate(int id, DateTime newDate)
+        {
+            string query = $"UPDATE Equipment " +
+                                      $"SET Maintenance_Sched = '{newDate}' " +
+                                      $"WHERE Equipment_ID = {id};";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int generateMaintenanceRequest(int reporter_id, int equip_id, DateTime rqst_date, int dmg, string desc, string status)
+        {
+            string query = $"INSERT INTO Maintains " +
+                $"(Reporter_ID, Equipment_ID, Request_Date, Dmg_Estimate, Request_Description, Status) " +
+                $"VALUES ({reporter_id}, {equip_id}, '{rqst_date}', {dmg}, '{desc}', '{status}')";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
         public void TerminateConnection()
         {
             dbMan.CloseConnection();

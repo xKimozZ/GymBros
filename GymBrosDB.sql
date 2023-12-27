@@ -324,3 +324,20 @@ INSERT INTO Mem_Trans (Member_ID, Transaction_Type, Transaction_Date) VALUES (10
 INSERT INTO Mem_Trans (Member_ID, Transaction_Type, Transaction_Date) VALUES (100, 'Membership_fees', '2024-11-13');
 INSERT INTO Mem_Trans (Member_ID, Transaction_Type, Transaction_Date) VALUES (102, 'Membership_fees', '2025-11-13');
 
+INSERT INTO Suppliers(Brand_Name) VALUES
+('GYM BRAND 1');
+INSERT INTO Suppliers(Brand_Name) VALUES
+('GYM BRAND 2');
+INSERT INTO Suppliers(Brand_Name) VALUES
+('GYM BRAND 3');
+INSERT INTO Suppliers(Brand_Name) VALUES
+('GYM BRAND 4');
+
+INSERT INTO Equipment(Model, Purchase_Date, Maintenance_Sched, Status, Supplier_ID) VALUES
+('BENCH PRESS', '2023-11-13', '2023-12-13', 'Good', 1000);
+INSERT INTO Equipment(Model, Purchase_Date, Maintenance_Sched, Status, Supplier_ID) VALUES
+('SHOULDER PRESS', '2022-11-13', '2022-12-13', 'Good', 1001);
+INSERT INTO Equipment(Model, Purchase_Date, Maintenance_Sched, Status, Supplier_ID) VALUES
+('SQUAT RACK', '2023-5-13', '2023-6-13', 'Good', 1001);
+INSERT INTO Equipment(Model, Purchase_Date, Maintenance_Sched, Status, Supplier_ID) VALUES
+('DUMBELL RACK', '2023-11-1', '2023-12-1', 'Good', 1002);
