@@ -104,12 +104,6 @@
       <DependentUpon>ReportMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="AppSession.cs" />
-    <Compile Include="BodyComp.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="BodyComp.Designer.cs">
-      <DependentUpon>BodyComp.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
     <Compile Include="EditMember.cs">
@@ -150,6 +144,12 @@
     <Compile Include="MemberAnnouncements.Designer.cs">
       <DependentUpon>MemberAnnouncements.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberBodyComp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberBodyComp.Designer.cs">
+      <DependentUpon>MemberBodyComp.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemberData.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -167,6 +167,12 @@
     </Compile>
     <Compile Include="MemberPay.Designer.cs">
       <DependentUpon>MemberPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberServices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberServices.Designer.cs">
+      <DependentUpon>MemberServices.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonaltrainingStaffMenu.cs">
       <SubType>UserControl</SubType>
@@ -263,9 +269,6 @@
     <EmbeddedResource Include="Admin Menu\ReportMenu.resx">
       <DependentUpon>ReportMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BodyComp.resx">
-      <DependentUpon>BodyComp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EditMember.resx">
       <DependentUpon>EditMember.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +285,9 @@
     <EmbeddedResource Include="MemberAnnouncements.resx">
       <DependentUpon>MemberAnnouncements.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MemberBodyComp.resx">
+      <DependentUpon>MemberBodyComp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MemberData.resx">
       <DependentUpon>MemberData.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemberPay.resx">
       <DependentUpon>MemberPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberServices.resx">
+      <DependentUpon>MemberServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonaltrainingStaffMenu.resx">
       <DependentUpon>PersonaltrainingStaffMenu.cs</DependentUpon>
