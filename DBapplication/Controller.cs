@@ -444,7 +444,27 @@ namespace DBapplication
 
             return dbMan.ExecuteNonQuery(classInsertQuery);
         }
+        public int UpdateClass(string classType, int newClassMgr, string newDescription, int newInstructorId, DateTime newDate, TimeSpan newTime, string newLocation, int newClassMaxLimit, bool newAvailability)
+        { 
+            string classUpdateQuery = $@"
+        UPDATE Classes
+        SET Class_Mgr = {newClassMgr},
+            Description = '{newDescription}',
+            Instructor_ID = {newInstructorId},
+            Date = '{newDate:yyyy-MM-dd}',
+            Time = '{newTime:hh\\:mm}',
+            Location = '{newLocation}',
+            Class_Max_Limit = {newClassMaxLimit},
+            Availability = {(newAvailability ? 1 : 0)}
+        WHERE Class_Type = '{classType}';";
 
+            return dbMan.ExecuteNonQuery(classUpdateQuery);
+        }
+        public DataTable GetAllClassTypes()
+        {
+            string query = "SELECT Class_Type FROM Classes;";
+            return dbMan.ExecuteReader(query);
+        }
 
 
         public void TerminateConnection()
