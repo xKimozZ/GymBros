@@ -175,7 +175,7 @@ namespace DBapplication.Admin_Menu
             panelMaintain.Hide();
             panelbuy.Show();
             panelselect.Visible = true;
-            panelselect.Top = buttonmaint.Top;
+            panelselect.Top = buttonAdd.Top;
         }
     }
 }
