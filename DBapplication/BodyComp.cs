@@ -26,6 +26,8 @@ namespace DBapplication
             {
                 e.Handled = true;
             }
+            else if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
         }
 
         private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
@@ -34,6 +36,8 @@ namespace DBapplication
             {
                 e.Handled = true;
             }
+            else if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
         }
 
         private void txtFat_KeyPress(object sender, KeyPressEventArgs e)
@@ -42,6 +46,8 @@ namespace DBapplication
             {
                 e.Handled = true;
             }
+            else if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
         }
 
         private void txtMuscle_KeyPress(object sender, KeyPressEventArgs e)
@@ -50,6 +56,8 @@ namespace DBapplication
             {
                 e.Handled = true;
             }
+            else if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
         }
 
         private void Editbutton_Click(object sender, EventArgs e)
@@ -90,7 +98,7 @@ namespace DBapplication
             }
 
 
-            int SessionID = 101; //Temporary.
+            int SessionID = AppSession.UserId; //Temporary.
 
             // Call the EditMember function with validated input
             int check  = controllerObj.CheckCompExist(SessionID);
@@ -104,8 +112,6 @@ namespace DBapplication
             if (result == 1)
             {
                 MessageBox.Show("Member editted successfully!");
-                dataGridView1.DataSource = controllerObj.getNamesMembers();
-                dataGridView1.Refresh();
             }
             else
             {
@@ -119,12 +125,34 @@ namespace DBapplication
             DataTable dt;
             int sessionID = AppSession.UserId;
             dt = controllerObj.getBodyComp(sessionID);
+            if (dt == null)
+                return;
             txtHeight.Text = dt.Rows[0].Field<int>("Height").ToString();
             txtWeight.Text = dt.Rows[0].Field<int>("Weight").ToString();
             txtFat.Text = dt.Rows[0].Field<double>("BodyFat_Prcntg").ToString();
             txtMuscle.Text = dt.Rows[0].Field<double>("Muscle_Prcntg").ToString();
             txtType.Text = dt.Rows[0].Field<string>("Body_Type");
             txtChronic.Text = dt.Rows[0].Field<string>("Chronic_Disease");
+        }
+
+        private void BodyComp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
+            else if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
+        }
+
+        private void txtType_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
+        }
+
+        private void txtChronic_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                Editbutton_Click(sender, e);
         }
     }
 }
