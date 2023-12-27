@@ -48,8 +48,8 @@ namespace DBapplication
                     if (role == "Admin")
                     {
                         MessageBox.Show("Admin");
-                        Staff staff = new Staff(); //temp until admin form is made
-                        staff.Show();
+                        Admin admin = new Admin(); //temp until admin form is made
+                        admin.Show();
                     }
                     else
                     {
