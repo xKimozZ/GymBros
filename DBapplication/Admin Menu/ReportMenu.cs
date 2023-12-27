@@ -26,11 +26,15 @@ namespace DBapplication.Admin_Menu
         private void button1_Click(object sender, EventArgs e)
         {
             ShowReportUC(new Reportsuc());
+            panelselect.Visible = true;
+            panelselect.Top = button1.Top;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            ShowReportUC(new Report2());
+            panelselect.Visible = true;
+            panelselect.Top = button2.Top;
         }
     }
 }

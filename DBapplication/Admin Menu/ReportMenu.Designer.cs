@@ -46,7 +46,7 @@
             // panelselect
             // 
             this.panelselect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
-            this.panelselect.Location = new System.Drawing.Point(170, 105);
+            this.panelselect.Location = new System.Drawing.Point(174, 100);
             this.panelselect.Margin = new System.Windows.Forms.Padding(0);
             this.panelselect.Name = "panelselect";
             this.panelselect.Size = new System.Drawing.Size(7, 54);
@@ -63,9 +63,9 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, -7);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(174, 407);
+            this.panel1.Size = new System.Drawing.Size(174, 374);
             this.panel1.TabIndex = 33;
             // 
             // button5
@@ -74,7 +74,7 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.button5.Location = new System.Drawing.Point(73, 280);
+            this.button5.Location = new System.Drawing.Point(73, 268);
             this.button5.Margin = new System.Windows.Forms.Padding(1);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 54);
@@ -88,7 +88,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.button4.Location = new System.Drawing.Point(73, 336);
+            this.button4.Location = new System.Drawing.Point(73, 324);
             this.button4.Margin = new System.Windows.Forms.Padding(1);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 54);
@@ -102,12 +102,12 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.button2.Location = new System.Drawing.Point(73, 168);
+            this.button2.Location = new System.Drawing.Point(73, 156);
             this.button2.Margin = new System.Windows.Forms.Padding(1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 54);
             this.button2.TabIndex = 21;
-            this.button2.Text = "2";
+            this.button2.Text = "Supplier Transaction";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -117,7 +117,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.button3.Location = new System.Drawing.Point(73, 224);
+            this.button3.Location = new System.Drawing.Point(73, 212);
             this.button3.Margin = new System.Windows.Forms.Padding(1);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 54);
@@ -131,7 +131,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.button1.Location = new System.Drawing.Point(73, 112);
+            this.button1.Location = new System.Drawing.Point(73, 100);
             this.button1.Margin = new System.Windows.Forms.Padding(1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 54);
@@ -145,7 +145,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(56, 79);
+            this.label1.Location = new System.Drawing.Point(51, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 20);
             this.label1.TabIndex = 17;
@@ -155,7 +155,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(18, -22);
+            this.pictureBox1.Location = new System.Drawing.Point(13, -22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(141, 130);
             this.pictureBox1.TabIndex = 23;
@@ -164,9 +164,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.panel2.Location = new System.Drawing.Point(170, 0);
+            this.panel2.Location = new System.Drawing.Point(174, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(629, 392);
+            this.panel2.Size = new System.Drawing.Size(629, 374);
             this.panel2.TabIndex = 35;
             // 
             // ReportMenu
@@ -177,7 +177,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "ReportMenu";
-            this.Size = new System.Drawing.Size(799, 392);
+            this.Size = new System.Drawing.Size(800, 374);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
