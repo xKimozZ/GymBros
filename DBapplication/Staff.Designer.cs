@@ -32,13 +32,14 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.placeholderPanel = new System.Windows.Forms.Panel();
             this.MainMenu = new System.Windows.Forms.Panel();
+            this.trans = new System.Windows.Forms.Button();
             this.PTButton = new System.Windows.Forms.Button();
             this.Announcment = new System.Windows.Forms.Button();
             this.EditStaffprofile = new System.Windows.Forms.Button();
             this.EditMember = new System.Windows.Forms.Button();
             this.AddMember = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.trans = new System.Windows.Forms.Button();
+            this.maintains = new System.Windows.Forms.Button();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +64,7 @@
             // 
             // MainMenu
             // 
+            this.MainMenu.Controls.Add(this.maintains);
             this.MainMenu.Controls.Add(this.trans);
             this.MainMenu.Controls.Add(this.PTButton);
             this.MainMenu.Controls.Add(this.Announcment);
@@ -75,6 +77,16 @@
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(796, 286);
             this.MainMenu.TabIndex = 5;
+            // 
+            // trans
+            // 
+            this.trans.Location = new System.Drawing.Point(12, 202);
+            this.trans.Name = "trans";
+            this.trans.Size = new System.Drawing.Size(115, 40);
+            this.trans.TabIndex = 9;
+            this.trans.Text = "Transactions";
+            this.trans.UseVisualStyleBackColor = true;
+            this.trans.Click += new System.EventHandler(this.trans_Click);
             // 
             // PTButton
             // 
@@ -136,15 +148,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Staff Menu";
             // 
-            // trans
+            // maintains
             // 
-            this.trans.Location = new System.Drawing.Point(12, 202);
-            this.trans.Name = "trans";
-            this.trans.Size = new System.Drawing.Size(115, 40);
-            this.trans.TabIndex = 9;
-            this.trans.Text = "Transactions";
-            this.trans.UseVisualStyleBackColor = true;
-            this.trans.Click += new System.EventHandler(this.trans_Click);
+            this.maintains.Location = new System.Drawing.Point(159, 202);
+            this.maintains.Name = "maintains";
+            this.maintains.Size = new System.Drawing.Size(129, 40);
+            this.maintains.TabIndex = 10;
+            this.maintains.Text = "Maintenance";
+            this.maintains.UseVisualStyleBackColor = true;
+            this.maintains.Click += new System.EventHandler(this.maintains_Click);
             // 
             // Staff
             // 
@@ -175,6 +187,7 @@
         private System.Windows.Forms.Button PTButton;
         private System.Windows.Forms.Button Announcment;
         private System.Windows.Forms.Button trans;
+        private System.Windows.Forms.Button maintains;
     }
 }
 

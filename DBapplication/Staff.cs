@@ -92,5 +92,12 @@ namespace DBapplication
             placeholderPanel.Show();
             MainMenu.Hide();
         }
+
+        private void maintains_Click(object sender, EventArgs e)
+        {
+            ShowContent(new StaffMaintenance());
+            placeholderPanel.Show();
+            MainMenu.Hide();
+        }
     }
 }

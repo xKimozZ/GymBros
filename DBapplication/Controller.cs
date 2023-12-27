@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
+using System.Deployment.Internal;
 
 namespace DBapplication
 {
@@ -332,6 +333,108 @@ namespace DBapplication
             string insertQuery = $"INSERT INTO Staff_Trans (Staff_ID, Transaction_Type, Transaction_Date) VALUES ({staffId}, '{transactionType}', GETDATE())";
             return dbMan.ExecuteNonQuery(insertQuery);
         }
+
+        public DataTable getEquimpent()
+        {
+            string query = $"SELECT Equipment_ID, Model FROM " +
+                           $"Equipment;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable getStaffRequiredMaintain(DateTime date)
+        {
+            string query = $"SELECT Equipment_ID, Model FROM " +
+                           $"Equipment WHERE '{date}' >= Maintenance_Sched;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DateTime getEquimpentMaintenanceDate(int id)
+        {
+            string query = $"SELECT Maintenance_Sched FROM " +
+                           $"Equipment WHERE Equipment_ID = {id};";
+            return DateTime.Parse((dbMan.ExecuteScalar(query)).ToString());
+        }
+        public int updateEquimpentMaintenanceDate(int id, DateTime newDate)
+        {
+            string query = $"UPDATE Equipment " +
+                                      $"SET Maintenance_Sched = '{newDate}' " +
+                                      $"WHERE Equipment_ID = {id};";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int generateMaintenanceRequest(int reporter_id, int equip_id, DateTime rqst_date, int dmg, string desc, string status)
+        {
+            string query = $"INSERT INTO Maintains " +
+                $"(Reporter_ID, Equipment_ID, Request_Date, Dmg_Estimate, Request_Description, Status) " +
+                $"VALUES ({reporter_id}, {equip_id}, '{rqst_date}', {dmg}, '{desc}', '{status}')";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int LoginAttempt(int UID, string pass)
+        {
+            string query = $"SELECT User_ID FROM Users WHERE User_ID = '{UID}' AND Account_Pass = '{pass}';";
+            return Convert.ToInt32(dbMan.ExecuteScalar(query));
+        }
+
+        public string LoginStaff(int UID)
+        {
+            string query = $"SELECT Role FROM Staff WHERE Staff_ID = '{UID}';";
+            return dbMan.ExecuteScalar(query).ToString();
+        }
+        public int LoginMember(int UID)
+        {
+            string query = $"Select Count(*) FROM Members WHERE Member_ID = '{UID}';";
+            return Convert.ToInt32(dbMan.ExecuteScalar(query));
+        }
+
+        public string FnameUser(int UID)
+        {
+            string query = $"Select Fname FROM Users WHERE User_ID = '{UID}';";
+            return dbMan.ExecuteScalar(query).ToString();
+        }
+
+        public DataTable getMemberData(int UID)
+        {
+            string query = $"SELECT Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact" +
+                $", Contact_Info  FROM Users WHERE User_ID = {UID};";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int UpdateComp(int userId, int height, int weight, float fat, float muscle, string type, string chronic)
+        {
+
+            string userUpdateQuery = $"UPDATE Body_Composition " +
+                                     $"SET Height = {height}, Weight = {weight}, Muscle_Prcntg = {muscle}, BodyFat_Prcntg = {fat}, " +
+                                     $"Body_Type = '{type}', Chronic_Disease = '{chronic}' " +
+                                     $"WHERE Member_ID = {userId};";
+
+            return dbMan.ExecuteNonQuery(userUpdateQuery);
+        }
+
+        public int InsertComp(int userId, int height, int weight, float fat, float muscle, string type, string chronic)
+        {
+
+            string userUpdateQuery = $"INSERT into Body_Composition " +
+                                     $"(Member_ID, Height, Weight, BodyFat_Prcntg, Muscle_Prcntg, Body_Type, Chronic_disease) " +
+                                     $"Values ({userId},{height},{weight},{fat},{muscle},'{type}','{chronic}')";
+
+            return dbMan.ExecuteNonQuery(userUpdateQuery);
+        }
+
+        public int CheckCompExist(int UID)
+        {
+            string query = $"SELECT Member_ID FROM Body_Composition WHERE Member_ID = '{UID}';";
+            return Convert.ToInt32(dbMan.ExecuteScalar(query));
+        }
+
+        public DataTable getBodyComp(int UID)
+        {
+            string query = $"SELECT Height, Weight, BodyFat_Prcntg, Muscle_Prcntg, Body_Type, Chronic_Disease" +
+                $" FROM Body_Composition WHERE Member_ID = {UID};";
+            return dbMan.ExecuteReader(query);
+        }
+
+
         public int InsertClass(string classType, int classMgr, string description, int instructorId, DateTime date, TimeSpan time, string location, int classMaxLimit)
         {
             string classInsertQuery = $"INSERT INTO Classes " +
