@@ -63,13 +63,13 @@ namespace DBapplication
         {
             if(!AreAllTextBoxesNotEmpty(this)) return;
         
-            float.TryParse(textBox3.Text, out float fatPercentage);
-            float.TryParse(textBox3.Text, out float MusPercentage);
+            float.TryParse(fatPercentageBox.Text, out float fatPercentage);
+            float.TryParse(musclePercentage.Text, out float MusPercentage);
 
-            if(!ValidateBodyCompositionInput(Convert.ToInt32( textBox1.Text) , Convert.ToInt32(textBox2.Text) , MusPercentage, fatPercentage )) return;
+            if(!ValidateBodyCompositionInput(Convert.ToInt32( Height.Text) , Convert.ToInt32(Weight.Text) , MusPercentage, fatPercentage )) return;
             
-            int res = controllerObj.AddOrUpdateBodyComposition(Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), MusPercentage,
-                fatPercentage,textBox5.Text.ToString(), textBox6.Text.ToString());
+            int res = controllerObj.AddOrUpdateBodyComposition(Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(Height.Text), Convert.ToInt32(Weight.Text), MusPercentage,
+                fatPercentage,bodyType.Text.ToString(), disease.Text.ToString());
 
             if (res == 1)
             {
@@ -80,6 +80,54 @@ namespace DBapplication
             else
             {
                 MessageBox.Show("Error, Please check the input and try again.");
+            }
+        }
+
+        private void Height_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Weight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void musclePercentage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void fatPercentage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void bodyType_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void disease_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

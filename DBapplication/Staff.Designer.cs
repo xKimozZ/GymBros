@@ -39,7 +39,7 @@
             this.EditStaffprofile = new System.Windows.Forms.Button();
             this.EditMember = new System.Windows.Forms.Button();
             this.AddMember = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,7 @@
             // 
             // MainMenu
             // 
+            this.MainMenu.Controls.Add(this.label2);
             this.MainMenu.Controls.Add(this.maintains);
             this.MainMenu.Controls.Add(this.trans);
             this.MainMenu.Controls.Add(this.PTButton);
@@ -72,7 +73,6 @@
             this.MainMenu.Controls.Add(this.EditStaffprofile);
             this.MainMenu.Controls.Add(this.EditMember);
             this.MainMenu.Controls.Add(this.AddMember);
-            this.MainMenu.Controls.Add(this.label1);
             this.MainMenu.Location = new System.Drawing.Point(36, 57);
             this.MainMenu.Margin = new System.Windows.Forms.Padding(4);
             this.MainMenu.Name = "MainMenu";
@@ -149,15 +149,18 @@
             this.AddMember.UseVisualStyleBackColor = true;
             this.AddMember.Click += new System.EventHandler(this.AddMember_Click);
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(297, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 36);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Staff Menu";
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
+            this.label2.Location = new System.Drawing.Point(257, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(248, 37);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Staff Main Menu";
             // 
             // Staff
             // 
@@ -182,7 +185,6 @@
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Panel placeholderPanel;
         private System.Windows.Forms.Panel MainMenu;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button AddMember;
         private System.Windows.Forms.Button EditMember;
         private System.Windows.Forms.Button EditStaffprofile;
@@ -190,6 +192,7 @@
         private System.Windows.Forms.Button Announcment;
         private System.Windows.Forms.Button trans;
         private System.Windows.Forms.Button maintains;
+        private System.Windows.Forms.Label label2;
     }
 }
 

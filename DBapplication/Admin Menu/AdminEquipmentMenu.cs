@@ -53,6 +53,15 @@ namespace DBapplication.Admin_Menu
 
             int equipmentId = Convert.ToInt32(comboBoxEquipmentID.Text);
 
+            // Call the GetSupplierIdByEquipmentId method to get the supplier ID
+            int supplierId = controllerObj.GetSupplierIdByEquipmentId(equipmentId);
+
+            if (supplierId == -1)  // -1 indicates an error or an invalid value
+            {
+                MessageBox.Show("Error retrieving supplier ID. Please check the input and try again.");
+                return;
+            }
+
             // Call the GetDmgEstimateByEquipmentId method to get the current damage estimate
             int dmgEstimate = controllerObj.GetDmgEstimateByEquipmentId(equipmentId);
 
@@ -81,8 +90,8 @@ namespace DBapplication.Admin_Menu
                     return;
             }
 
-            // Insert into Staff_Trans table
-            int insertResult = controllerObj.InsertStaffTransaction(equipmentId, transactionType);
+            // Insert into Supplier_Trans table
+            int insertResult = controllerObj.InsertSupplierTransaction(supplierId, transactionType);
 
             if (insertResult == 1)
             {

@@ -153,6 +153,7 @@
             this.buttonExtra.TabIndex = 1;
             this.buttonExtra.Text = "Extra Services";
             this.buttonExtra.UseVisualStyleBackColor = false;
+            this.buttonExtra.Click += new System.EventHandler(this.buttonExtra_Click);
             // 
             // buttonReports
             // 
