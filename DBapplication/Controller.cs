@@ -473,6 +473,39 @@ namespace DBapplication
             return dbMan.ExecuteNonQuery(deleteQuery);
         }
 
+        public DataTable GetPendingMaintenanceRequests()
+        {
+            string query = @"
+        SELECT *
+        FROM Maintains
+        WHERE Maintains.Status = 'Pending';";
+
+            return dbMan.ExecuteReader(query);
+        }
+        public int GetDmgEstimateByEquipmentId(int equipmentId)
+        {
+            string dmgEstimateQuery = $"SELECT Dmg_Estimate FROM Maintains WHERE Equipment_ID = {equipmentId}";
+            object result = dbMan.ExecuteScalar(dmgEstimateQuery);
+
+            // Check if the result is not null and return the damage estimate as an integer
+            return result != null && int.TryParse(result.ToString(), out int dmgEstimate) ? dmgEstimate : -1; // You can use any default value you prefer
+        }
+        public int UpdateEquipmentStatus(int equipmentId, string newStatus)
+        {
+            string updateQuery = $"UPDATE Equipment SET Status = '{newStatus}' WHERE Equipment_ID = {equipmentId};";
+            return dbMan.ExecuteNonQuery(updateQuery);
+        }
+        public int UpdateEquipmentMaintenanceStatus(int equipmentId, string newStatus)
+        {
+            string updateQuery = $"UPDATE Equipment SET  Status = '{newStatus}' WHERE Equipment_ID = {equipmentId};";
+            return dbMan.ExecuteNonQuery(updateQuery);
+        }
+        public int DeleteMaintainsRecord(int equipmentId)
+        {
+            string deleteQuery = $"DELETE FROM Maintains WHERE Equipment_ID = {equipmentId};";
+            return dbMan.ExecuteNonQuery(deleteQuery);
+        }
+
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
