@@ -66,14 +66,14 @@ namespace DBapplication
 
         private void Services_Click(object sender, EventArgs e)
         {
-            ShowContent(new StaffAnnouncmentMenu());
+            ShowContent(new MemberServices());
             placeholderPanel.Show();
             MainMenu.Hide();
         }
 
         private void FitnessProgress_Click(object sender, EventArgs e)
         {
-            ShowContent(new BodyComp());
+            ShowContent(new MemberBodyComp());
             placeholderPanel.Show();
             MainMenu.Hide();
         }

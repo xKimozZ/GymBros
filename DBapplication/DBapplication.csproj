@@ -86,11 +86,11 @@
       <DependentUpon>AdminStaffMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="AppSession.cs" />
-    <Compile Include="BodyComp.cs">
+    <Compile Include="MemberBodyComp.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BodyComp.Designer.cs">
-      <DependentUpon>BodyComp.cs</DependentUpon>
+    <Compile Include="MemberBodyComp.Designer.cs">
+      <DependentUpon>MemberBodyComp.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
@@ -149,6 +149,12 @@
     </Compile>
     <Compile Include="MemberPay.Designer.cs">
       <DependentUpon>MemberPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberServices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberServices.Designer.cs">
+      <DependentUpon>MemberServices.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonaltrainingStaffMenu.cs">
       <SubType>UserControl</SubType>
@@ -236,8 +242,8 @@
     <EmbeddedResource Include="Admin Menu\AdminStaffMenu.resx">
       <DependentUpon>AdminStaffMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BodyComp.resx">
-      <DependentUpon>BodyComp.cs</DependentUpon>
+    <EmbeddedResource Include="MemberBodyComp.resx">
+      <DependentUpon>MemberBodyComp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditMember.resx">
       <DependentUpon>EditMember.cs</DependentUpon>
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemberPay.resx">
       <DependentUpon>MemberPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberServices.resx">
+      <DependentUpon>MemberServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonaltrainingStaffMenu.resx">
       <DependentUpon>PersonaltrainingStaffMenu.cs</DependentUpon>
