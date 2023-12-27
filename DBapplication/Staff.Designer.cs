@@ -32,6 +32,7 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.placeholderPanel = new System.Windows.Forms.Panel();
             this.MainMenu = new System.Windows.Forms.Panel();
+            this.maintains = new System.Windows.Forms.Button();
             this.trans = new System.Windows.Forms.Button();
             this.PTButton = new System.Windows.Forms.Button();
             this.Announcment = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.EditMember = new System.Windows.Forms.Button();
             this.AddMember = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.maintains = new System.Windows.Forms.Button();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,7 @@
             // 
             // placeholderPanel
             // 
+            this.placeholderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.placeholderPanel.Location = new System.Drawing.Point(1, 1);
             this.placeholderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.placeholderPanel.Name = "placeholderPanel";
@@ -77,6 +78,16 @@
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(796, 286);
             this.MainMenu.TabIndex = 5;
+            // 
+            // maintains
+            // 
+            this.maintains.Location = new System.Drawing.Point(159, 202);
+            this.maintains.Name = "maintains";
+            this.maintains.Size = new System.Drawing.Size(129, 40);
+            this.maintains.TabIndex = 10;
+            this.maintains.Text = "Maintenance";
+            this.maintains.UseVisualStyleBackColor = true;
+            this.maintains.Click += new System.EventHandler(this.maintains_Click);
             // 
             // trans
             // 
@@ -148,20 +159,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Staff Menu";
             // 
-            // maintains
-            // 
-            this.maintains.Location = new System.Drawing.Point(159, 202);
-            this.maintains.Name = "maintains";
-            this.maintains.Size = new System.Drawing.Size(129, 40);
-            this.maintains.TabIndex = 10;
-            this.maintains.Text = "Maintenance";
-            this.maintains.UseVisualStyleBackColor = true;
-            this.maintains.Click += new System.EventHandler(this.maintains_Click);
-            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(864, 472);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.placeholderPanel);
