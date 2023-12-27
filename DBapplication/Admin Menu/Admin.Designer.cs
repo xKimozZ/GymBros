@@ -119,6 +119,7 @@
             this.buttonClasses.TabIndex = 2;
             this.buttonClasses.Text = "Classes";
             this.buttonClasses.UseVisualStyleBackColor = false;
+            this.buttonClasses.Click += new System.EventHandler(this.buttonClasses_Click);
             // 
             // buttonExtra
             // 

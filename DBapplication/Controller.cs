@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
+using System.Deployment.Internal;
 
 namespace DBapplication
 {
@@ -41,6 +42,16 @@ namespace DBapplication
 
             return dbMan.ExecuteReader(query);
         }
+        public DataTable GetStaffByRole(string role)
+        {
+            string query = $@"
+        SELECT *
+        FROM Staff
+        WHERE Staff.Role = '{role}';";
+
+            return dbMan.ExecuteReader(query);
+        }
+
 
         public DataTable GetMemberInformation(int memberId)
         {
@@ -323,6 +334,42 @@ namespace DBapplication
             return dbMan.ExecuteNonQuery(insertQuery);
         }
 
+        public DataTable getEquimpent()
+        {
+            string query = $"SELECT Equipment_ID, Model FROM " +
+                           $"Equipment;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable getStaffRequiredMaintain(DateTime date)
+        {
+            string query = $"SELECT Equipment_ID, Model FROM " +
+                           $"Equipment WHERE '{date}' >= Maintenance_Sched;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DateTime getEquimpentMaintenanceDate(int id)
+        {
+            string query = $"SELECT Maintenance_Sched FROM " +
+                           $"Equipment WHERE Equipment_ID = {id};";
+            return DateTime.Parse((dbMan.ExecuteScalar(query)).ToString());
+        }
+        public int updateEquimpentMaintenanceDate(int id, DateTime newDate)
+        {
+            string query = $"UPDATE Equipment " +
+                                      $"SET Maintenance_Sched = '{newDate}' " +
+                                      $"WHERE Equipment_ID = {id};";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int generateMaintenanceRequest(int reporter_id, int equip_id, DateTime rqst_date, int dmg, string desc, string status)
+        {
+            string query = $"INSERT INTO Maintains " +
+                $"(Reporter_ID, Equipment_ID, Request_Date, Dmg_Estimate, Request_Description, Status) " +
+                $"VALUES ({reporter_id}, {equip_id}, '{rqst_date}', {dmg}, '{desc}', '{status}')";
+            return dbMan.ExecuteNonQuery(query);
+        }
         public int LoginAttempt(int UID, string pass)
         {
             string query = $"SELECT User_ID FROM Users WHERE User_ID = '{UID}' AND Account_Pass = '{pass}';";
@@ -386,6 +433,18 @@ namespace DBapplication
                 $" FROM Body_Composition WHERE Member_ID = {UID};";
             return dbMan.ExecuteReader(query);
         }
+
+
+        public int InsertClass(string classType, int classMgr, string description, int instructorId, DateTime date, TimeSpan time, string location, int classMaxLimit)
+        {
+            string classInsertQuery = $"INSERT INTO Classes " +
+                                      $"(Class_Type, Class_Mgr, Availability, Description, Instructor_ID, Date, Time, Location, Registered_Num, Class_Max_Limit) " +
+                                      $"VALUES " +
+                                      $"('{classType}', {classMgr}, 1, '{description}', {instructorId}, '{date:yyyy-MM-dd}', '{time:hh\\:mm}', '{location}', 0, {classMaxLimit});";
+
+            return dbMan.ExecuteNonQuery(classInsertQuery);
+        }
+
 
 
         public void TerminateConnection()

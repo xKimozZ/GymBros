@@ -103,7 +103,6 @@ namespace DBapplication
             string lname = txtLname.Text.Trim();
             string pass = txtPass.Text.Trim();
             int age;
-            //int Salary;
             string Role = comboBoxRole2.SelectedItem.ToString();
 
             // Validate age input
@@ -112,11 +111,7 @@ namespace DBapplication
                 MessageBox.Show("Invalid age. Please enter a valid age greater than or equal to 18.");
                 return;
             }
-            //if (!int.TryParse(textBoxAdSalary.Text, out Salary))
-            //{
-            //    MessageBox.Show("Invalid Salary. Please enter a valid number.");
-            //    return;
-            //}
+
             int contactInfo;
             int emergencyContact;
 

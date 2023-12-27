@@ -61,6 +61,12 @@
     <Compile Include="Admin Menu\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin Menu\AdminClassesMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\AdminClassesMenu.Designer.cs">
+      <DependentUpon>AdminClassesMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin Menu\AdminEquipmentMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +161,12 @@
     <Compile Include="StaffCheckInPT.Designer.cs">
       <DependentUpon>StaffCheckInPT.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffMaintenance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaffMaintenance.Designer.cs">
+      <DependentUpon>StaffMaintenance.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffPTUpdate.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Menu\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Menu\AdminClassesMenu.resx">
+      <DependentUpon>AdminClassesMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Menu\AdminEquipmentMenu.resx">
       <DependentUpon>AdminEquipmentMenu.cs</DependentUpon>
@@ -243,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffCheckInPT.resx">
       <DependentUpon>StaffCheckInPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffMaintenance.resx">
+      <DependentUpon>StaffMaintenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffPTUpdate.resx">
       <DependentUpon>StaffPTUpdate.cs</DependentUpon>
