@@ -19,10 +19,10 @@ namespace DBapplication
         private void button1_Click(object sender, EventArgs e)
         {
             //AdminLogin a = new AdminLogin();
-            //Admin a = new Admin();
-            //a.Show();
-            Login l = new Login();
-            l.Show();
+            Admin a = new Admin();
+            a.Show();
+            //Login l = new Login();
+            //l.Show();
         }
 
         //private void button2_Click(object sender, EventArgs e)
@@ -38,10 +38,10 @@ namespace DBapplication
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Staff s = new Staff();
-            //s.Show();
-            Login l = new Login();
-            l.Show();
+            Staff s = new Staff();
+            s.Show();
+            //Login l = new Login();
+            //l.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
