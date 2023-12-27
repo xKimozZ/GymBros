@@ -69,5 +69,12 @@ namespace DBapplication
             placeholderPanel.Show();
             MainMenu.Hide();
         }
+
+        private void buttonEquipment_Click(object sender, EventArgs e)
+        {
+            ShowContent(new AdminEquipmentMenu());
+            placeholderPanel.Show();
+            MainMenu.Hide();
+        }
     }
 }

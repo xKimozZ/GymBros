@@ -44,18 +44,23 @@
             // 
             // buttonBack
             // 
+            this.buttonBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
             this.buttonBack.Enabled = false;
+            this.buttonBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonBack.Location = new System.Drawing.Point(33, 408);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(85, 28);
             this.buttonBack.TabIndex = 27;
             this.buttonBack.Text = "Back";
-            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Visible = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // MainMenu
             // 
+            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.MainMenu.Controls.Add(this.label2);
             this.MainMenu.Controls.Add(this.buttonAnnouncement);
             this.MainMenu.Controls.Add(this.buttonEquipment);
@@ -63,27 +68,32 @@
             this.MainMenu.Controls.Add(this.buttonClasses);
             this.MainMenu.Controls.Add(this.buttonExtra);
             this.MainMenu.Controls.Add(this.buttonReports);
-            this.MainMenu.Location = new System.Drawing.Point(0, 26);
+            this.MainMenu.Location = new System.Drawing.Point(0, 27);
             this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(799, 376);
+            this.MainMenu.Size = new System.Drawing.Size(800, 374);
             this.MainMenu.TabIndex = 0;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(278, 16);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
+            this.label2.Location = new System.Drawing.Point(280, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 20);
+            this.label2.Size = new System.Drawing.Size(226, 28);
             this.label2.TabIndex = 6;
             this.label2.Text = "Admin Main Menu";
             // 
             // buttonAnnouncement
             // 
-            this.buttonAnnouncement.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonAnnouncement.Location = new System.Drawing.Point(22, 303);
+            this.buttonAnnouncement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
+            this.buttonAnnouncement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAnnouncement.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnnouncement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
+            this.buttonAnnouncement.Location = new System.Drawing.Point(480, 212);
             this.buttonAnnouncement.Name = "buttonAnnouncement";
-            this.buttonAnnouncement.Size = new System.Drawing.Size(109, 55);
+            this.buttonAnnouncement.Size = new System.Drawing.Size(138, 110);
             this.buttonAnnouncement.TabIndex = 5;
             this.buttonAnnouncement.Text = "Announcements";
             this.buttonAnnouncement.UseVisualStyleBackColor = false;
@@ -91,20 +101,27 @@
             // 
             // buttonEquipment
             // 
-            this.buttonEquipment.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonEquipment.Location = new System.Drawing.Point(22, 152);
+            this.buttonEquipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
+            this.buttonEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEquipment.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEquipment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
+            this.buttonEquipment.Location = new System.Drawing.Point(480, 71);
             this.buttonEquipment.Name = "buttonEquipment";
-            this.buttonEquipment.Size = new System.Drawing.Size(109, 46);
+            this.buttonEquipment.Size = new System.Drawing.Size(138, 110);
             this.buttonEquipment.TabIndex = 4;
             this.buttonEquipment.Text = "Equipment";
             this.buttonEquipment.UseVisualStyleBackColor = false;
+            this.buttonEquipment.Click += new System.EventHandler(this.buttonEquipment_Click);
             // 
             // buttonStaff
             // 
-            this.buttonStaff.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonStaff.Location = new System.Drawing.Point(22, 48);
+            this.buttonStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
+            this.buttonStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStaff.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
+            this.buttonStaff.Location = new System.Drawing.Point(154, 71);
             this.buttonStaff.Name = "buttonStaff";
-            this.buttonStaff.Size = new System.Drawing.Size(109, 46);
+            this.buttonStaff.Size = new System.Drawing.Size(138, 110);
             this.buttonStaff.TabIndex = 3;
             this.buttonStaff.Text = "Staff";
             this.buttonStaff.UseVisualStyleBackColor = false;
@@ -112,10 +129,13 @@
             // 
             // buttonClasses
             // 
-            this.buttonClasses.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonClasses.Location = new System.Drawing.Point(22, 256);
+            this.buttonClasses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
+            this.buttonClasses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClasses.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClasses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
+            this.buttonClasses.Location = new System.Drawing.Point(154, 212);
             this.buttonClasses.Name = "buttonClasses";
-            this.buttonClasses.Size = new System.Drawing.Size(109, 46);
+            this.buttonClasses.Size = new System.Drawing.Size(138, 110);
             this.buttonClasses.TabIndex = 2;
             this.buttonClasses.Text = "Classes";
             this.buttonClasses.UseVisualStyleBackColor = false;
@@ -123,20 +143,26 @@
             // 
             // buttonExtra
             // 
-            this.buttonExtra.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonExtra.Location = new System.Drawing.Point(22, 204);
+            this.buttonExtra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
+            this.buttonExtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExtra.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExtra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
+            this.buttonExtra.Location = new System.Drawing.Point(317, 212);
             this.buttonExtra.Name = "buttonExtra";
-            this.buttonExtra.Size = new System.Drawing.Size(109, 46);
+            this.buttonExtra.Size = new System.Drawing.Size(138, 110);
             this.buttonExtra.TabIndex = 1;
             this.buttonExtra.Text = "Extra Services";
             this.buttonExtra.UseVisualStyleBackColor = false;
             // 
             // buttonReports
             // 
-            this.buttonReports.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonReports.Location = new System.Drawing.Point(22, 100);
+            this.buttonReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
+            this.buttonReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReports.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
+            this.buttonReports.Location = new System.Drawing.Point(317, 71);
             this.buttonReports.Name = "buttonReports";
-            this.buttonReports.Size = new System.Drawing.Size(109, 46);
+            this.buttonReports.Size = new System.Drawing.Size(138, 110);
             this.buttonReports.TabIndex = 0;
             this.buttonReports.Text = "Reports";
             this.buttonReports.UseVisualStyleBackColor = false;
@@ -145,13 +171,14 @@
             // buttonExit
             // 
             this.buttonExit.BackColor = System.Drawing.Color.Red;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.Color.White;
-            this.buttonExit.Location = new System.Drawing.Point(696, 410);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonExit.Location = new System.Drawing.Point(741, -3);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(0);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(56, 26);
+            this.buttonExit.Size = new System.Drawing.Size(60, 30);
             this.buttonExit.TabIndex = 28;
             this.buttonExit.Text = "EXIT";
             this.buttonExit.UseVisualStyleBackColor = false;
@@ -168,7 +195,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(798, 446);
             this.Controls.Add(this.buttonExit);
