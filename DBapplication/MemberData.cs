@@ -109,7 +109,7 @@ namespace DBapplication
         {
             controllerObj = new Controller();
             DataTable dt;
-            int sessionID = 101;
+            int sessionID = AppSession.UserId;
             dt = controllerObj.getMemberData(sessionID);
             txtFname.Text = dt.Rows[0].Field<string>("Fname");
             txtLname.Text = dt.Rows[0].Field<string>("Lname");

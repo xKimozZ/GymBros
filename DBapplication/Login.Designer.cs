@@ -79,6 +79,8 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(282, 22);
             this.textBox2.TabIndex = 8;
+            this.textBox2.UseSystemPasswordChar = true;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label2
             // 
@@ -111,6 +113,7 @@
             this.Controls.Add(this.button2);
             this.Name = "Login";
             this.Text = "Login";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

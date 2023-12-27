@@ -15,7 +15,7 @@ namespace DBapplication
         public Member(int ID)
         {
             InitializeComponent();
-            AppSession.Login(ID, "John");
+            //AppSession.Login(ID, "John");
         }
 
         private void placeholderPanel_Paint(object sender, PaintEventArgs e)

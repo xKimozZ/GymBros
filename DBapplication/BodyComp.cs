@@ -117,7 +117,7 @@ namespace DBapplication
         {
             controllerObj = new Controller();
             DataTable dt;
-            int sessionID = 101;
+            int sessionID = AppSession.UserId;
             dt = controllerObj.getBodyComp(sessionID);
             txtHeight.Text = dt.Rows[0].Field<int>("Height").ToString();
             txtWeight.Text = dt.Rows[0].Field<int>("Weight").ToString();
