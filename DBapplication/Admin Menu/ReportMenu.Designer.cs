@@ -37,8 +37,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -122,8 +122,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 54);
             this.button3.TabIndex = 20;
-            this.button3.Text = "3";
+            this.button3.Text = "Maintenance requests";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -151,6 +152,14 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Reports";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.panel2.Location = new System.Drawing.Point(174, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(629, 374);
+            this.panel2.TabIndex = 35;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
@@ -160,14 +169,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(141, 130);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.panel2.Location = new System.Drawing.Point(174, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(629, 374);
-            this.panel2.TabIndex = 35;
             // 
             // ReportMenu
             // 

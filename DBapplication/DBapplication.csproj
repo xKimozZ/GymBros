@@ -91,6 +91,12 @@
     <Compile Include="Admin Menu\Report2.Designer.cs">
       <DependentUpon>Report2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin Menu\Report3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\Report3.Designer.cs">
+      <DependentUpon>Report3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin Menu\ReportMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -251,6 +257,9 @@
     <EmbeddedResource Include="Admin Menu\Report2.resx">
       <DependentUpon>Report2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin Menu\Report3.resx">
+      <DependentUpon>Report3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin Menu\ReportMenu.resx">
       <DependentUpon>ReportMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,6 +275,7 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance.rdlc" />
     <EmbeddedResource Include="Member.resx">
       <DependentUpon>Member.cs</DependentUpon>
     </EmbeddedResource>

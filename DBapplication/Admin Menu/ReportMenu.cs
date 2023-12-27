@@ -36,5 +36,12 @@ namespace DBapplication.Admin_Menu
             panelselect.Visible = true;
             panelselect.Top = button2.Top;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ShowReportUC(new Report3());
+            panelselect.Visible = true;
+            panelselect.Top = button3.Top;
+        }
     }
 }
