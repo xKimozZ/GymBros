@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.gymBrosDBDataSet = new DBapplication.GymBrosDBDataSet();
             this.staffTransBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gymBrosDBDataSet = new DBapplication.GymBrosDBDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.staff_TransTableAdapter = new DBapplication.GymBrosDBDataSetTableAdapters.Staff_TransTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.gymBrosDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffTransBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymBrosDBDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // staffTransBindingSource
+            // 
+            this.staffTransBindingSource.DataMember = "Staff_Trans";
+            this.staffTransBindingSource.DataSource = this.gymBrosDBDataSet;
+            // 
+            // gymBrosDBDataSet
+            // 
+            this.gymBrosDBDataSet.DataSetName = "GymBrosDBDataSet";
+            this.gymBrosDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -51,16 +61,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(799, 376);
             this.reportViewer1.TabIndex = 0;
             // 
-            // gymBrosDBDataSet
-            // 
-            this.gymBrosDBDataSet.DataSetName = "GymBrosDBDataSet";
-            this.gymBrosDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // staffTransBindingSource
-            // 
-            this.staffTransBindingSource.DataMember = "Staff_Trans";
-            this.staffTransBindingSource.DataSource = this.gymBrosDBDataSet;
-            // 
             // staff_TransTableAdapter
             // 
             this.staff_TransTableAdapter.ClearBeforeFill = true;
@@ -72,8 +72,8 @@
             this.Controls.Add(this.reportViewer1);
             this.Name = "Reportsuc";
             this.Size = new System.Drawing.Size(799, 376);
-            ((System.ComponentModel.ISupportInitialize)(this.gymBrosDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffTransBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymBrosDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
