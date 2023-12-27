@@ -21,7 +21,7 @@ namespace DBapplication
             //Application.Run(new Staff());
 
             //
-            Application.Run(new Staff());
+            Application.Run(new Welcome());
         }
     }
 }
