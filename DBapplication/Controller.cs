@@ -239,14 +239,7 @@ namespace DBapplication
 
             return dbMan.ExecuteNonQuery(staffUpdateQuery);
         }
-        //public int UpdateStaffSalary(int staffId, int Salary)
-        //{
-        //    string staffUpdateQuery = $"UPDATE Staff " +
-        //                              $"SET Salary = '{Salary}' " +
-        //                              $"WHERE Staff_ID = {staffId};";
-
-        //    return dbMan.ExecuteNonQuery(staffUpdateQuery);
-        //}
+ 
         public int DeleteUser(int userid)
         {
             string staffUpdateQuery = $"Delete Users " +
@@ -316,7 +309,19 @@ namespace DBapplication
 
             return dbMan.ExecuteReader(query);
         }
+        public string GetRoleByStaffId(int staffId)
+        {
+            string roleQuery = $"SELECT Role FROM Staff WHERE Staff_ID = {staffId}";
+            object result = dbMan.ExecuteScalar(roleQuery);
 
+            // Check if the result is not null and return the role as a string
+            return result != null ? result.ToString() : "Role Not Found"; // You can use any default value you prefer
+        }
+        public int InsertStaffTransaction(int staffId, string transactionType)
+        {
+            string insertQuery = $"INSERT INTO Staff_Trans (Staff_ID, Transaction_Type, Transaction_Date) VALUES ({staffId}, '{transactionType}', GETDATE())";
+            return dbMan.ExecuteNonQuery(insertQuery);
+        }
         public void TerminateConnection()
         {
             dbMan.CloseConnection();

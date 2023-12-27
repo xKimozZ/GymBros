@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminStaffMenu));
             this.panelAdminPay = new System.Windows.Forms.Panel();
+            this.buttonPaypanel = new System.Windows.Forms.Button();
             this.buttonAddadmin = new System.Windows.Forms.Button();
             this.panelStaffdel = new System.Windows.Forms.Panel();
             this.buttonDel = new System.Windows.Forms.Button();
@@ -66,7 +67,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelselect = new System.Windows.Forms.Panel();
-            this.buttonPaypanel = new System.Windows.Forms.Button();
             this.panelAdminPay.SuspendLayout();
             this.panelManager.SuspendLayout();
             this.panelAdd.SuspendLayout();
@@ -79,8 +79,18 @@
             this.panelAdminPay.Controls.Add(this.buttonPaypanel);
             this.panelAdminPay.Location = new System.Drawing.Point(292, 168);
             this.panelAdminPay.Name = "panelAdminPay";
-            this.panelAdminPay.Size = new System.Drawing.Size(365, 57);
+            this.panelAdminPay.Size = new System.Drawing.Size(366, 57);
             this.panelAdminPay.TabIndex = 24;
+            // 
+            // buttonPaypanel
+            // 
+            this.buttonPaypanel.Location = new System.Drawing.Point(137, 18);
+            this.buttonPaypanel.Name = "buttonPaypanel";
+            this.buttonPaypanel.Size = new System.Drawing.Size(75, 23);
+            this.buttonPaypanel.TabIndex = 0;
+            this.buttonPaypanel.Text = "Pay";
+            this.buttonPaypanel.UseVisualStyleBackColor = true;
+            this.buttonPaypanel.Click += new System.EventHandler(this.buttonPaypanel_Click);
             // 
             // buttonAddadmin
             // 
@@ -474,16 +484,6 @@
             this.panelselect.Size = new System.Drawing.Size(7, 54);
             this.panelselect.TabIndex = 28;
             this.panelselect.Visible = false;
-            // 
-            // buttonPaypanel
-            // 
-            this.buttonPaypanel.Location = new System.Drawing.Point(137, 18);
-            this.buttonPaypanel.Name = "buttonPaypanel";
-            this.buttonPaypanel.Size = new System.Drawing.Size(75, 23);
-            this.buttonPaypanel.TabIndex = 0;
-            this.buttonPaypanel.Text = "Pay";
-            this.buttonPaypanel.UseVisualStyleBackColor = true;
-            this.buttonPaypanel.Click += new System.EventHandler(this.buttonPaypanel_Click);
             // 
             // AdminStaffMenu
             // 

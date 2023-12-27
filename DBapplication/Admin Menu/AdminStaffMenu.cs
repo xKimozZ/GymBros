@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -236,7 +237,40 @@ namespace DBapplication
 
         private void buttonPaypanel_Click(object sender, EventArgs e)
         {
-            //Add Pay Functionality
+            controllerObj = new Controller();
+
+            if (comboBoxID.Text == "")   // Validation part
+            {
+                MessageBox.Show("No Staff selected");
+                return;
+            }
+
+            int staffId = Convert.ToInt32(comboBoxID.Text);
+
+            // Call the GetRoleByStaffId method to get the current role
+            string currentRole = controllerObj.GetRoleByStaffId(staffId);
+
+            if (currentRole == null)
+            {
+                MessageBox.Show("Error retrieving staff role. Please check the input and try again.");
+                return;
+            }
+
+            // Determine the transaction type based on the current role
+            string transactionType = (currentRole == "Admin") ? "Salary_Admin" : "Salary_Staff";
+
+            // Insert into Staff_Trans table
+            int insertResult = controllerObj.InsertStaffTransaction(staffId, transactionType);
+
+            if (insertResult == 1)
+            {
+                MessageBox.Show($"Transaction inserted successfully! Transaction Type: {transactionType}");
+            }
+            else
+            {
+                MessageBox.Show("Error inserting transaction. Please check the input and try again.");
+            }
         }
     }
 }
+    
