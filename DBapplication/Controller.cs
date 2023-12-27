@@ -478,12 +478,15 @@ namespace DBapplication
 
             return dbMan.ExecuteNonQuery(classUpdateQuery);
         }
-        public int UpdateExtraService(string serviceName, string description, int serviceMgrId)
+        public int UpdateExtraService(string serviceName, string description, int serviceMgrId, bool availability)
         {
+            int availabilityValue = availability ? 1 : 0; // Convert bool to 1 or 0 for the BIT field
+
             string updateQuery = $@"
         UPDATE Extra_Service
         SET Description = '{description}',
-            Service_Mgr_ID = {serviceMgrId}
+            Service_Mgr_ID = {serviceMgrId},
+            Availability = {availabilityValue}
         WHERE Service_Name = '{serviceName}';";
 
             return dbMan.ExecuteNonQuery(updateQuery);
@@ -491,12 +494,28 @@ namespace DBapplication
 
         public DataTable GetAllClassTypes()
         {
-            string query = "SELECT Class_Type FROM Classes;";
+            string query = "SELECT * FROM Classes;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable GetAllServices()
+        {
+            string query = @"
+        SELECT *
+        FROM Extra_Service;";
+
             return dbMan.ExecuteReader(query);
         }
         public int DeleteClass(string classType)
         {
             string deleteQuery = $"DELETE FROM Classes WHERE Class_Type = '{classType}';";
+            return dbMan.ExecuteNonQuery(deleteQuery);
+        }
+        public int DeleteService(string serviceName)
+        {
+            string deleteQuery = $@"
+        DELETE FROM Extra_Service
+        WHERE Service_Name = '{serviceName}';";
+
             return dbMan.ExecuteNonQuery(deleteQuery);
         }
 
