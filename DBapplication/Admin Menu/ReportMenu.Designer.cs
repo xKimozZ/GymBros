@@ -74,13 +74,14 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.button5.Location = new System.Drawing.Point(73, 268);
+            this.button5.Location = new System.Drawing.Point(73, 324);
             this.button5.Margin = new System.Windows.Forms.Padding(1);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 54);
             this.button5.TabIndex = 25;
             this.button5.Text = "4";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -88,7 +89,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.button4.Location = new System.Drawing.Point(73, 324);
+            this.button4.Location = new System.Drawing.Point(73, 268);
             this.button4.Margin = new System.Windows.Forms.Padding(1);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 54);

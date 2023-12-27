@@ -244,6 +244,40 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Total Transactions = </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Count(Fields!Supplier_ID.Value, "DataSet1")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>3.54224cm</Top>
+        <Left>2.37511cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.3575cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>2in</Height>
     <Style />
@@ -271,9 +305,9 @@
           </Paragraphs>
           <rd:DefaultName>ReportName</rd:DefaultName>
           <Top>0.81097cm</Top>
-          <Left>6.64782cm</Left>
+          <Left>5.48365cm</Left>
           <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Width>5.06646cm</Width>
           <Style>
             <Border>
               <Style>None</Style>

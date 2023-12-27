@@ -43,5 +43,10 @@ namespace DBapplication.Admin_Menu
             panelselect.Visible = true;
             panelselect.Top = button3.Top;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
