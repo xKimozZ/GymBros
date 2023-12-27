@@ -85,6 +85,24 @@
     <Compile Include="Admin Menu\AdminStaffMenu.Designer.cs">
       <DependentUpon>AdminStaffMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin Menu\Report2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\Report2.Designer.cs">
+      <DependentUpon>Report2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Menu\Report3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\Report3.Designer.cs">
+      <DependentUpon>Report3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Menu\ReportMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Menu\ReportMenu.Designer.cs">
+      <DependentUpon>ReportMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppSession.cs" />
     <Compile Include="MemberBodyComp.cs">
       <SubType>UserControl</SubType>
@@ -164,10 +182,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportsuc.cs">
+    <Compile Include="Admin Menu\Reportsuc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Reportsuc.Designer.cs">
+    <Compile Include="Admin Menu\Reportsuc.Designer.cs">
       <DependentUpon>Reportsuc.cs</DependentUpon>
     </Compile>
     <Compile Include="Staff.cs">
@@ -241,8 +259,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Menu\AdminStaffMenu.resx">
       <DependentUpon>AdminStaffMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MemberBodyComp.resx">
+		<EmbeddedResource Include="Admin Menu\Report2.resx">
+			<DependentUpon>Report2.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Admin Menu\Report3.resx">
+			<DependentUpon>Report3.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Admin Menu\ReportMenu.resx">
+			<DependentUpon>ReportMenu.cs</DependentUpon>
+		</EmbeddedResource>
+    </EmbeddedResource>MemberBodyComp.resx">
       <DependentUpon>MemberBodyComp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditMember.resx">
@@ -254,6 +280,7 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance.rdlc" />
     <EmbeddedResource Include="Member.resx">
       <DependentUpon>Member.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,7 +313,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="Reportsuc.resx">
+    <EmbeddedResource Include="Admin Menu\Reportsuc.resx">
       <DependentUpon>Reportsuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Staff.resx">
@@ -310,6 +337,7 @@
     <EmbeddedResource Include="StaffUpdateBody.resx">
       <DependentUpon>StaffUpdateBody.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Supplier Transaction.rdlc" />
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
