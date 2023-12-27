@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Height = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Weight = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.musclePercentage = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.fatPercentageBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.bodyType = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.disease = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -53,12 +53,13 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 0;
             // 
-            // textBox1
+            // Height
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 1;
+            this.Height.Location = new System.Drawing.Point(120, 75);
+            this.Height.Name = "Height";
+            this.Height.Size = new System.Drawing.Size(121, 22);
+            this.Height.TabIndex = 1;
+            this.Height.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Height_KeyPress);
             // 
             // label1
             // 
@@ -87,12 +88,13 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Weight";
             // 
-            // textBox2
+            // Weight
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 113);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 22);
-            this.textBox2.TabIndex = 4;
+            this.Weight.Location = new System.Drawing.Point(120, 113);
+            this.Weight.Name = "Weight";
+            this.Weight.Size = new System.Drawing.Size(121, 22);
+            this.Weight.TabIndex = 4;
+            this.Weight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Weight_KeyPress);
             // 
             // label4
             // 
@@ -103,12 +105,13 @@
             this.label4.TabIndex = 7;
             this.label4.Text = " Muscle_Prcntg";
             // 
-            // textBox3
+            // musclePercentage
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 148);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 22);
-            this.textBox3.TabIndex = 6;
+            this.musclePercentage.Location = new System.Drawing.Point(120, 148);
+            this.musclePercentage.Name = "musclePercentage";
+            this.musclePercentage.Size = new System.Drawing.Size(121, 22);
+            this.musclePercentage.TabIndex = 6;
+            this.musclePercentage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.musclePercentage_KeyPress);
             // 
             // label5
             // 
@@ -119,12 +122,13 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "BodyFat_Prcntg";
             // 
-            // textBox4
+            // fatPercentageBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(120, 183);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 22);
-            this.textBox4.TabIndex = 8;
+            this.fatPercentageBox.Location = new System.Drawing.Point(120, 183);
+            this.fatPercentageBox.Name = "fatPercentageBox";
+            this.fatPercentageBox.Size = new System.Drawing.Size(121, 22);
+            this.fatPercentageBox.TabIndex = 8;
+            this.fatPercentageBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fatPercentage_KeyPress);
             // 
             // label6
             // 
@@ -135,12 +139,13 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Body_Type";
             // 
-            // textBox5
+            // bodyType
             // 
-            this.textBox5.Location = new System.Drawing.Point(120, 224);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(121, 22);
-            this.textBox5.TabIndex = 10;
+            this.bodyType.Location = new System.Drawing.Point(120, 224);
+            this.bodyType.Name = "bodyType";
+            this.bodyType.Size = new System.Drawing.Size(121, 22);
+            this.bodyType.TabIndex = 10;
+            this.bodyType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bodyType_KeyPress);
             // 
             // button1
             // 
@@ -161,31 +166,33 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Chronic_Disease";
             // 
-            // textBox6
+            // disease
             // 
-            this.textBox6.Location = new System.Drawing.Point(119, 262);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(121, 22);
-            this.textBox6.TabIndex = 13;
+            this.disease.Location = new System.Drawing.Point(119, 262);
+            this.disease.Name = "disease";
+            this.disease.Size = new System.Drawing.Size(121, 22);
+            this.disease.TabIndex = 13;
+            this.disease.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disease_KeyPress);
             // 
             // StaffUpdateBody
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.disease);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.bodyType);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.fatPercentageBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.musclePercentage);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Weight);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Height);
             this.Controls.Add(this.comboBox1);
             this.Name = "StaffUpdateBody";
             this.Size = new System.Drawing.Size(555, 419);
@@ -197,19 +204,19 @@
         #endregion
 
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Height;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Weight;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox musclePercentage;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox fatPercentageBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox bodyType;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox disease;
     }
 }

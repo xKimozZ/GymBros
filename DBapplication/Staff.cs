@@ -19,7 +19,7 @@ namespace DBapplication
             InitializeComponent();
             controllerObj = new Controller();
             // Hard code login session 
-            AppSession.Login(101,"John");
+            AppSession.Login(104,"John");
             
         }
 
