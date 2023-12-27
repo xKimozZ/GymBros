@@ -45,15 +45,8 @@
             this.panelUpdate = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.comboBoxClassType = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtTime2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.txtClassDescription2 = new System.Windows.Forms.RichTextBox();
             this.buttonUpdate = new System.Windows.Forms.Button();
-            this.textBoxclassupd = new System.Windows.Forms.TextBox();
-            this.txtLocation2 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panelAdd = new System.Windows.Forms.Panel();
@@ -91,12 +84,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(144, 119);
+            this.label5.Location = new System.Drawing.Point(129, 119);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.Size = new System.Drawing.Size(74, 13);
             this.label5.TabIndex = 67;
-            this.label5.Text = "Class Type";
+            this.label5.Text = "Service Name";
             // 
             // buttonDel
             // 
@@ -107,8 +100,9 @@
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(115, 40);
             this.buttonDel.TabIndex = 47;
-            this.buttonDel.Text = "Delete Class";
+            this.buttonDel.Text = "Delete Service";
             this.buttonDel.UseVisualStyleBackColor = false;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // panelselect
             // 
@@ -144,7 +138,7 @@
             this.buttonManage.Name = "buttonManage";
             this.buttonManage.Size = new System.Drawing.Size(100, 54);
             this.buttonManage.TabIndex = 21;
-            this.buttonManage.Text = "Class Manager";
+            this.buttonManage.Text = "Service Manager";
             this.buttonManage.UseVisualStyleBackColor = false;
             this.buttonManage.Click += new System.EventHandler(this.buttonManage_Click);
             // 
@@ -159,8 +153,9 @@
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(100, 54);
             this.buttonRemove.TabIndex = 20;
-            this.buttonRemove.Text = "Remove Class";
+            this.buttonRemove.Text = "Remove Service";
             this.buttonRemove.UseVisualStyleBackColor = false;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // buttonAdd
             // 
@@ -221,15 +216,8 @@
             // 
             this.panelUpdate.Controls.Add(this.checkBox1);
             this.panelUpdate.Controls.Add(this.comboBoxClassType);
-            this.panelUpdate.Controls.Add(this.label8);
-            this.panelUpdate.Controls.Add(this.txtTime2);
-            this.panelUpdate.Controls.Add(this.dateTimePicker2);
             this.panelUpdate.Controls.Add(this.txtClassDescription2);
             this.panelUpdate.Controls.Add(this.buttonUpdate);
-            this.panelUpdate.Controls.Add(this.textBoxclassupd);
-            this.panelUpdate.Controls.Add(this.txtLocation2);
-            this.panelUpdate.Controls.Add(this.label11);
-            this.panelUpdate.Controls.Add(this.label12);
             this.panelUpdate.Controls.Add(this.label14);
             this.panelUpdate.Controls.Add(this.label15);
             this.panelUpdate.Location = new System.Drawing.Point(292, 26);
@@ -240,7 +228,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(63, 213);
+            this.checkBox1.Location = new System.Drawing.Point(48, 140);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(69, 17);
             this.checkBox1.TabIndex = 67;
@@ -251,39 +239,14 @@
             // 
             this.comboBoxClassType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxClassType.FormattingEnabled = true;
-            this.comboBoxClassType.Location = new System.Drawing.Point(78, 26);
+            this.comboBoxClassType.Location = new System.Drawing.Point(88, 31);
             this.comboBoxClassType.Name = "comboBoxClassType";
             this.comboBoxClassType.Size = new System.Drawing.Size(90, 21);
             this.comboBoxClassType.TabIndex = 66;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(263, 193);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(30, 13);
-            this.label8.TabIndex = 64;
-            this.label8.Text = "Time";
-            // 
-            // txtTime2
-            // 
-            this.txtTime2.Location = new System.Drawing.Point(346, 193);
-            this.txtTime2.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTime2.Name = "txtTime2";
-            this.txtTime2.Size = new System.Drawing.Size(90, 20);
-            this.txtTime2.TabIndex = 63;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(17, 167);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(193, 20);
-            this.dateTimePicker2.TabIndex = 62;
-            // 
             // txtClassDescription2
             // 
-            this.txtClassDescription2.Location = new System.Drawing.Point(17, 81);
+            this.txtClassDescription2.Location = new System.Drawing.Point(150, 107);
             this.txtClassDescription2.Margin = new System.Windows.Forms.Padding(2);
             this.txtClassDescription2.Name = "txtClassDescription2";
             this.txtClassDescription2.Size = new System.Drawing.Size(161, 76);
@@ -299,65 +262,29 @@
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(115, 40);
             this.buttonUpdate.TabIndex = 46;
-            this.buttonUpdate.Text = "Update Class";
+            this.buttonUpdate.Text = "Update Service";
             this.buttonUpdate.UseVisualStyleBackColor = false;
-            // 
-            // textBoxclassupd
-            // 
-            this.textBoxclassupd.Location = new System.Drawing.Point(346, 107);
-            this.textBoxclassupd.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxclassupd.Name = "textBoxclassupd";
-            this.textBoxclassupd.Size = new System.Drawing.Size(90, 20);
-            this.textBoxclassupd.TabIndex = 45;
-            // 
-            // txtLocation2
-            // 
-            this.txtLocation2.Location = new System.Drawing.Point(346, 150);
-            this.txtLocation2.Margin = new System.Windows.Forms.Padding(2);
-            this.txtLocation2.Name = "txtLocation2";
-            this.txtLocation2.Size = new System.Drawing.Size(90, 20);
-            this.txtLocation2.TabIndex = 42;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(256, 110);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 13);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "Class Size";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(263, 153);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 13);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Location";
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(44, 61);
+            this.label14.Location = new System.Drawing.Point(177, 87);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(88, 13);
+            this.label14.Size = new System.Drawing.Size(99, 13);
             this.label14.TabIndex = 35;
-            this.label14.Text = "Class Description";
+            this.label14.Text = "Service Description";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(14, 29);
+            this.label15.Location = new System.Drawing.Point(9, 33);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(59, 13);
+            this.label15.Size = new System.Drawing.Size(74, 13);
             this.label15.TabIndex = 34;
-            this.label15.Text = "Class Type";
+            this.label15.Text = "Service Name";
             // 
             // panelAdd
             // 
@@ -430,9 +357,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBoxServiceMgr);
             this.Controls.Add(this.ServiceMgr);
+            this.Controls.Add(this.paneldel);
             this.Controls.Add(this.panelUpdate);
             this.Controls.Add(this.panelAdd);
-            this.Controls.Add(this.paneldel);
             this.Name = "AdminExtraMenu";
             this.Size = new System.Drawing.Size(800, 348);
             this.paneldel.ResumeLayout(false);
@@ -467,15 +394,8 @@
         private System.Windows.Forms.Panel panelUpdate;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ComboBox comboBoxClassType;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtTime2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.RichTextBox txtClassDescription2;
         private System.Windows.Forms.Button buttonUpdate;
-        private System.Windows.Forms.TextBox textBoxclassupd;
-        private System.Windows.Forms.TextBox txtLocation2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panelAdd;

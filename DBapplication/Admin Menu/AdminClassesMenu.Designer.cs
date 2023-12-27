@@ -533,9 +533,9 @@
             this.Controls.Add(this.comboBoxClassMgr);
             this.Controls.Add(this.labelId);
             this.Controls.Add(this.labelMgr);
-            this.Controls.Add(this.panelUpdate);
             this.Controls.Add(this.panelAdd);
             this.Controls.Add(this.paneldel);
+            this.Controls.Add(this.panelUpdate);
             this.Name = "AdminClassesMenu";
             this.Size = new System.Drawing.Size(800, 348);
             this.panel1.ResumeLayout(false);

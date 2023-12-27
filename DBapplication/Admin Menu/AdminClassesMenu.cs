@@ -229,7 +229,7 @@ namespace DBapplication.Admin_Menu
 
         private void buttonDel_Click(object sender, EventArgs e)
         {
-            string classType = comboBoxClassType.SelectedValue?.ToString();
+            string classType = comboBoxdel.SelectedValue?.ToString();
 
             if (string.IsNullOrEmpty(classType))
             {
@@ -242,6 +242,7 @@ namespace DBapplication.Admin_Menu
             if (result == 1)
             {
                 MessageBox.Show("Class deleted successfully!");
+                LoadClassTypes();
             }
             else
             {
