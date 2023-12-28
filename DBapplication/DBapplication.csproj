@@ -366,6 +366,9 @@
     <EmbeddedResource Include="StaffUpdateBody.resx">
       <DependentUpon>StaffUpdateBody.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Staff_Transactions.resx">
+      <DependentUpon>Staff_Transactions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Supplier Transaction.rdlc" />
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>

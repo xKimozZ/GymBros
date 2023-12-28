@@ -684,8 +684,9 @@ namespace DBapplication
 
         public DataTable GetAllClasses()
         {
-            string query = "SELECT Class_Type, Class_Mgr, Instructor_ID, Availability, Date, Time, Location " +
-                "FROM Classes;";
+            string query = "SELECT Class_Type, M.Fname AS ClassMgr, I.Fname AS Instructor, Availability, Date, Time, Location " +
+                "FROM Classes AS C, Users AS M, Users AS I" +
+                " WHERE M.User_ID = C.Class_Mgr AND I.User_ID = C.Instructor_ID;";
             return dbMan.ExecuteReader(query);
         }
 
