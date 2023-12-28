@@ -39,7 +39,6 @@
             this.buttonReports = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.placeholderPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +50,7 @@
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonBack.Location = new System.Drawing.Point(44, 502);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(113, 34);
             this.buttonBack.TabIndex = 27;
@@ -63,7 +62,6 @@
             // MainMenu
             // 
             this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.MainMenu.Controls.Add(this.label1);
             this.MainMenu.Controls.Add(this.label2);
             this.MainMenu.Controls.Add(this.buttonAnnouncement);
             this.MainMenu.Controls.Add(this.buttonEquipment);
@@ -72,7 +70,7 @@
             this.MainMenu.Controls.Add(this.buttonExtra);
             this.MainMenu.Controls.Add(this.buttonReports);
             this.MainMenu.Location = new System.Drawing.Point(0, 33);
-            this.MainMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MainMenu.Margin = new System.Windows.Forms.Padding(4);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(1067, 460);
             this.MainMenu.TabIndex = 0;
@@ -97,7 +95,7 @@
             this.buttonAnnouncement.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAnnouncement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
             this.buttonAnnouncement.Location = new System.Drawing.Point(640, 261);
-            this.buttonAnnouncement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAnnouncement.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAnnouncement.Name = "buttonAnnouncement";
             this.buttonAnnouncement.Size = new System.Drawing.Size(184, 135);
             this.buttonAnnouncement.TabIndex = 5;
@@ -112,7 +110,7 @@
             this.buttonEquipment.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEquipment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
             this.buttonEquipment.Location = new System.Drawing.Point(640, 87);
-            this.buttonEquipment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonEquipment.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEquipment.Name = "buttonEquipment";
             this.buttonEquipment.Size = new System.Drawing.Size(184, 135);
             this.buttonEquipment.TabIndex = 4;
@@ -127,7 +125,7 @@
             this.buttonStaff.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
             this.buttonStaff.Location = new System.Drawing.Point(205, 87);
-            this.buttonStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonStaff.Margin = new System.Windows.Forms.Padding(4);
             this.buttonStaff.Name = "buttonStaff";
             this.buttonStaff.Size = new System.Drawing.Size(184, 135);
             this.buttonStaff.TabIndex = 3;
@@ -142,7 +140,7 @@
             this.buttonClasses.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClasses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
             this.buttonClasses.Location = new System.Drawing.Point(205, 261);
-            this.buttonClasses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonClasses.Margin = new System.Windows.Forms.Padding(4);
             this.buttonClasses.Name = "buttonClasses";
             this.buttonClasses.Size = new System.Drawing.Size(184, 135);
             this.buttonClasses.TabIndex = 2;
@@ -157,7 +155,7 @@
             this.buttonExtra.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExtra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
             this.buttonExtra.Location = new System.Drawing.Point(423, 261);
-            this.buttonExtra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonExtra.Margin = new System.Windows.Forms.Padding(4);
             this.buttonExtra.Name = "buttonExtra";
             this.buttonExtra.Size = new System.Drawing.Size(184, 135);
             this.buttonExtra.TabIndex = 1;
@@ -172,7 +170,7 @@
             this.buttonReports.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
             this.buttonReports.Location = new System.Drawing.Point(423, 87);
-            this.buttonReports.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonReports.Margin = new System.Windows.Forms.Padding(4);
             this.buttonReports.Name = "buttonReports";
             this.buttonReports.Size = new System.Drawing.Size(184, 135);
             this.buttonReports.TabIndex = 0;
@@ -199,19 +197,10 @@
             // placeholderPanel
             // 
             this.placeholderPanel.Location = new System.Drawing.Point(0, 33);
-            this.placeholderPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.placeholderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.placeholderPanel.Name = "placeholderPanel";
             this.placeholderPanel.Size = new System.Drawing.Size(1065, 462);
             this.placeholderPanel.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(843, 236);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "label1";
             // 
             // Admin
             // 
@@ -226,7 +215,7 @@
             this.Controls.Add(this.placeholderPanel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Admin";
@@ -251,6 +240,5 @@
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel placeholderPanel;
-        private System.Windows.Forms.Label label1;
     }
 }

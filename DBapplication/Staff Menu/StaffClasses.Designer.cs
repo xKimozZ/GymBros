@@ -34,18 +34,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Update_radio = new System.Windows.Forms.RadioButton();
             this.CheckIn_pnl = new System.Windows.Forms.Panel();
+            this.check_btn = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.check_btn = new System.Windows.Forms.Button();
             this.CheckIn_radio = new System.Windows.Forms.RadioButton();
             this.updt_btn = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.updt_panel = new System.Windows.Forms.Panel();
+            this.timeBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.classCombo = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.timeBox = new System.Windows.Forms.TextBox();
             this.CheckIn_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.updt_panel.SuspendLayout();
@@ -110,6 +110,16 @@
             this.CheckIn_pnl.Size = new System.Drawing.Size(379, 150);
             this.CheckIn_pnl.TabIndex = 88;
             // 
+            // check_btn
+            // 
+            this.check_btn.Location = new System.Drawing.Point(3, 44);
+            this.check_btn.Name = "check_btn";
+            this.check_btn.Size = new System.Drawing.Size(205, 33);
+            this.check_btn.TabIndex = 91;
+            this.check_btn.Text = "Check In";
+            this.check_btn.UseVisualStyleBackColor = true;
+            this.check_btn.Click += new System.EventHandler(this.check_btn_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -130,16 +140,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(438, 278);
             this.dataGridView1.TabIndex = 94;
-            // 
-            // check_btn
-            // 
-            this.check_btn.Location = new System.Drawing.Point(3, 44);
-            this.check_btn.Name = "check_btn";
-            this.check_btn.Size = new System.Drawing.Size(205, 33);
-            this.check_btn.TabIndex = 91;
-            this.check_btn.Text = "Check In";
-            this.check_btn.UseVisualStyleBackColor = true;
-            this.check_btn.Click += new System.EventHandler(this.check_btn_Click);
             // 
             // CheckIn_radio
             // 
@@ -182,6 +182,22 @@
             this.updt_panel.Size = new System.Drawing.Size(379, 150);
             this.updt_panel.TabIndex = 98;
             // 
+            // timeBox
+            // 
+            this.timeBox.Location = new System.Drawing.Point(111, 50);
+            this.timeBox.Name = "timeBox";
+            this.timeBox.Size = new System.Drawing.Size(265, 22);
+            this.timeBox.TabIndex = 99;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 51);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 16);
+            this.label6.TabIndex = 98;
+            this.label6.Text = "New Time";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -200,26 +216,11 @@
             this.classCombo.TabIndex = 100;
             this.classCombo.SelectedIndexChanged += new System.EventHandler(this.classCombo_SelectedIndexChanged);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 51);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 16);
-            this.label6.TabIndex = 98;
-            this.label6.Text = "New Time";
-            // 
-            // timeBox
-            // 
-            this.timeBox.Location = new System.Drawing.Point(111, 50);
-            this.timeBox.Name = "timeBox";
-            this.timeBox.Size = new System.Drawing.Size(265, 22);
-            this.timeBox.TabIndex = 99;
-            // 
             // StaffClasses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.Controls.Add(this.label1);
             this.Controls.Add(this.classCombo);
             this.Controls.Add(this.updt_panel);
