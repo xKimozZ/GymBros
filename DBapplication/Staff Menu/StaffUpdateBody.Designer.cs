@@ -48,135 +48,152 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(120, 24);
+            this.comboBox1.Location = new System.Drawing.Point(90, 20);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 0;
             // 
             // Height
             // 
-            this.Height.Location = new System.Drawing.Point(120, 75);
+            this.Height.Location = new System.Drawing.Point(90, 61);
+            this.Height.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Height.Name = "Height";
-            this.Height.Size = new System.Drawing.Size(121, 22);
+            this.Height.Size = new System.Drawing.Size(92, 20);
             this.Height.TabIndex = 1;
             this.Height.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Height_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 27);
+            this.label1.Location = new System.Drawing.Point(2, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Member";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 78);
+            this.label2.Location = new System.Drawing.Point(2, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Height";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 113);
+            this.label3.Location = new System.Drawing.Point(2, 92);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 16);
+            this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Weight";
             // 
             // Weight
             // 
-            this.Weight.Location = new System.Drawing.Point(120, 113);
+            this.Weight.Location = new System.Drawing.Point(90, 92);
+            this.Weight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Weight.Name = "Weight";
-            this.Weight.Size = new System.Drawing.Size(121, 22);
+            this.Weight.Size = new System.Drawing.Size(92, 20);
             this.Weight.TabIndex = 4;
             this.Weight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Weight_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(-3, 148);
+            this.label4.Location = new System.Drawing.Point(-2, 120);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 16);
+            this.label4.Size = new System.Drawing.Size(81, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = " Muscle_Prcntg";
             // 
             // musclePercentage
             // 
-            this.musclePercentage.Location = new System.Drawing.Point(120, 148);
+            this.musclePercentage.Location = new System.Drawing.Point(90, 120);
+            this.musclePercentage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.musclePercentage.Name = "musclePercentage";
-            this.musclePercentage.Size = new System.Drawing.Size(121, 22);
+            this.musclePercentage.Size = new System.Drawing.Size(92, 20);
             this.musclePercentage.TabIndex = 6;
             this.musclePercentage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.musclePercentage_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 183);
+            this.label5.Location = new System.Drawing.Point(2, 149);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 16);
+            this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "BodyFat_Prcntg";
             // 
             // fatPercentageBox
             // 
-            this.fatPercentageBox.Location = new System.Drawing.Point(120, 183);
+            this.fatPercentageBox.Location = new System.Drawing.Point(90, 149);
+            this.fatPercentageBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.fatPercentageBox.Name = "fatPercentageBox";
-            this.fatPercentageBox.Size = new System.Drawing.Size(121, 22);
+            this.fatPercentageBox.Size = new System.Drawing.Size(92, 20);
             this.fatPercentageBox.TabIndex = 8;
             this.fatPercentageBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fatPercentage_KeyPress);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 224);
+            this.label6.Location = new System.Drawing.Point(2, 182);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 16);
+            this.label6.Size = new System.Drawing.Size(61, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Body_Type";
             // 
             // bodyType
             // 
-            this.bodyType.Location = new System.Drawing.Point(120, 224);
+            this.bodyType.Location = new System.Drawing.Point(90, 182);
+            this.bodyType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bodyType.Name = "bodyType";
-            this.bodyType.Size = new System.Drawing.Size(121, 22);
+            this.bodyType.Size = new System.Drawing.Size(92, 20);
             this.bodyType.TabIndex = 10;
             this.bodyType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bodyType_KeyPress);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(279, 116);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(209, 94);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 48);
+            this.button1.Size = new System.Drawing.Size(104, 39);
             this.button1.TabIndex = 12;
             this.button1.Text = "Update Body Comp";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 265);
+            this.label7.Location = new System.Drawing.Point(2, 215);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 16);
+            this.label7.Size = new System.Drawing.Size(87, 13);
             this.label7.TabIndex = 14;
             this.label7.Text = "Chronic_Disease";
             // 
             // disease
             // 
-            this.disease.Location = new System.Drawing.Point(119, 262);
+            this.disease.Location = new System.Drawing.Point(89, 213);
+            this.disease.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.disease.Name = "disease";
-            this.disease.Size = new System.Drawing.Size(121, 22);
+            this.disease.Size = new System.Drawing.Size(92, 20);
             this.disease.TabIndex = 13;
             this.disease.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disease_KeyPress);
             // 
             // StaffUpdateBody
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.Controls.Add(this.label7);
@@ -194,8 +211,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Height);
             this.Controls.Add(this.comboBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "StaffUpdateBody";
-            this.Size = new System.Drawing.Size(555, 419);
+            this.Size = new System.Drawing.Size(416, 340);
             this.ResumeLayout(false);
             this.PerformLayout();
 

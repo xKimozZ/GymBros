@@ -55,45 +55,48 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(307, 22);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(230, 18);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 25);
+            this.label4.Size = new System.Drawing.Size(109, 20);
             this.label4.TabIndex = 87;
             this.label4.Text = "Classes Menu";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 22);
+            this.label2.Location = new System.Drawing.Point(5, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 16);
+            this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 64;
             this.label2.Text = "Member Name";
             // 
             // memberCombo
             // 
             this.memberCombo.FormattingEnabled = true;
-            this.memberCombo.Location = new System.Drawing.Point(111, 14);
+            this.memberCombo.Location = new System.Drawing.Point(83, 11);
+            this.memberCombo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.memberCombo.Name = "memberCombo";
-            this.memberCombo.Size = new System.Drawing.Size(265, 24);
+            this.memberCombo.Size = new System.Drawing.Size(200, 21);
             this.memberCombo.TabIndex = 75;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 18);
+            this.label3.Location = new System.Drawing.Point(5, 15);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 16);
+            this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 65;
             this.label3.Text = "New Date";
             // 
             // Update_radio
             // 
             this.Update_radio.AutoSize = true;
-            this.Update_radio.Location = new System.Drawing.Point(177, 73);
+            this.Update_radio.Location = new System.Drawing.Point(133, 59);
+            this.Update_radio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Update_radio.Name = "Update_radio";
-            this.Update_radio.Size = new System.Drawing.Size(125, 20);
+            this.Update_radio.Size = new System.Drawing.Size(99, 17);
             this.Update_radio.TabIndex = 89;
             this.Update_radio.TabStop = true;
             this.Update_radio.Text = "Update Classes";
@@ -105,16 +108,18 @@
             this.CheckIn_pnl.Controls.Add(this.label2);
             this.CheckIn_pnl.Controls.Add(this.memberCombo);
             this.CheckIn_pnl.Controls.Add(this.check_btn);
-            this.CheckIn_pnl.Location = new System.Drawing.Point(14, 139);
+            this.CheckIn_pnl.Location = new System.Drawing.Point(10, 113);
+            this.CheckIn_pnl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CheckIn_pnl.Name = "CheckIn_pnl";
-            this.CheckIn_pnl.Size = new System.Drawing.Size(379, 150);
+            this.CheckIn_pnl.Size = new System.Drawing.Size(284, 122);
             this.CheckIn_pnl.TabIndex = 88;
             // 
             // check_btn
             // 
-            this.check_btn.Location = new System.Drawing.Point(3, 44);
+            this.check_btn.Location = new System.Drawing.Point(2, 36);
+            this.check_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.check_btn.Name = "check_btn";
-            this.check_btn.Size = new System.Drawing.Size(205, 33);
+            this.check_btn.Size = new System.Drawing.Size(154, 27);
             this.check_btn.TabIndex = 91;
             this.check_btn.Text = "Check In";
             this.check_btn.UseVisualStyleBackColor = true;
@@ -123,9 +128,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(396, 73);
+            this.label5.Location = new System.Drawing.Point(297, 59);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(205, 16);
+            this.label5.Size = new System.Drawing.Size(164, 13);
             this.label5.TabIndex = 95;
             this.label5.Text = "Current Classes / Class Attenders";
             // 
@@ -134,19 +140,21 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(399, 99);
+            this.dataGridView1.Location = new System.Drawing.Point(299, 80);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(438, 278);
+            this.dataGridView1.Size = new System.Drawing.Size(328, 226);
             this.dataGridView1.TabIndex = 94;
             // 
             // CheckIn_radio
             // 
             this.CheckIn_radio.AutoSize = true;
-            this.CheckIn_radio.Location = new System.Drawing.Point(14, 73);
+            this.CheckIn_radio.Location = new System.Drawing.Point(10, 59);
+            this.CheckIn_radio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CheckIn_radio.Name = "CheckIn_radio";
-            this.CheckIn_radio.Size = new System.Drawing.Size(139, 20);
+            this.CheckIn_radio.Size = new System.Drawing.Size(114, 17);
             this.CheckIn_radio.TabIndex = 90;
             this.CheckIn_radio.TabStop = true;
             this.CheckIn_radio.Text = "Check In Members";
@@ -155,19 +163,23 @@
             // 
             // updt_btn
             // 
-            this.updt_btn.Location = new System.Drawing.Point(3, 111);
+            this.updt_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
+            this.updt_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.updt_btn.Location = new System.Drawing.Point(42, 78);
+            this.updt_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.updt_btn.Name = "updt_btn";
-            this.updt_btn.Size = new System.Drawing.Size(205, 33);
+            this.updt_btn.Size = new System.Drawing.Size(154, 27);
             this.updt_btn.TabIndex = 96;
             this.updt_btn.Text = "Update";
-            this.updt_btn.UseVisualStyleBackColor = true;
+            this.updt_btn.UseVisualStyleBackColor = false;
             this.updt_btn.Click += new System.EventHandler(this.updt_btn_Click);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(111, 13);
+            this.dateTimePicker1.Location = new System.Drawing.Point(83, 11);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 97;
             // 
             // updt_panel
@@ -177,48 +189,53 @@
             this.updt_panel.Controls.Add(this.label3);
             this.updt_panel.Controls.Add(this.updt_btn);
             this.updt_panel.Controls.Add(this.dateTimePicker1);
-            this.updt_panel.Location = new System.Drawing.Point(14, 139);
+            this.updt_panel.Location = new System.Drawing.Point(10, 113);
+            this.updt_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.updt_panel.Name = "updt_panel";
-            this.updt_panel.Size = new System.Drawing.Size(379, 150);
+            this.updt_panel.Size = new System.Drawing.Size(284, 122);
             this.updt_panel.TabIndex = 98;
             // 
             // timeBox
             // 
-            this.timeBox.Location = new System.Drawing.Point(111, 50);
+            this.timeBox.Location = new System.Drawing.Point(83, 41);
+            this.timeBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.timeBox.Name = "timeBox";
-            this.timeBox.Size = new System.Drawing.Size(265, 22);
+            this.timeBox.Size = new System.Drawing.Size(200, 20);
             this.timeBox.TabIndex = 99;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 51);
+            this.label6.Location = new System.Drawing.Point(5, 41);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 16);
+            this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 98;
             this.label6.Text = "New Time";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 112);
+            this.label1.Location = new System.Drawing.Point(16, 91);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 16);
+            this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 99;
             this.label1.Text = "Select Class";
             // 
             // classCombo
             // 
             this.classCombo.FormattingEnabled = true;
-            this.classCombo.Location = new System.Drawing.Point(125, 109);
+            this.classCombo.Location = new System.Drawing.Point(94, 89);
+            this.classCombo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.classCombo.Name = "classCombo";
-            this.classCombo.Size = new System.Drawing.Size(265, 24);
+            this.classCombo.Size = new System.Drawing.Size(200, 21);
             this.classCombo.TabIndex = 100;
             this.classCombo.SelectedIndexChanged += new System.EventHandler(this.classCombo_SelectedIndexChanged);
             // 
             // StaffClasses
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.Controls.Add(this.label1);
@@ -230,8 +247,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.CheckIn_radio);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "StaffClasses";
-            this.Size = new System.Drawing.Size(861, 412);
+            this.Size = new System.Drawing.Size(646, 335);
             this.CheckIn_pnl.ResumeLayout(false);
             this.CheckIn_pnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

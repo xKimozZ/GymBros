@@ -37,52 +37,59 @@
             // 
             // checkin
             // 
-            this.checkin.Location = new System.Drawing.Point(86, 117);
+            this.checkin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
+            this.checkin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.checkin.Location = new System.Drawing.Point(64, 95);
+            this.checkin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkin.Name = "checkin";
-            this.checkin.Size = new System.Drawing.Size(75, 23);
+            this.checkin.Size = new System.Drawing.Size(54, 24);
             this.checkin.TabIndex = 0;
             this.checkin.Text = "Check in";
-            this.checkin.UseVisualStyleBackColor = true;
+            this.checkin.UseVisualStyleBackColor = false;
             this.checkin.Click += new System.EventHandler(this.button1_Click);
             // 
             // SessionBox
             // 
             this.SessionBox.FormattingEnabled = true;
-            this.SessionBox.Location = new System.Drawing.Point(67, 79);
+            this.SessionBox.Location = new System.Drawing.Point(50, 64);
+            this.SessionBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SessionBox.Name = "SessionBox";
-            this.SessionBox.Size = new System.Drawing.Size(121, 24);
+            this.SessionBox.Size = new System.Drawing.Size(92, 21);
             this.SessionBox.TabIndex = 2;
             // 
             // sessionLbl
             // 
             this.sessionLbl.AutoSize = true;
-            this.sessionLbl.Location = new System.Drawing.Point(5, 82);
+            this.sessionLbl.Location = new System.Drawing.Point(4, 67);
+            this.sessionLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sessionLbl.Name = "sessionLbl";
-            this.sessionLbl.Size = new System.Drawing.Size(56, 16);
+            this.sessionLbl.Size = new System.Drawing.Size(44, 13);
             this.sessionLbl.TabIndex = 4;
             this.sessionLbl.Text = "Session";
             // 
             // MemLbl
             // 
             this.MemLbl.AutoSize = true;
-            this.MemLbl.Location = new System.Drawing.Point(4, 20);
+            this.MemLbl.Location = new System.Drawing.Point(3, 16);
+            this.MemLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.MemLbl.Name = "MemLbl";
-            this.MemLbl.Size = new System.Drawing.Size(57, 16);
+            this.MemLbl.Size = new System.Drawing.Size(45, 13);
             this.MemLbl.TabIndex = 6;
             this.MemLbl.Text = "Member";
             // 
             // MemberBox
             // 
             this.MemberBox.FormattingEnabled = true;
-            this.MemberBox.Location = new System.Drawing.Point(66, 17);
+            this.MemberBox.Location = new System.Drawing.Point(50, 14);
+            this.MemberBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MemberBox.Name = "MemberBox";
-            this.MemberBox.Size = new System.Drawing.Size(121, 24);
+            this.MemberBox.Size = new System.Drawing.Size(92, 21);
             this.MemberBox.TabIndex = 5;
             this.MemberBox.SelectedIndexChanged += new System.EventHandler(this.MemberBox_SelectedIndexChanged);
             // 
             // StaffCheckInPT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.Controls.Add(this.MemLbl);
@@ -90,8 +97,9 @@
             this.Controls.Add(this.sessionLbl);
             this.Controls.Add(this.SessionBox);
             this.Controls.Add(this.checkin);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "StaffCheckInPT";
-            this.Size = new System.Drawing.Size(528, 343);
+            this.Size = new System.Drawing.Size(396, 279);
             this.ResumeLayout(false);
             this.PerformLayout();
 
