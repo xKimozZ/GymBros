@@ -30,28 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.supplierTransBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gymBrosDBDataSet = new DBapplication.GymBrosDBDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.gymBrosDBDataSet = new DBapplication.GymBrosDBDataSet();
+            this.supplierTransBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.supplier_TransTableAdapter = new DBapplication.GymBrosDBDataSetTableAdapters.Supplier_TransTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierTransBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymBrosDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierTransBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // supplierTransBindingSource
-            // 
-            this.supplierTransBindingSource.DataMember = "Supplier_Trans";
-            this.supplierTransBindingSource.DataSource = this.gymBrosDBDataSet;
-            // 
-            // gymBrosDBDataSet
-            // 
-            this.gymBrosDBDataSet.DataSetName = "GymBrosDBDataSet";
-            this.gymBrosDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.supplierTransBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "DBapplication.Supplier Transaction.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -59,6 +50,16 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(799, 376);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // gymBrosDBDataSet
+            // 
+            this.gymBrosDBDataSet.DataSetName = "GymBrosDBDataSet";
+            this.gymBrosDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // supplierTransBindingSource
+            // 
+            this.supplierTransBindingSource.DataMember = "Supplier_Trans";
+            this.supplierTransBindingSource.DataSource = this.gymBrosDBDataSet;
             // 
             // supplier_TransTableAdapter
             // 
@@ -71,8 +72,8 @@
             this.Controls.Add(this.reportViewer1);
             this.Name = "Report2";
             this.Size = new System.Drawing.Size(799, 376);
-            ((System.ComponentModel.ISupportInitialize)(this.supplierTransBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymBrosDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierTransBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
