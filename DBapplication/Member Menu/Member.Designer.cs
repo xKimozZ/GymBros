@@ -58,52 +58,67 @@
             // 
             // Payment
             // 
+            this.Payment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
+            this.Payment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Payment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
             this.Payment.Location = new System.Drawing.Point(634, 101);
             this.Payment.Name = "Payment";
-            this.Payment.Size = new System.Drawing.Size(141, 40);
+            this.Payment.Size = new System.Drawing.Size(147, 63);
             this.Payment.TabIndex = 8;
             this.Payment.Text = "Payment";
-            this.Payment.UseVisualStyleBackColor = true;
+            this.Payment.UseVisualStyleBackColor = false;
             this.Payment.Click += new System.EventHandler(this.Payment_Click);
             // 
             // FitnessProgress
             // 
+            this.FitnessProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
+            this.FitnessProgress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FitnessProgress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
             this.FitnessProgress.Location = new System.Drawing.Point(471, 41);
             this.FitnessProgress.Name = "FitnessProgress";
-            this.FitnessProgress.Size = new System.Drawing.Size(126, 41);
+            this.FitnessProgress.Size = new System.Drawing.Size(132, 64);
             this.FitnessProgress.TabIndex = 7;
             this.FitnessProgress.Text = "Fitness Progress";
-            this.FitnessProgress.UseVisualStyleBackColor = true;
+            this.FitnessProgress.UseVisualStyleBackColor = false;
             this.FitnessProgress.Click += new System.EventHandler(this.FitnessProgress_Click);
             // 
             // Services
             // 
+            this.Services.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
+            this.Services.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Services.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
             this.Services.Location = new System.Drawing.Point(308, 40);
             this.Services.Name = "Services";
-            this.Services.Size = new System.Drawing.Size(126, 41);
+            this.Services.Size = new System.Drawing.Size(132, 64);
             this.Services.TabIndex = 6;
             this.Services.Text = "Services";
-            this.Services.UseVisualStyleBackColor = true;
+            this.Services.UseVisualStyleBackColor = false;
             this.Services.Click += new System.EventHandler(this.Services_Click);
             // 
             // Announcements
             // 
+            this.Announcements.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
+            this.Announcements.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Announcements.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
             this.Announcements.Location = new System.Drawing.Point(151, 41);
             this.Announcements.Name = "Announcements";
-            this.Announcements.Size = new System.Drawing.Size(129, 41);
+            this.Announcements.Size = new System.Drawing.Size(135, 64);
             this.Announcements.TabIndex = 6;
             this.Announcements.Text = "Announcements";
-            this.Announcements.UseVisualStyleBackColor = true;
+            this.Announcements.UseVisualStyleBackColor = false;
             this.Announcements.Click += new System.EventHandler(this.Announcements_Click);
             // 
             // ManageData
             // 
+            this.ManageData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
+            this.ManageData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ManageData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
             this.ManageData.Location = new System.Drawing.Point(4, 41);
             this.ManageData.Name = "ManageData";
-            this.ManageData.Size = new System.Drawing.Size(115, 40);
+            this.ManageData.Size = new System.Drawing.Size(121, 63);
             this.ManageData.TabIndex = 5;
             this.ManageData.Text = "Manage Data";
-            this.ManageData.UseVisualStyleBackColor = true;
+            this.ManageData.UseVisualStyleBackColor = false;
             this.ManageData.Click += new System.EventHandler(this.AddMember_Click);
             // 
             // label1
@@ -127,12 +142,15 @@
             // 
             // buttonBack
             // 
+            this.buttonBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonBack.Location = new System.Drawing.Point(27, 434);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(115, 40);
             this.buttonBack.TabIndex = 6;
             this.buttonBack.Text = "back";
-            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // anger_panel
@@ -151,7 +169,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(19, 231);
+            this.label3.Location = new System.Drawing.Point(286, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(323, 36);
             this.label3.TabIndex = 95;
