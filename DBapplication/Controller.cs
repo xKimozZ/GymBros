@@ -820,6 +820,30 @@ namespace DBapplication
             return dbMan.ExecuteNonQuery(userUpdateQuery);
         }
 
+        public int InsertUser(string firstName, string lastName, bool gender, int age, string accountPassword, int emergencyContact, int contactInfo)
+        {
+            string insertQuery = $"INSERT INTO Users (Fname, Lname, Gender, Age, Account_Pass, Emrgncy_Contact, Contact_Info) " +
+                                $"VALUES ('{firstName}', '{lastName}', {(gender ? 1 : 0)}, {age}," +
+                                $"'{accountPassword}', {emergencyContact}, {contactInfo})" +
+                        "SELECT CAST(SCOPE_IDENTITY() AS INT);";
+
+            object result = dbMan.ExecuteScalar(insertQuery);
+
+            if (result != null && result != DBNull.Value)
+            {
+                int userID = Convert.ToInt32(result);
+                return userID;
+            }
+            else
+                return -1;
+        }
+
+        public void InsertMember(int userID, DateTime renewalDate)
+        {
+            string insertMemberQuery = $"INSERT INTO Members (Member_ID, Renewal_Date) VALUES ({userID}, '{renewalDate}');";
+            dbMan.ExecuteNonQuery(insertMemberQuery);
+        }
+
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
