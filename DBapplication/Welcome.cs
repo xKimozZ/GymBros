@@ -49,5 +49,11 @@ namespace DBapplication
             Login l = new Login();
             l.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Register r = new Register();
+            r.Show();
+        }
     }
 }
