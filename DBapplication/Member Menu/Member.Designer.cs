@@ -37,16 +37,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.placeholderPanel = new System.Windows.Forms.Panel();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.anger_panel = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.MainMenu.SuspendLayout();
+            this.anger_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenu
             // 
+            this.MainMenu.Controls.Add(this.label3);
+            this.MainMenu.Controls.Add(this.anger_panel);
             this.MainMenu.Controls.Add(this.Payment);
-            this.MainMenu.Controls.Add(this.FitnessProgress);
-            this.MainMenu.Controls.Add(this.Services);
-            this.MainMenu.Controls.Add(this.Announcements);
-            this.MainMenu.Controls.Add(this.ManageData);
             this.MainMenu.Controls.Add(this.label1);
             this.MainMenu.Location = new System.Drawing.Point(51, 71);
             this.MainMenu.Margin = new System.Windows.Forms.Padding(4);
@@ -67,7 +68,7 @@
             // 
             // FitnessProgress
             // 
-            this.FitnessProgress.Location = new System.Drawing.Point(479, 102);
+            this.FitnessProgress.Location = new System.Drawing.Point(471, 41);
             this.FitnessProgress.Name = "FitnessProgress";
             this.FitnessProgress.Size = new System.Drawing.Size(126, 41);
             this.FitnessProgress.TabIndex = 7;
@@ -77,7 +78,7 @@
             // 
             // Services
             // 
-            this.Services.Location = new System.Drawing.Point(316, 101);
+            this.Services.Location = new System.Drawing.Point(308, 40);
             this.Services.Name = "Services";
             this.Services.Size = new System.Drawing.Size(126, 41);
             this.Services.TabIndex = 6;
@@ -87,7 +88,7 @@
             // 
             // Announcements
             // 
-            this.Announcements.Location = new System.Drawing.Point(159, 102);
+            this.Announcements.Location = new System.Drawing.Point(151, 41);
             this.Announcements.Name = "Announcements";
             this.Announcements.Size = new System.Drawing.Size(129, 41);
             this.Announcements.TabIndex = 6;
@@ -97,7 +98,7 @@
             // 
             // ManageData
             // 
-            this.ManageData.Location = new System.Drawing.Point(12, 102);
+            this.ManageData.Location = new System.Drawing.Point(4, 41);
             this.ManageData.Name = "ManageData";
             this.ManageData.Size = new System.Drawing.Size(115, 40);
             this.ManageData.TabIndex = 5;
@@ -134,10 +135,33 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // anger_panel
+            // 
+            this.anger_panel.Controls.Add(this.FitnessProgress);
+            this.anger_panel.Controls.Add(this.Services);
+            this.anger_panel.Controls.Add(this.Announcements);
+            this.anger_panel.Controls.Add(this.ManageData);
+            this.anger_panel.Location = new System.Drawing.Point(8, 61);
+            this.anger_panel.Name = "anger_panel";
+            this.anger_panel.Size = new System.Drawing.Size(609, 149);
+            this.anger_panel.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(19, 231);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(323, 36);
+            this.label3.TabIndex = 95;
+            this.label3.Text = "PAY UP RIGHT NOW";
+            // 
             // Member
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(900, 488);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.placeholderPanel);
@@ -147,6 +171,7 @@
             this.Load += new System.EventHandler(this.Member_Load);
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
+            this.anger_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -162,5 +187,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel placeholderPanel;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Panel anger_panel;
+        private System.Windows.Forms.Label label3;
     }
 }
