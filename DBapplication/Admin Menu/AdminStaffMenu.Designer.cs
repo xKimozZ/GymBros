@@ -82,12 +82,14 @@
             // 
             // buttonPaypanel
             // 
-            this.buttonPaypanel.Location = new System.Drawing.Point(137, 18);
+            this.buttonPaypanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
+            this.buttonPaypanel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonPaypanel.Location = new System.Drawing.Point(122, 12);
             this.buttonPaypanel.Name = "buttonPaypanel";
-            this.buttonPaypanel.Size = new System.Drawing.Size(75, 23);
+            this.buttonPaypanel.Size = new System.Drawing.Size(115, 40);
             this.buttonPaypanel.TabIndex = 0;
             this.buttonPaypanel.Text = "Pay";
-            this.buttonPaypanel.UseVisualStyleBackColor = true;
+            this.buttonPaypanel.UseVisualStyleBackColor = false;
             this.buttonPaypanel.Click += new System.EventHandler(this.buttonPaypanel_Click);
             // 
             // buttonAddadmin
@@ -102,12 +104,14 @@
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(137, 140);
+            this.buttonDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
+            this.buttonDel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonDel.Location = new System.Drawing.Point(120, 126);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(75, 23);
+            this.buttonDel.Size = new System.Drawing.Size(115, 40);
             this.buttonDel.TabIndex = 2;
             this.buttonDel.Text = "Delete";
-            this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.UseVisualStyleBackColor = false;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // buttonPay
@@ -299,12 +303,15 @@
             // 
             // button2add
             // 
+            this.button2add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
+            this.button2add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2add.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2add.Location = new System.Drawing.Point(178, 239);
             this.button2add.Name = "button2add";
             this.button2add.Size = new System.Drawing.Size(115, 40);
             this.button2add.TabIndex = 46;
             this.button2add.Text = "Add Staff";
-            this.button2add.UseVisualStyleBackColor = true;
+            this.button2add.UseVisualStyleBackColor = false;
             this.button2add.Click += new System.EventHandler(this.button2add_Click);
             // 
             // txtEmergencyContact
@@ -470,9 +477,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.comboBoxID);
-            this.Controls.Add(this.panelAdd);
             this.Controls.Add(this.panelManager);
             this.Controls.Add(this.panelAdminPay);
+            this.Controls.Add(this.panelAdd);
             this.DoubleBuffered = true;
             this.Name = "AdminStaffMenu";
             this.Size = new System.Drawing.Size(719, 376);
