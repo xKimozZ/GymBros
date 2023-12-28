@@ -684,8 +684,9 @@ namespace DBapplication
 
         public DataTable GetAllClasses()
         {
-            string query = "SELECT Class_Type, Class_Mgr, Instructor_ID, Availability, Date, Time, Location " +
-                "FROM Classes;";
+            string query = "SELECT Class_Type, M.Fname AS ClassMgr, I.Fname AS Instructor, Availability, Date, Time, Location " +
+                "FROM Classes AS C, Users AS M, Users AS I" +
+                " WHERE M.User_ID = C.Class_Mgr AND I.User_ID = C.Instructor_ID;";
             return dbMan.ExecuteReader(query);
         }
 
@@ -764,6 +765,34 @@ namespace DBapplication
             string query = $"DELETE FROM Uses_Service " +
                 $"WHERE Member_ID = {id} AND Service_Name = '{service}';";
             return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int AlreadyUseService(int UID, string serviceType)
+        {
+            string query = $"SELECT COUNT(*) FROM Uses_Service WHERE Member_ID = {UID} AND Service_Name = '{serviceType}';";
+            return Convert.ToInt32(dbMan.ExecuteScalar(query));
+        }
+
+        public DateTime GetSubscriptionRenewal(int UID, string serviceType)
+        {
+            string query = $"SELECT Subscription_Len FROM Uses_Service WHERE Member_ID = {UID} AND Service_Name = '{serviceType}';";
+            return (DateTime)dbMan.ExecuteScalar(query);
+        }
+
+        public int InsertServiceUsing(int UID, string serviceType, DateTime newdate)
+        {
+            string insertQuery = $"INSERT INTO Uses_Service " +
+                $"(Member_ID, Service_Name, Subscription_Len, Num_Attended_Sessions)\r\n" +
+                $"VALUES ({UID}, '{serviceType}', '{newdate}', 0);";
+            return dbMan.ExecuteNonQuery(insertQuery);
+        }
+
+        public int UpdateServiceRenewal(DateTime newdate, int UID)
+        {
+
+            string userUpdateQuery = $"UPDATE Uses_Service SET Subscription_Len = '{newdate}' WHERE Member_ID = {UID};";
+
+            return dbMan.ExecuteNonQuery(userUpdateQuery);
         }
 
         public void TerminateConnection()

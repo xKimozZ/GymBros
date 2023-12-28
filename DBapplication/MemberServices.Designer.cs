@@ -41,6 +41,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label8
@@ -69,6 +70,7 @@
             this.textBox2.Size = new System.Drawing.Size(153, 22);
             this.textBox2.TabIndex = 109;
             this.textBox2.UseSystemPasswordChar = true;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox1
             // 
@@ -77,6 +79,8 @@
             this.textBox1.Size = new System.Drawing.Size(153, 22);
             this.textBox1.TabIndex = 108;
             this.textBox1.UseSystemPasswordChar = true;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label3
             // 
@@ -108,6 +112,7 @@
             this.Editbutton.TabIndex = 103;
             this.Editbutton.Text = "Pay";
             this.Editbutton.UseVisualStyleBackColor = true;
+            this.Editbutton.Click += new System.EventHandler(this.Editbutton_Click);
             // 
             // label1
             // 
@@ -127,6 +132,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 113;
+            this.comboBox1.DropDown += new System.EventHandler(this.comboBox1_DropDown);
             this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
             // 
             // comboBox2
@@ -167,11 +173,24 @@
             this.label4.TabIndex = 117;
             this.label4.Text = "description here";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(187, 94);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(223, 25);
+            this.label5.TabIndex = 118;
+            this.label5.Text = "renewal date and cost";
+            // 
             // MemberServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label6);
@@ -208,5 +227,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

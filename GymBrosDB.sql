@@ -400,3 +400,4 @@ INSERT INTO Uses_Service(Member_ID, Service_Name, Subscription_Len, Num_Attended
 (100, 'Tan', '2023-12-20', 0);
 INSERT INTO Uses_Service(Member_ID, Service_Name, Subscription_Len, Num_Attended_Sessions) VALUES
 (102, 'Oil', '2024-1-1', 0);	
+
