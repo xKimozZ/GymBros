@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace DBapplication.Admin_Menu
 {
-    public partial class Report4 : UserControl
+    public partial class Report5 : UserControl
     {
-        public Report4()
+        public Report5()
         {
             InitializeComponent();
-            usersTableAdapter.Fill(gymBrosDBDataSet.Users);
+            uses_ServiceTableAdapter.Fill(gymBrosDBDataSet.Uses_Service);
             reportViewer1.RefreshReport();
         }
     }
