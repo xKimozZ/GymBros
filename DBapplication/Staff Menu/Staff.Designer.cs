@@ -49,10 +49,10 @@
             // 
             this.buttonBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
             this.buttonBack.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonBack.Location = new System.Drawing.Point(9, 341);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBack.Location = new System.Drawing.Point(12, 420);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(86, 32);
+            this.buttonBack.Size = new System.Drawing.Size(115, 39);
             this.buttonBack.TabIndex = 1;
             this.buttonBack.Text = "back";
             this.buttonBack.UseVisualStyleBackColor = false;
@@ -62,8 +62,9 @@
             // 
             this.placeholderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.placeholderPanel.Location = new System.Drawing.Point(1, 1);
+            this.placeholderPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.placeholderPanel.Name = "placeholderPanel";
-            this.placeholderPanel.Size = new System.Drawing.Size(646, 335);
+            this.placeholderPanel.Size = new System.Drawing.Size(861, 412);
             this.placeholderPanel.TabIndex = 4;
             this.placeholderPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.placeholderPanel_Paint);
             // 
@@ -79,9 +80,10 @@
             this.MainMenu.Controls.Add(this.EditStaffprofile);
             this.MainMenu.Controls.Add(this.EditMember);
             this.MainMenu.Controls.Add(this.AddMember);
-            this.MainMenu.Location = new System.Drawing.Point(27, 46);
+            this.MainMenu.Location = new System.Drawing.Point(36, 57);
+            this.MainMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(597, 232);
+            this.MainMenu.Size = new System.Drawing.Size(796, 286);
             this.MainMenu.TabIndex = 5;
             // 
             // label2
@@ -90,9 +92,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
-            this.label2.Location = new System.Drawing.Point(193, 0);
+            this.label2.Location = new System.Drawing.Point(257, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(198, 28);
+            this.label2.Size = new System.Drawing.Size(248, 37);
             this.label2.TabIndex = 11;
             this.label2.Text = "Staff Main Menu";
             // 
@@ -101,10 +104,10 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.button1.Location = new System.Drawing.Point(430, 151);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(573, 186);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 56);
+            this.button1.Size = new System.Drawing.Size(129, 69);
             this.button1.TabIndex = 12;
             this.button1.Text = "Extra Services";
             this.button1.UseVisualStyleBackColor = false;
@@ -115,10 +118,10 @@
             this.class_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
             this.class_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.class_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.class_btn.Location = new System.Drawing.Point(308, 151);
-            this.class_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.class_btn.Location = new System.Drawing.Point(411, 186);
+            this.class_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.class_btn.Name = "class_btn";
-            this.class_btn.Size = new System.Drawing.Size(97, 56);
+            this.class_btn.Size = new System.Drawing.Size(129, 69);
             this.class_btn.TabIndex = 11;
             this.class_btn.Text = "Classes";
             this.class_btn.UseVisualStyleBackColor = false;
@@ -129,10 +132,10 @@
             this.maintains.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
             this.maintains.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maintains.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.maintains.Location = new System.Drawing.Point(192, 151);
-            this.maintains.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maintains.Location = new System.Drawing.Point(256, 186);
+            this.maintains.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maintains.Name = "maintains";
-            this.maintains.Size = new System.Drawing.Size(97, 56);
+            this.maintains.Size = new System.Drawing.Size(129, 69);
             this.maintains.TabIndex = 10;
             this.maintains.Text = "Maintenance";
             this.maintains.UseVisualStyleBackColor = false;
@@ -143,10 +146,10 @@
             this.trans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
             this.trans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.trans.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.trans.Location = new System.Drawing.Point(82, 151);
-            this.trans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trans.Location = new System.Drawing.Point(109, 186);
+            this.trans.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.trans.Name = "trans";
-            this.trans.Size = new System.Drawing.Size(86, 56);
+            this.trans.Size = new System.Drawing.Size(115, 69);
             this.trans.TabIndex = 9;
             this.trans.Text = "Transactions";
             this.trans.UseVisualStyleBackColor = false;
@@ -157,10 +160,10 @@
             this.PTButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
             this.PTButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PTButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.PTButton.Location = new System.Drawing.Point(478, 69);
-            this.PTButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PTButton.Location = new System.Drawing.Point(637, 85);
+            this.PTButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PTButton.Name = "PTButton";
-            this.PTButton.Size = new System.Drawing.Size(106, 56);
+            this.PTButton.Size = new System.Drawing.Size(141, 69);
             this.PTButton.TabIndex = 8;
             this.PTButton.Text = "Personal Training";
             this.PTButton.UseVisualStyleBackColor = false;
@@ -171,10 +174,10 @@
             this.Announcment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
             this.Announcment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Announcment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.Announcment.Location = new System.Drawing.Point(361, 70);
-            this.Announcment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Announcment.Location = new System.Drawing.Point(481, 86);
+            this.Announcment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Announcment.Name = "Announcment";
-            this.Announcment.Size = new System.Drawing.Size(94, 57);
+            this.Announcment.Size = new System.Drawing.Size(125, 70);
             this.Announcment.TabIndex = 7;
             this.Announcment.Text = "Announcment";
             this.Announcment.UseVisualStyleBackColor = false;
@@ -185,10 +188,10 @@
             this.EditStaffprofile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
             this.EditStaffprofile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditStaffprofile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.EditStaffprofile.Location = new System.Drawing.Point(239, 69);
-            this.EditStaffprofile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditStaffprofile.Location = new System.Drawing.Point(319, 85);
+            this.EditStaffprofile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EditStaffprofile.Name = "EditStaffprofile";
-            this.EditStaffprofile.Size = new System.Drawing.Size(94, 57);
+            this.EditStaffprofile.Size = new System.Drawing.Size(125, 70);
             this.EditStaffprofile.TabIndex = 6;
             this.EditStaffprofile.Text = "Edit My Profile";
             this.EditStaffprofile.UseVisualStyleBackColor = false;
@@ -199,10 +202,10 @@
             this.EditMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
             this.EditMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.EditMember.Location = new System.Drawing.Point(121, 70);
-            this.EditMember.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditMember.Location = new System.Drawing.Point(161, 86);
+            this.EditMember.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EditMember.Name = "EditMember";
-            this.EditMember.Size = new System.Drawing.Size(97, 57);
+            this.EditMember.Size = new System.Drawing.Size(129, 70);
             this.EditMember.TabIndex = 6;
             this.EditMember.Text = "Edit Member";
             this.EditMember.UseVisualStyleBackColor = false;
@@ -213,10 +216,10 @@
             this.AddMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))));
             this.AddMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.AddMember.Location = new System.Drawing.Point(11, 70);
-            this.AddMember.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddMember.Location = new System.Drawing.Point(15, 86);
+            this.AddMember.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddMember.Name = "AddMember";
-            this.AddMember.Size = new System.Drawing.Size(86, 56);
+            this.AddMember.Size = new System.Drawing.Size(115, 69);
             this.AddMember.TabIndex = 5;
             this.AddMember.Text = "Add Member";
             this.AddMember.UseVisualStyleBackColor = false;
@@ -224,16 +227,17 @@
             // 
             // Staff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(648, 384);
+            this.ClientSize = new System.Drawing.Size(864, 473);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.placeholderPanel);
             this.Controls.Add(this.buttonBack);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Staff";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Staff";
             this.Load += new System.EventHandler(this.Staff_Load);
             this.MainMenu.ResumeLayout(false);

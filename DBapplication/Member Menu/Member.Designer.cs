@@ -185,6 +185,7 @@
             this.Controls.Add(this.placeholderPanel);
             this.Controls.Add(this.buttonBack);
             this.Name = "Member";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Member";
             this.Load += new System.EventHandler(this.Member_Load);
             this.MainMenu.ResumeLayout(false);

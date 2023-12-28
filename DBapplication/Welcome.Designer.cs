@@ -87,6 +87,7 @@
             this.Controls.Add(this.button2);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Welcome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "<GymBros> Frontend";
             this.ResumeLayout(false);
             this.PerformLayout();

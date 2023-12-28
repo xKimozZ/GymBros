@@ -114,6 +114,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
             this.ResumeLayout(false);
