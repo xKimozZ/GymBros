@@ -49,10 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddSession.cs">
+    <Compile Include="Staff Menu\AddSession.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddSession.Designer.cs">
+    <Compile Include="Staff Menu\AddSession.Designer.cs">
       <DependentUpon>AddSession.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin Menu\Admin.cs">
@@ -130,16 +130,16 @@
     <Compile Include="AppSession.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
-    <Compile Include="EditMember.cs">
+    <Compile Include="Member Menu\EditMember.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EditMember.Designer.cs">
+    <Compile Include="Member Menu\EditMember.Designer.cs">
       <DependentUpon>EditMember.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditStaffOwnProfile.cs">
+    <Compile Include="Staff Menu\EditStaffOwnProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EditStaffOwnProfile.Designer.cs">
+    <Compile Include="Staff Menu\EditStaffOwnProfile.Designer.cs">
       <DependentUpon>EditStaffOwnProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="GymBrosDBDataSet.cs">
@@ -156,52 +156,52 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Member.cs">
+    <Compile Include="Member Menu\Member.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Member.Designer.cs">
+    <Compile Include="Member Menu\Member.Designer.cs">
       <DependentUpon>Member.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberAnnouncements.cs">
+    <Compile Include="Member Menu\MemberAnnouncements.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MemberAnnouncements.Designer.cs">
+    <Compile Include="Member Menu\MemberAnnouncements.Designer.cs">
       <DependentUpon>MemberAnnouncements.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberBodyComp.cs">
+    <Compile Include="Member Menu\MemberBodyComp.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MemberBodyComp.Designer.cs">
+    <Compile Include="Member Menu\MemberBodyComp.Designer.cs">
       <DependentUpon>MemberBodyComp.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberData.cs">
+    <Compile Include="Member Menu\MemberData.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MemberData.Designer.cs">
+    <Compile Include="Member Menu\MemberData.Designer.cs">
       <DependentUpon>MemberData.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberManage.cs">
+    <Compile Include="Member Menu\MemberManage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MemberManage.Designer.cs">
+    <Compile Include="Member Menu\MemberManage.Designer.cs">
       <DependentUpon>MemberManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberPay.cs">
+    <Compile Include="Member Menu\MemberPay.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MemberPay.Designer.cs">
+    <Compile Include="Member Menu\MemberPay.Designer.cs">
       <DependentUpon>MemberPay.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberServices.cs">
+    <Compile Include="Member Menu\MemberServices.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MemberServices.Designer.cs">
+    <Compile Include="Member Menu\MemberServices.Designer.cs">
       <DependentUpon>MemberServices.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonaltrainingStaffMenu.cs">
+    <Compile Include="Staff Menu\PersonaltrainingStaffMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PersonaltrainingStaffMenu.Designer.cs">
+    <Compile Include="Staff Menu\PersonaltrainingStaffMenu.Designer.cs">
       <DependentUpon>PersonaltrainingStaffMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -212,64 +212,64 @@
     <Compile Include="Admin Menu\Reportsuc.Designer.cs">
       <DependentUpon>Reportsuc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Staff.cs">
+    <Compile Include="Staff Menu\Staff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Staff.Designer.cs">
+    <Compile Include="Staff Menu\Staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffAnnouncmentMenu.cs">
+    <Compile Include="Staff Menu\StaffAnnouncmentMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StaffAnnouncmentMenu.Designer.cs">
+    <Compile Include="Staff Menu\StaffAnnouncmentMenu.Designer.cs">
       <DependentUpon>StaffAnnouncmentMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffCheckInPT.cs">
+    <Compile Include="Staff Menu\StaffCheckInPT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StaffCheckInPT.Designer.cs">
+    <Compile Include="Staff Menu\StaffCheckInPT.Designer.cs">
       <DependentUpon>StaffCheckInPT.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffClasses.cs">
+    <Compile Include="Staff Menu\StaffClasses.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StaffClasses.Designer.cs">
+    <Compile Include="Staff Menu\StaffClasses.Designer.cs">
       <DependentUpon>StaffClasses.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffES.cs">
+    <Compile Include="Staff Menu\StaffES.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StaffES.Designer.cs">
+    <Compile Include="Staff Menu\StaffES.Designer.cs">
       <DependentUpon>StaffES.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffMaintenance.cs">
+    <Compile Include="Staff Menu\StaffMaintenance.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StaffMaintenance.Designer.cs">
+    <Compile Include="Staff Menu\StaffMaintenance.Designer.cs">
       <DependentUpon>StaffMaintenance.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffPTUpdate.cs">
+    <Compile Include="Staff Menu\StaffPTUpdate.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StaffPTUpdate.Designer.cs">
+    <Compile Include="Staff Menu\StaffPTUpdate.Designer.cs">
       <DependentUpon>StaffPTUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffPTView.cs">
+    <Compile Include="Staff Menu\StaffPTView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StaffPTView.Designer.cs">
+    <Compile Include="Staff Menu\StaffPTView.Designer.cs">
       <DependentUpon>StaffPTView.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffUpdateBody.cs">
+    <Compile Include="Staff Menu\StaffUpdateBody.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StaffUpdateBody.Designer.cs">
+    <Compile Include="Staff Menu\StaffUpdateBody.Designer.cs">
       <DependentUpon>StaffUpdateBody.cs</DependentUpon>
     </Compile>
-    <Compile Include="Staff_Transactions.cs">
+    <Compile Include="Staff Menu\Staff_Transactions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Staff_Transactions.Designer.cs">
+    <Compile Include="Staff Menu\Staff_Transactions.Designer.cs">
       <DependentUpon>Staff_Transactions.cs</DependentUpon>
     </Compile>
     <Compile Include="Welcome.cs">
@@ -278,7 +278,7 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddSession.resx">
+    <EmbeddedResource Include="Staff Menu\AddSession.resx">
       <DependentUpon>AddSession.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Menu\Admin.resx">
@@ -319,10 +319,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BodyCom.rdlc" />
     <EmbeddedResource Include="Classes.rdlc" />
-    <EmbeddedResource Include="EditMember.resx">
+    <EmbeddedResource Include="Member Menu\EditMember.resx">
       <DependentUpon>EditMember.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditStaffOwnProfile.resx">
+    <EmbeddedResource Include="Staff Menu\EditStaffOwnProfile.resx">
       <DependentUpon>EditStaffOwnProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Extra.rdlc" />
@@ -330,28 +330,28 @@
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintenance.rdlc" />
-    <EmbeddedResource Include="Member.resx">
+    <EmbeddedResource Include="Member Menu\Member.resx">
       <DependentUpon>Member.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberAnnouncements.resx">
+    <EmbeddedResource Include="Member Menu\MemberAnnouncements.resx">
       <DependentUpon>MemberAnnouncements.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberBodyComp.resx">
+    <EmbeddedResource Include="Member Menu\MemberBodyComp.resx">
       <DependentUpon>MemberBodyComp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberData.resx">
+    <EmbeddedResource Include="Member Menu\MemberData.resx">
       <DependentUpon>MemberData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberManage.resx">
+    <EmbeddedResource Include="Member Menu\MemberManage.resx">
       <DependentUpon>MemberManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberPay.resx">
+    <EmbeddedResource Include="Member Menu\MemberPay.resx">
       <DependentUpon>MemberPay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberServices.resx">
+    <EmbeddedResource Include="Member Menu\MemberServices.resx">
       <DependentUpon>MemberServices.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PersonaltrainingStaffMenu.resx">
+    <EmbeddedResource Include="Staff Menu\PersonaltrainingStaffMenu.resx">
       <DependentUpon>PersonaltrainingStaffMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -369,34 +369,34 @@
       <DependentUpon>Reportsuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportFinal.rdlc" />
-    <EmbeddedResource Include="Staff.resx">
+    <EmbeddedResource Include="Staff Menu\Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffAnnouncmentMenu.resx">
+    <EmbeddedResource Include="Staff Menu\StaffAnnouncmentMenu.resx">
       <DependentUpon>StaffAnnouncmentMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffCheckInPT.resx">
+    <EmbeddedResource Include="Staff Menu\StaffCheckInPT.resx">
       <DependentUpon>StaffCheckInPT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffClasses.resx">
+    <EmbeddedResource Include="Staff Menu\StaffClasses.resx">
       <DependentUpon>StaffClasses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffES.resx">
+    <EmbeddedResource Include="Staff Menu\StaffES.resx">
       <DependentUpon>StaffES.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffMaintenance.resx">
+    <EmbeddedResource Include="Staff Menu\StaffMaintenance.resx">
       <DependentUpon>StaffMaintenance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffPTUpdate.resx">
+    <EmbeddedResource Include="Staff Menu\StaffPTUpdate.resx">
       <DependentUpon>StaffPTUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffPTView.resx">
+    <EmbeddedResource Include="Staff Menu\StaffPTView.resx">
       <DependentUpon>StaffPTView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffUpdateBody.resx">
+    <EmbeddedResource Include="Staff Menu\StaffUpdateBody.resx">
       <DependentUpon>StaffUpdateBody.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Staff_Transactions.resx">
+    <EmbeddedResource Include="Staff Menu\Staff_Transactions.resx">
       <DependentUpon>Staff_Transactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier Transaction.rdlc" />
