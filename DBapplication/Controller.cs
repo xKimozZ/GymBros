@@ -795,6 +795,28 @@ namespace DBapplication
             return dbMan.ExecuteNonQuery(userUpdateQuery);
         }
 
+        public int AlreadyUseClass(int UID, string classType)
+        {
+            string query = $"SELECT COUNT(*) FROM Attends_Class WHERE Member_ID = {UID} AND Class_Type = '{classType}';";
+            return Convert.ToInt32(dbMan.ExecuteScalar(query));
+        }
+
+        public int InsertAttendsClass(int UID, string classType)
+        {
+            string insertQuery = $"INSERT INTO Attends_Class " +
+                $"(Member_ID, Class_Type, Num_Attended_Classes)" +
+                $"VALUES ({UID}, '{classType}', 0);";
+            return dbMan.ExecuteNonQuery(insertQuery);
+        }
+
+        public int IncrementClassRegistered(int registered, string classType)
+        {
+
+            string userUpdateQuery = $"UPDATE Classes SET Registered_Num = '{registered}' WHERE Class_Type = {classType};";
+
+            return dbMan.ExecuteNonQuery(userUpdateQuery);
+        }
+
         public void TerminateConnection()
         {
             dbMan.CloseConnection();

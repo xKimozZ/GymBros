@@ -21,7 +21,6 @@ namespace DBapplication
 
         private void Editbutton_Click(object sender, EventArgs e)
         {
-            controllerObj.LoginAttempt(AppSession.UserId, textBox1.Text.ToString());
 
             string pass = textBox1.Text.Trim();
             string rechk = textBox2.Text.Trim();
@@ -57,7 +56,7 @@ namespace DBapplication
             }
             else
             {
-                MessageBox.Show("The user ID and/or password you entered is not correct.");
+                MessageBox.Show("The password you entered is not correct.");
                 return;
             }
         }
