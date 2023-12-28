@@ -38,7 +38,7 @@
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.AliceBlue;
-            this.button2.Image = global::DBapplication.Properties.Resources.abstract_geometric_blue_background_vector_3958327;
+            this.button2.Image = global::DBapplication.Properties.Resources._360_F_166620979_YEjNRefWLF42MUvr42oE53HynM52RHSp;
             this.button2.Location = new System.Drawing.Point(92, 181);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
@@ -66,7 +66,7 @@
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.AliceBlue;
-            this.button4.Image = global::DBapplication.Properties.Resources._360_F_166620979_YEjNRefWLF42MUvr42oE53HynM52RHSp;
+            this.button4.Image = global::DBapplication.Properties.Resources.abstract_geometric_blue_background_vector_3958327;
             this.button4.Location = new System.Drawing.Point(474, 181);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
