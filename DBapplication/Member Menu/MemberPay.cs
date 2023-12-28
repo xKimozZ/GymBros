@@ -46,12 +46,12 @@ namespace DBapplication
             int checkID = controllerObj.LoginAttempt(AppSession.UserId, textBox1.Text);
             if (checkID != 0)
             {
-                DateTime renew = controllerObj.GetRenewalDate(AppSession.UserId);
-                renew = renew.AddMonths(1);
+                DateTime currentDate = DateTime.Now;
+                currentDate = currentDate.AddMonths(1);
                 MessageBox.Show("Payment successful!\nYou have paid "+ controllerObj.TransactionAmount("membership_fees")
-                    +"\nYour new renewal date is " + renew.ToLongDateString() + ".");
-                label3.Text = renew.ToString();
-                controllerObj.UpdateRenewalDate(renew,AppSession.UserId);
+                    +"\nYour new renewal date is " + currentDate.ToLongDateString() + ".");
+                label3.Text = currentDate.ToString();
+                controllerObj.UpdateRenewalDate(currentDate, AppSession.UserId);
                 controllerObj.InsertMemberTransaction(AppSession.UserId, "Membership_fees");
             }
             else

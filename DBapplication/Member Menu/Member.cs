@@ -12,10 +12,20 @@ namespace DBapplication
 {
     public partial class Member : Form
     {
+        Controller controllerObj;
         public Member(int ID)
         {
+            controllerObj = new Controller();
             InitializeComponent();
-            //AppSession.Login(ID, "John");
+            anger_panel.Show();
+            label3.Hide();
+            DateTime currentDate = DateTime.Now;
+            DateTime RenewalDate = controllerObj.GetRenewalDate(AppSession.UserId);
+            if (currentDate >= RenewalDate)
+            {
+                anger_panel.Hide();
+                label3.Show();
+            }
         }
 
         private void placeholderPanel_Paint(object sender, PaintEventArgs e)
@@ -55,6 +65,18 @@ namespace DBapplication
             MainMenu.Show();
             buttonBack.Enabled = false;
             buttonBack.Visible = false;
+            DateTime currentDate = DateTime.Now;
+            DateTime RenewalDate = controllerObj.GetRenewalDate(AppSession.UserId);
+            if (currentDate >= RenewalDate)
+            {
+                anger_panel.Hide();
+                label3.Show();
+            }
+            else
+            {
+                anger_panel.Show();
+                label3.Hide();
+            }
         }
 
         private void Announcements_Click(object sender, EventArgs e)

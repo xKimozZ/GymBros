@@ -94,12 +94,14 @@
             // 
             // buttonAddadmin
             // 
+            this.buttonAddadmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
+            this.buttonAddadmin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonAddadmin.Location = new System.Drawing.Point(31, 65);
             this.buttonAddadmin.Name = "buttonAddadmin";
             this.buttonAddadmin.Size = new System.Drawing.Size(128, 23);
             this.buttonAddadmin.TabIndex = 2;
             this.buttonAddadmin.Text = "Make Admin";
-            this.buttonAddadmin.UseVisualStyleBackColor = true;
+            this.buttonAddadmin.UseVisualStyleBackColor = false;
             this.buttonAddadmin.Click += new System.EventHandler(this.buttonAddadmin_Click);
             // 
             // buttonDel
@@ -193,12 +195,14 @@
             // 
             // buttonRoleChange
             // 
+            this.buttonRoleChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
+            this.buttonRoleChange.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonRoleChange.Location = new System.Drawing.Point(218, 62);
             this.buttonRoleChange.Name = "buttonRoleChange";
             this.buttonRoleChange.Size = new System.Drawing.Size(128, 23);
             this.buttonRoleChange.TabIndex = 3;
             this.buttonRoleChange.Text = "Change Role";
-            this.buttonRoleChange.UseVisualStyleBackColor = true;
+            this.buttonRoleChange.UseVisualStyleBackColor = false;
             this.buttonRoleChange.Click += new System.EventHandler(this.buttonRoleChange_Click);
             // 
             // comboBoxID
