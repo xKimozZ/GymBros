@@ -46,7 +46,7 @@ namespace DBapplication
                 if (IsMember == 0)
                 {
                     string role = controllerObj.LoginStaff(Convert.ToInt32(textBox1.Text));
-                    if (role == "Admin")
+                    if (role.ToLower() == "admin")
                     {
                         MessageBox.Show("Admin");
                         Admin admin = new Admin(); //temp until admin form is made

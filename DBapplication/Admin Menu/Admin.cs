@@ -18,6 +18,7 @@ namespace DBapplication
             InitializeComponent();
             MainMenu.Show();
             placeholderPanel.Hide();
+            label1.Text = AppSession.UserId.ToString();
         }
         private void buttonStaff_Click(object sender, EventArgs e)
         {

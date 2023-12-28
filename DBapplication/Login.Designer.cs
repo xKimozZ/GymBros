@@ -42,7 +42,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Turquoise;
-            this.label1.Location = new System.Drawing.Point(233, 36);
+            this.label1.Location = new System.Drawing.Point(288, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 59);
             this.label1.TabIndex = 6;
@@ -55,7 +55,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.AliceBlue;
             this.button2.Image = global::DBapplication.Properties.Resources.abstract_geometric_blue_background_vector_3958327;
-            this.button2.Location = new System.Drawing.Point(180, 270);
+            this.button2.Location = new System.Drawing.Point(235, 302);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(244, 87);
@@ -66,7 +66,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(180, 110);
+            this.textBox1.Location = new System.Drawing.Point(235, 142);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(282, 22);
             this.textBox1.TabIndex = 7;
@@ -75,7 +75,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(180, 164);
+            this.textBox2.Location = new System.Drawing.Point(235, 196);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(282, 22);
             this.textBox2.TabIndex = 8;
@@ -85,7 +85,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(102, 113);
+            this.label2.Location = new System.Drawing.Point(157, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 16);
             this.label2.TabIndex = 9;
@@ -94,7 +94,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(102, 167);
+            this.label3.Location = new System.Drawing.Point(157, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 10;
@@ -104,6 +104,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.BackgroundImage = global::DBapplication.Properties.Resources._360_F_166620979_YEjNRefWLF42MUvr42oE53HynM52RHSp;
             this.ClientSize = new System.Drawing.Size(712, 455);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
