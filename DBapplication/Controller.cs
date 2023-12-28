@@ -45,10 +45,13 @@ namespace DBapplication
         public DataTable GetStaffByRole(string role)
         {
             string query = $@"
-        SELECT *
-        FROM Staff
+        SELECT Users.User_ID, Users.Fname, Users.Lname,
+               CASE WHEN Users.Gender = 1 THEN 'Male' ELSE 'Female' END AS Gender,
+               Users.Age, Users.Contact_Info, Users.Emrgncy_Contact,
+               Staff.Role
+        FROM Users
+        JOIN Staff ON Users.User_ID = Staff.Staff_ID
         WHERE Staff.Role = '{role}';";
-
             return dbMan.ExecuteReader(query);
         }
 

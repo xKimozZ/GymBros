@@ -30,8 +30,8 @@ namespace DBapplication.Admin_Menu
         private void LoadServiceManagers()
         {
             DataTable managers = controllerObj.GetStaffByRole("Manager");
-            comboBoxServiceMgr.DisplayMember = "Staff_ID";
-            comboBoxServiceMgr.ValueMember = "Staff_ID";
+            comboBoxServiceMgr.DisplayMember = "Lname";
+            comboBoxServiceMgr.ValueMember = "User_ID";
             comboBoxServiceMgr.DataSource = managers;
         }
         private void LoadServiceNames()
@@ -84,6 +84,7 @@ namespace DBapplication.Admin_Menu
             if (result == 1)
             {
                 MessageBox.Show("Extra service added successfully!");
+                LoadServiceNames();
             }
             else
             {
@@ -136,6 +137,7 @@ namespace DBapplication.Admin_Menu
 
                 txtServiceName.Text = "";
                 txtDescription.Text = "";
+                LoadServiceNames();
             }
             else
             {

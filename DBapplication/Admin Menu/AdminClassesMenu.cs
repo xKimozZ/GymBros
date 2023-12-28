@@ -51,16 +51,16 @@ namespace DBapplication.Admin_Menu
         private void LoadClassManagers()
         {
             DataTable managers = controllerObj.GetStaffByRole("Manager");
-            comboBoxClassMgr.DisplayMember = "Staff_ID";
-            comboBoxClassMgr.ValueMember = "Staff_ID";
+            comboBoxClassMgr.DisplayMember = "Lname";
+            comboBoxClassMgr.ValueMember = "User_ID";
             comboBoxClassMgr.DataSource = managers;
         }
 
         private void LoadInstructors()
         {
             DataTable trainers = controllerObj.GetStaffByRole("Trainer");
-            comboBoxInstructorId.DisplayMember = "Staff_ID";
-            comboBoxInstructorId.ValueMember = "Staff_ID";
+            comboBoxInstructorId.DisplayMember = "Lname";
+            comboBoxInstructorId.ValueMember = "User_ID";
             comboBoxInstructorId.DataSource = trainers;
         }
 
@@ -117,6 +117,7 @@ namespace DBapplication.Admin_Menu
             if (result == 1)
             {
                 MessageBox.Show("Class added successfully!");
+                LoadClassTypes();
             }
             else
             {
@@ -204,6 +205,7 @@ namespace DBapplication.Admin_Menu
             if (result == 1)
             {
                 MessageBox.Show("Class updated successfully!");
+                LoadClassTypes();
             }
             else
             {
