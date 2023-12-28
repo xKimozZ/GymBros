@@ -1,4 +1,4 @@
-﻿using DBapplication.GymBrosDBDataSetTableAdapters;
+﻿using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,12 +11,13 @@ using System.Windows.Forms;
 
 namespace DBapplication.Admin_Menu
 {
-    public partial class Report4 : UserControl
+    public partial class Report7 : UserControl
     {
-        public Report4()
+        public Report7()
         {
             InitializeComponent();
-            usersTableAdapter.Fill(gymBrosDBDataSet.Users);
+            equipmentTableAdapter.Fill(gymBrosDBDataSet.Equipment);
+            reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", (DataTable)gymBrosDBDataSet.Equipment));
             reportViewer1.RefreshReport();
         }
     }

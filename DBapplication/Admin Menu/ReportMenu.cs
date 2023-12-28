@@ -51,9 +51,23 @@ namespace DBapplication.Admin_Menu
         }
         private void button5_Click(object sender, EventArgs e)
         {
-
+            ShowReportUC(new Report5());
+            panelselect.Visible = true;
+            panelselect.Top = button5.Top;
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ShowReportUC(new Report6());
+            panelselect.Visible = true;
+            panelselect.Top = button6.Top;
+        }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ShowReportUC(new Report7());
+            panelselect.Visible = true;
+            panelselect.Top = button7.Top;
+        }
     }
 }
