@@ -25,17 +25,20 @@ namespace DBapplication
             comboBoxRoles.Items.AddRange(roles);
             comboBoxRole2.SelectedItem = roles[0];
 
-            DataTable st = controllerObj.getNamesStaff();
-            comboBoxID.DisplayMember = "Staff_ID";
-            comboBoxID.ValueMember = "Lname";
-            comboBoxID.DataSource = st;
+            PopulateStaffComboBox();
 
             labelLname.Visible = false;
             panelManager.Hide();
             panelAdminPay.Hide();
             panelAdd.Hide();
         }
-
+        public void PopulateStaffComboBox()
+        {
+            DataTable st = controllerObj.getNamesStaff();
+            comboBoxID.DisplayMember = "Staff_ID";
+            comboBoxID.ValueMember = "Lname";
+            comboBoxID.DataSource = st;
+        }
 
         private void buttonProfile_Click(object sender, EventArgs e)
         {
@@ -120,6 +123,7 @@ namespace DBapplication
             if (result == 1)
             {
                 MessageBox.Show("Staff added successfully!");
+                PopulateStaffComboBox();
             }
             else
             {
@@ -145,6 +149,7 @@ namespace DBapplication
             if (result == 1)
             {
                 MessageBox.Show("Admin added successfully!");
+                PopulateStaffComboBox();
             }
             else
             {
@@ -189,6 +194,7 @@ namespace DBapplication
             if (result == 1)
             {
                 MessageBox.Show("Staff deleted successfully!");
+                PopulateStaffComboBox();
             }
             else
             {
